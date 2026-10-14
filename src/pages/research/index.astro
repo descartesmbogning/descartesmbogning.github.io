@@ -1,0 +1,4 @@
+---
+import Base from '../../layouts/Base.astro';import domains from '../../data/domains.json';import projects from '../../data/projects.json';
+---
+<Base title="Research domains"><div class="page-hero"><div class="container"><p class="eyebrow on-dark">Scientific contributions</p><h1>Research domains</h1><p>Explore six connected areas from biomedical research to scientific software and applied AI.</p></div></div><section class="section container"><div class="grid">{domains.map((d,i)=><a class="card" href={`/research/${d.id}/`}><span class="num">0{i+1}</span><h3>{d.label} ↗</h3><p>{d.desc}</p><span class="pill">{projects.filter(p=>p.domains.includes(d.id)).length} project areas</span></a>)}</div><p class="source" style="margin-top:28px">A project can be associated with more than one domain. Counts therefore overlap.</p></section></Base>

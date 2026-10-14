@@ -1,28 +1,57 @@
-# Editable research portfolio
+# Scientific Contributions Archive — Version 2
 
-Astro static portfolio for GitHub Pages. The content is separated from the layout.
+Astro-powered, editable research archive for `https://descartesmbogning.github.io/`.
 
-## Update content
-- Edit `src/data/profile.json` for name, headline, bio and links.
-- Edit `src/data/projects.json` to add/edit/remove projects. Each item needs a unique `slug`; new pages are generated automatically.
-- Edit `src/pages/index.astro` for homepage layout/styles and `src/pages/projects/[slug].astro` for case-study layout.
-- Put images and a CV in `public/`, then link to them in the page templates or JSON data.
+## Contents
 
-## Local preview
+- Homepage with the scientific journey and transparent record counts.
+- Six interconnected research domains, with dedicated pages.
+- Searchable **all-projects index** with 32 project areas and evidence notes.
+- Project details generated automatically for each record.
+- Publication catalogue (initial subset, pending complete reconciliation).
+- Academic qualifications separated from course certificates.
+- Searchable certification catalogue with 39 sourced entries.
+- Methods & skills, About, and contact links.
+
+## Run locally
+
 ```bash
 npm install
 npm run dev
+npm run build
+npm run preview
 ```
 
-## Deploy
-1. Create a **public** GitHub repository named `descartesmbogning.github.io`.
-2. In `astro.config.mjs`, set `site` to `https://descartesmbogning.github.io` and no `base` setting is required for this user site.
-3. Upload these files to the repository root and commit to `main`.
-4. The workflow runs `npm install` before building. For more reproducible deployments, generate and commit a `package-lock.json` and switch to `npm ci`.
-5. In repository **Settings → Pages**, choose **GitHub Actions** as the build/deployment source.
-6. Push to `main`; the included workflow builds and deploys automatically.
+## Update content without redesigning
 
-For future edits, update JSON in GitHub's web editor and commit. The website will rebuild.
+Edit the appropriate JSON file:
 
-## Caution
-This is a starter, not a published site. Verify project claims, authorship, links and publication status before sharing. Do not publish unpublished data, credentials, proprietary code, or private client information. Add a privacy-safe contact email only if desired.
+| Information | File |
+| --- | --- |
+| Name, headline, links, location | `src/data/profile.json` |
+| Every research or software project | `src/data/projects.json` |
+| Research domain labels and descriptions | `src/data/domains.json` |
+| Publications and status notices | `src/data/publications.json` |
+| Certificates and training | `src/data/certificates.json` |
+| Academic degrees and qualifications | `src/data/qualifications.json` |
+| Method and technical skill categories | `src/data/skills.json` |
+
+Each project requires a unique slug and uses `domains` ids from `domains.json`. The build automatically makes `/projects/SLUG/` pages and connects them across their research domains. For citations and project figures, extend the relevant JSON record with public `links`, then update the `src/pages/projects/[slug].astro` detail template.
+
+For source control, create a branch and pull request for future changes. The `.github/workflows/deploy.yml` workflow publishes the `main` branch automatically after a successful build.
+
+### Privacy / academic integrity
+
+**Do not upload private diploma or transcript scans, Gmail attachments, student numbers, identity numbers, signatures or addresses into this public repository.** Diplomas are listed as metadata only. Only use external verification links intentionally meant for public sharing. Remove token-bearing credential invitation URLs. Some entries were inventoried from LinkedIn screenshots, Gmail and selected Google Drive folders; they require title, issuer, date and duplicate reconciliation before treating this as a final audited record. Publications with retractions or expressions of concern must retain their status notices. Claims of software deployment, methods, leadership and specific individual contribution should be verified before promotion.
+
+### Deployment
+
+The repository name is `descartesmbogning.github.io` and `astro.config.mjs` has the corresponding site URL and no project base path. GitHub Pages -> Source: GitHub Actions. The workflow uses `npm install` and `npm run build`; it does not require a committed lockfile. Recommended: generate `package-lock.json` and switch to `npm ci` after verifying installation.
+
+## Next editorial pass
+
+1. Obtain a full Google Scholar BibTeX/CSV export, match DOIs, remove duplicates and update publication notices.
+2. Verify doctoral diploma date, other degree descriptions and certificate authenticity. Retain original documents privately.
+3. Add verified project figures and dashboard screenshots in `public/images` (with alt text and rights clearance).
+4. Review GitHub project source, reproducibility, licences, and individual authorship.
+5. Add a downloadable redacted CV and portfolio narrative when approved for publication.

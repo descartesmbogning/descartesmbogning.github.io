@@ -1,0 +1,4 @@
+---
+import Base from '../../layouts/Base.astro';import skills from '../../data/skills.json';
+---
+<Base title="Methods & skills"><div class="page-hero"><div class="container"><p class="eyebrow on-dark">Research practice</p><h1>Methods & technical capabilities</h1><p>A methods inventory connected to research and software projects, rather than an isolated list of keywords.</p></div></div><section class="section container"><div class="grid two">{skills.map(s=><article class="card"><h3>{s.name}</h3><div>{s.items.map(i=><span class="pill">{i}</span>)}</div></article>)}</div><p class="source" style="margin-top:24px">Method names summarize demonstrated or reported experience across the inventory. Individual project pages carry the evidence and verification notes.</p></section></Base>

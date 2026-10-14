@@ -1,0 +1,32 @@
+[
+  {
+    "id": "biomedical",
+    "label": "Biomedical science",
+    "desc": "Bacterial discovery, microbiota, genomics and cancer immunotherapy."
+  },
+  {
+    "id": "public-health",
+    "label": "Public health & One Health",
+    "desc": "Epidemiology, surveillance, climate-related health and evidence synthesis."
+  },
+  {
+    "id": "science",
+    "label": "Science of science",
+    "desc": "Bibliometrics, research inequalities, collaboration, funding and open science."
+  },
+  {
+    "id": "patents",
+    "label": "Patent & technology intelligence",
+    "desc": "Technology landscapes, innovators, intellectual property and competitive insights."
+  },
+  {
+    "id": "data",
+    "label": "Scientific data & software",
+    "desc": "Metadata infrastructure, reproducible processing, scholarly APIs and research applications."
+  },
+  {
+    "id": "ai",
+    "label": "Applied AI & NLP",
+    "desc": "Scientific text mining, LLM screening and automated research classification."
+  }
+]

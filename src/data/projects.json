@@ -1,7 +1,1050 @@
 [
- {"slug":"phage-patent-intelligence","title":"Global Phage Therapy Patent Intelligence","category":"Patent Intelligence","status":"Published research","summary":"Patent landscaping, topic modelling, disease mapping, and inventor/applicant network analysis across 2,365 patent families.","role":"Research design, computational analysis, scientific communication (confirm detailed contribution).","methods":["Lens.org","Python","LDA","Network analysis","VOSviewer"],"outcome":"2024 Nature Biotechnology research article","links":[{"label":"Publication","url":"https://www.nature.com/articles/s41587-024-02493-9"},{"label":"Code","url":"https://github.com/descartesmbogning/phage-therapy-patents-analysis"}]},
- {"slug":"preprint-metadata-integration","title":"Global Preprint Metadata Integration","category":"Data Engineering","status":"Manuscript in preparation","summary":"Cross-source scholarly metadata collection, harmonization, DOI normalization, and record linkage across preprint infrastructures.","role":"Data processing and metadata integration workflows; confirm manuscript contribution details.","methods":["OpenAlex","Crossref","DataCite","Python","DuckDB"],"outcome":"Research dataset and manuscript draft; figures subject to verification","links":[{"label":"Harvester","url":"https://github.com/descartesmbogning/preprint-harvester"}]},
- {"slug":"preprint-explorer","title":"Preprint Servers Explorer","category":"Scientific Software","status":"Prototype / deployment to verify","summary":"An interactive interface for exploring preprint-server metadata and trends.","role":"Application and analysis code; verify deployment and usage metrics.","methods":["Python","Streamlit","Scientific metadata"],"outcome":"Public application repository","links":[{"label":"Code","url":"https://github.com/descartesmbogning/Preprint-Servers-Explorer"}]},
- {"slug":"genai-literature-intelligence","title":"Generative AI Literature Intelligence","category":"Applied AI","status":"In development","summary":"Multi-provider LLM screening and multi-label classification of scientific literature, with caching, validation, and error-handling safeguards.","role":"Developed screening and harvesting scripts; classification metrics pending validation.","methods":["Python","OpenAlex","LLMs","Classification","Quality assurance"],"outcome":"Research scripts and validation workflow; no published performance claim","links":[]},
- {"slug":"openalex-data-enricher","title":"OpenAlex Data Enricher","category":"Scientific Software","status":"Public code","summary":"Reusable tooling to enrich scholarly publication records with OpenAlex metadata.","role":"Software development; verify final features and deployment.","methods":["Python","OpenAlex API","Data enrichment"],"outcome":"Public repository","links":[{"label":"Code","url":"https://github.com/descartesmbogning/OpenAlexDataEnricher"}]}
+  {
+    "id": "P01",
+    "slug": "phage-therapy-patent-landscape",
+    "title": "Phage therapy patent landscape",
+    "category": "Patent & technology intelligence",
+    "domains": [
+      "patents",
+      "science",
+      "ai"
+    ],
+    "status": "Published (2024)",
+    "summary": "Map phage therapy innovation, actors, technology topics and geography",
+    "contribution": "Study design; patent collection, cleaning, NLP, network analysis and manuscript",
+    "methods": [
+      "Lens.org",
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "NLTK",
+      "scispaCy",
+      "OpenRefine",
+      "LDA",
+      "VOSviewer"
+    ],
+    "skills": [
+      "Patent analytics",
+      "entity normalization",
+      "topic modelling",
+      "network analysis",
+      "writing"
+    ],
+    "outputs": "2,365 patent families; figures, networks, topic models; Nature Biotechnology article",
+    "evidenceType": "Published article + GitHub",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://www.nature.com/articles/s41587-024-02493-9"
+      }
+    ],
+    "verification": "Confirm final dataset counts and individual contribution wording",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P02",
+    "slug": "bacteriophage-one-health-literature-mapping",
+    "title": "Bacteriophage One Health literature mapping",
+    "category": "Science of science",
+    "domains": [
+      "science",
+      "public-health",
+      "ai"
+    ],
+    "status": "Research draft",
+    "summary": "Map publication themes, equity, funding and trends in bacteriophage research",
+    "contribution": "Literature data assembly, topic modelling and bibliometric visualization",
+    "methods": [
+      "Web of Science",
+      "Scopus",
+      "PubMed",
+      "Python",
+      "LDA",
+      "VOSviewer"
+    ],
+    "skills": [
+      "Bibliometrics",
+      "literature synthesis",
+      "thematic evolution",
+      "science mapping"
+    ],
+    "outputs": "Literature datasets; co-occurrence maps; topic analysis; manuscript material",
+    "evidenceType": "Research files + GitHub",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/Deciphering_Bacteriophage_Revolution"
+      }
+    ],
+    "verification": "Verify manuscript and final outputs",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P03",
+    "slug": "phage-therapy-funding-intelligence",
+    "title": "Phage therapy funding intelligence",
+    "category": "Patent & technology intelligence",
+    "domains": [
+      "patents",
+      "science"
+    ],
+    "status": "Repository identified",
+    "summary": "Analyze funding signals related to phage therapy",
+    "contribution": "Research notebooks identified; exact contribution to confirm",
+    "methods": [
+      "Python",
+      "Jupyter (repository evidence)"
+    ],
+    "skills": [
+      "Funding intelligence",
+      "research trend analysis (to verify)"
+    ],
+    "outputs": "Public repository / notebooks",
+    "evidenceType": "GitHub repository",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/phage-therapy-funding"
+      }
+    ],
+    "verification": "Review notebook results",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P04",
+    "slug": "global-preprint-metadata-integration",
+    "title": "Global preprint metadata integration",
+    "category": "Scientific data & software",
+    "domains": [
+      "data",
+      "science"
+    ],
+    "status": "Manuscript draft",
+    "summary": "Harmonize multi-source preprint records across servers",
+    "contribution": "Metadata harvesting, record linkage, normalization and deduplication",
+    "methods": [
+      "OpenAlex",
+      "Crossref",
+      "DataCite",
+      "Python",
+      "DOI normalization",
+      "SQL"
+    ],
+    "skills": [
+      "Data engineering",
+      "entity resolution",
+      "metadata quality",
+      "reproducibility"
+    ],
+    "outputs": "Draft: 7,905,699 harvested; 7,332,492 parent records; 109 servers; manuscript",
+    "evidenceType": "Draft manuscript + code",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/preprint-harvester"
+      }
+    ],
+    "verification": "Reconcile with CV ~9.8m figure; verify snapshot",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P05",
+    "slug": "preprint-harvester-toolkit",
+    "title": "Preprint Harvester toolkit",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repository",
+    "summary": "Unify harvesting from Crossref, DataCite and OpenAlex",
+    "contribution": "Developed / assembled toolkit; code authorship to verify",
+    "methods": [
+      "Python",
+      "APIs",
+      "Jupyter"
+    ],
+    "skills": [
+      "API engineering",
+      "extraction",
+      "automation",
+      "pipeline design"
+    ],
+    "outputs": "Unified harvester repository",
+    "evidenceType": "GitHub screenshot/repository",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/preprint-harvester"
+      }
+    ],
+    "verification": "Run tests and document architecture",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P06",
+    "slug": "crossref-preprint-harvesting-and-labeling",
+    "title": "Crossref preprint harvesting and labeling",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repositories",
+    "summary": "Collect and classify posted-content metadata",
+    "contribution": "Harvester, metadata classification and normalization workflows",
+    "methods": [
+      "Crossref API",
+      "Python",
+      "Jupyter"
+    ],
+    "skills": [
+      "Cursor pagination",
+      "API resilience",
+      "metadata labeling",
+      "QA"
+    ],
+    "outputs": "Harvester and labeling repositories; notebooks",
+    "evidenceType": "GitHub screenshot/repository",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/crossref-preprints-harvester"
+      }
+    ],
+    "verification": "Validate current performance and dataset outputs",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P07",
+    "slug": "datacite-preprint-harvesting",
+    "title": "DataCite preprint harvesting",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repository",
+    "summary": "Harvest DataCite preprint metadata at scale",
+    "contribution": "Resumable extraction pipeline described in repository",
+    "methods": [
+      "DataCite API",
+      "Python"
+    ],
+    "skills": [
+      "Resumability",
+      "metadata harvesting",
+      "reliability engineering"
+    ],
+    "outputs": "Harvester repository",
+    "evidenceType": "GitHub screenshot/repository",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/datacite-preprints-harvester"
+      }
+    ],
+    "verification": "Review source and test reproducibility",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P08",
+    "slug": "openalex-preprint-metadata-extraction",
+    "title": "OpenAlex preprint metadata extraction",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repository",
+    "summary": "Retrieve preprint-server metadata from OpenAlex",
+    "contribution": "API harvesting and record selection",
+    "methods": [
+      "OpenAlex API",
+      "Python"
+    ],
+    "skills": [
+      "API querying",
+      "filtering",
+      "extraction",
+      "documentation"
+    ],
+    "outputs": "Collector script; README; requirements",
+    "evidenceType": "GitHub code",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/openalex_preprints_metada"
+      }
+    ],
+    "verification": "Fix README commands / placeholders",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P09",
+    "slug": "preprint-servers-explorer",
+    "title": "Preprint Servers Explorer",
+    "category": "Scientific data & software",
+    "domains": [
+      "data",
+      "science"
+    ],
+    "status": "Public repository; deployment unverified",
+    "summary": "Make preprint-server statistics explorable",
+    "contribution": "Application components, data and assets identified",
+    "methods": [
+      "Python",
+      "Streamlit (reported)"
+    ],
+    "skills": [
+      "Dashboard design",
+      "scientific communication",
+      "data visualization"
+    ],
+    "outputs": "Interactive dashboard code and app URL",
+    "evidenceType": "GitHub + app URL",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://preprint-servers.streamlit.app/"
+      }
+    ],
+    "verification": "Check live app functionality and data accuracy",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P10",
+    "slug": "crossref-preprints-explorer",
+    "title": "Crossref Preprints Explorer",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repository",
+    "summary": "Explore Crossref preprint metadata",
+    "contribution": "Repository identified; implementation details to review",
+    "methods": [
+      "Python (GitHub)"
+    ],
+    "skills": [
+      "Exploratory analytics",
+      "dashboard engineering (to verify)"
+    ],
+    "outputs": "Public application repository",
+    "evidenceType": "GitHub screenshot",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/Crossref-Preprints-Explorer"
+      }
+    ],
+    "verification": "Inspect app code and deployment",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P11",
+    "slug": "genai-publication-intelligence",
+    "title": "GenAI publication intelligence",
+    "category": "Applied AI & NLP",
+    "domains": [
+      "ai",
+      "science",
+      "data"
+    ],
+    "status": "In development",
+    "summary": "Screen and classify research on generative AI",
+    "contribution": "Built harvester and multi-provider classification workflow",
+    "methods": [
+      "OpenAlex",
+      "Python",
+      "GPT",
+      "Gemini",
+      "DeepSeek",
+      "Parquet",
+      "regex"
+    ],
+    "skills": [
+      "Prompt engineering",
+      "LLM orchestration",
+      "screening",
+      "QA",
+      "caching"
+    ],
+    "outputs": "Screened corpora; code; classification rules; validation workbooks",
+    "evidenceType": "Drive source-code review",
+    "priority": "High",
+    "links": [],
+    "verification": "Report gold-standard accuracy only after validation",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P12",
+    "slug": "ticks-and-climate-change-research-mapping",
+    "title": "Ticks and climate-change research mapping",
+    "category": "Public health & One Health",
+    "domains": [
+      "public-health",
+      "science",
+      "ai"
+    ],
+    "status": "Research ongoing; output to verify",
+    "summary": "Map research about ticks, climate and related risks",
+    "contribution": "Evidence mapping and AI-assisted screening (reported)",
+    "methods": [
+      "Python",
+      "bibliometrics",
+      "topic modelling",
+      "LLM screening"
+    ],
+    "skills": [
+      "Evidence synthesis",
+      "research mapping",
+      "NLP"
+    ],
+    "outputs": "CV reports 334,277 deduplicated records; project files",
+    "evidenceType": "CV + Drive folder",
+    "priority": "Medium",
+    "links": [],
+    "verification": "Verify corpus and publication status",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P13",
+    "slug": "rsv-integrated-surveillance-review",
+    "title": "RSV integrated surveillance review",
+    "category": "Public health & One Health",
+    "domains": [
+      "public-health"
+    ],
+    "status": "Research contribution",
+    "summary": "Compare integrated RSV/influenza/COVID surveillance approaches",
+    "contribution": "Literature review, evidence extraction and methods comparison",
+    "methods": [
+      "Literature databases",
+      "Excel",
+      "structured extraction"
+    ],
+    "skills": [
+      "Systematic review",
+      "public health surveillance",
+      "synthesis"
+    ],
+    "outputs": "Evidence summaries and review materials",
+    "evidenceType": "Prior project discussion",
+    "priority": "Medium",
+    "links": [],
+    "verification": "Confirm exact deliverables and contribution",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P14",
+    "slug": "cameroon-malaria-under-reporting-analysis",
+    "title": "Cameroon malaria under-reporting analysis",
+    "category": "Public health & One Health",
+    "domains": [
+      "public-health"
+    ],
+    "status": "Research contribution",
+    "summary": "Identify drivers of malaria under-reporting",
+    "contribution": "Variable identification and literature/model review",
+    "methods": [
+      "Research literature",
+      "epidemiological modelling (specific software unverified)"
+    ],
+    "skills": [
+      "Public health analytics",
+      "variable specification",
+      "synthesis"
+    ],
+    "outputs": "Variable framework; literature review material",
+    "evidenceType": "Prior project discussion",
+    "priority": "Medium",
+    "links": [],
+    "verification": "Confirm whether analyses were completed",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P15",
+    "slug": "african-covid-19-research-bibliometrics",
+    "title": "African COVID-19 research bibliometrics",
+    "category": "Science of science",
+    "domains": [
+      "science",
+      "public-health"
+    ],
+    "status": "Published (2021)",
+    "summary": "Study African COVID-19 research output and collaboration inequalities",
+    "contribution": "Bibliometric analysis and manuscript authorship",
+    "methods": [
+      "Scientific metadata",
+      "bibliometrics",
+      "network analysis"
+    ],
+    "skills": [
+      "Science mapping",
+      "equity analysis",
+      "scientific writing"
+    ],
+    "outputs": "Peer-reviewed article; figures and collaboration analysis",
+    "evidenceType": "Google Scholar screenshots",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://scholar.google.com/citations?user=j32BUrIAAAAJ&hl=fr"
+      }
+    ],
+    "verification": "Document exact software and authorship",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P16",
+    "slug": "covid-19-transmission-and-mortality-in-africa",
+    "title": "COVID-19 transmission and mortality in Africa",
+    "category": "Public health & One Health",
+    "domains": [
+      "public-health"
+    ],
+    "status": "Published (2021)",
+    "summary": "Assess cross-country determinants of low reported transmission and mortality",
+    "contribution": "Co-authored epidemiological analysis",
+    "methods": [
+      "Statistical / epidemiological methods (tools to verify)"
+    ],
+    "skills": [
+      "Quantitative epidemiology",
+      "cross-country analysis"
+    ],
+    "outputs": "Frontiers in Public Health article",
+    "evidenceType": "Google Scholar screenshots",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://scholar.google.com/citations?user=j32BUrIAAAAJ&hl=fr"
+      }
+    ],
+    "verification": "Verify personal role and analysis tools",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P17",
+    "slug": "covid-19-case-reporting-in-africa",
+    "title": "COVID-19 case reporting in Africa",
+    "category": "Public health & One Health",
+    "domains": [
+      "public-health"
+    ],
+    "status": "Published (2024)",
+    "summary": "Investigate determinants of COVID-19 case reporting",
+    "contribution": "Co-authored public health research",
+    "methods": [
+      "Quantitative research methods (specific tools unverified)"
+    ],
+    "skills": [
+      "Reporting bias analysis",
+      "scientific synthesis"
+    ],
+    "outputs": "Frontiers in Public Health article",
+    "evidenceType": "Google Scholar screenshots",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://scholar.google.com/citations?user=j32BUrIAAAAJ&hl=fr"
+      }
+    ],
+    "verification": "Distinguish preprint from published record",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P18",
+    "slug": "african-research-production-and-inequalities",
+    "title": "African research production and inequalities",
+    "category": "Science of science",
+    "domains": [
+      "science",
+      "public-health"
+    ],
+    "status": "Multiple projects",
+    "summary": "Assess research funding, access, collaboration and inequalities",
+    "contribution": "Africa research notebooks, maps and manuscripts",
+    "methods": [
+      "Scopus",
+      "WoS",
+      "Python",
+      "VOSviewer (project-dependent)"
+    ],
+    "skills": [
+      "Research evaluation",
+      "equity mapping",
+      "science policy"
+    ],
+    "outputs": "Notebooks, presentations, manuscript drafts",
+    "evidenceType": "Drive folder + CV",
+    "priority": "High",
+    "links": [],
+    "verification": "Break into distinct studies after reviewing files",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P19",
+    "slug": "marburg-virus-bibliometrics-and-gender",
+    "title": "Marburg virus bibliometrics and gender",
+    "category": "Science of science",
+    "domains": [
+      "science",
+      "public-health"
+    ],
+    "status": "Public notebooks",
+    "summary": "Map Marburg research and gender-related patterns",
+    "contribution": "Notebooks identified",
+    "methods": [
+      "Jupyter",
+      "bibliometric data (details unverified)"
+    ],
+    "skills": [
+      "Research mapping",
+      "gender analysis (to verify)"
+    ],
+    "outputs": "Two public repositories",
+    "evidenceType": "GitHub screenshots",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/Marburg-virus-research"
+      }
+    ],
+    "verification": "Review methods and final findings",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P20",
+    "slug": "gut-microbiota-and-cancer-immunotherapy",
+    "title": "Gut microbiota and cancer immunotherapy",
+    "category": "Biomedical science",
+    "domains": [
+      "biomedical"
+    ],
+    "status": "Published collaborative studies",
+    "summary": "Study microbiota and immune response in cancer",
+    "contribution": "Collaborative research contribution; exact role to verify",
+    "methods": [
+      "Experimental microbiology",
+      "culturomics (project-specific tools to verify)"
+    ],
+    "skills": [
+      "Biomedical interpretation",
+      "interdisciplinary research"
+    ],
+    "outputs": "Science (2023) and Cancer Discovery (2022) co-authored articles",
+    "evidenceType": "Google Scholar screenshots",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://scholar.google.com/citations?user=j32BUrIAAAAJ&hl=fr"
+      }
+    ],
+    "verification": "Describe exact contribution without implying leadership",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P21",
+    "slug": "bacterial-discovery-and-taxonogenomics",
+    "title": "Bacterial discovery and taxonogenomics",
+    "category": "Biomedical science",
+    "domains": [
+      "biomedical"
+    ],
+    "status": "Published research",
+    "summary": "Isolate and describe bacterial species",
+    "contribution": "Isolation, characterization and scientific reporting",
+    "methods": [
+      "Culturomics",
+      "taxonogenomics",
+      "microbial culture"
+    ],
+    "skills": [
+      "Microbial discovery",
+      "phenotypic characterization",
+      "research writing"
+    ],
+    "outputs": "Multiple bacterial species publications",
+    "evidenceType": "Google Scholar screenshots",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://scholar.google.com/citations?user=j32BUrIAAAAJ&hl=fr"
+      }
+    ],
+    "verification": "Review publication notices before showcasing",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P22",
+    "slug": "openalex-data-enricher",
+    "title": "OpenAlex Data Enricher",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repository",
+    "summary": "Enrich scholarly records with OpenAlex metadata",
+    "contribution": "Python software and notebook versions identified",
+    "methods": [
+      "Python",
+      "OpenAlex API",
+      "Jupyter"
+    ],
+    "skills": [
+      "Metadata enrichment",
+      "automation",
+      "API development"
+    ],
+    "outputs": "OpenAlexDataEnricher and notebook repositories",
+    "evidenceType": "GitHub screenshots",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/OpenAlexDataEnricher"
+      }
+    ],
+    "verification": "Add sample I/O and installation instructions",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P23",
+    "slug": "publication-fetcher",
+    "title": "Publication Fetcher",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repositories",
+    "summary": "Retrieve scientific publication metadata",
+    "contribution": "Multiple publication fetcher repositories identified",
+    "methods": [
+      "Python",
+      "scholarly APIs (specific APIs to verify)"
+    ],
+    "skills": [
+      "Research automation",
+      "data acquisition"
+    ],
+    "outputs": "publicationfetcher; publication-fetcher; publications_fetch",
+    "evidenceType": "GitHub screenshots",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/publicationfetcher"
+      }
+    ],
+    "verification": "Consolidate versions and document differences",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P24",
+    "slug": "immune-checkpoint-patent-intelligence-dashboard",
+    "title": "Immune-checkpoint patent intelligence dashboard",
+    "category": "Patent & technology intelligence",
+    "domains": [
+      "patents",
+      "data"
+    ],
+    "status": "Public repositories",
+    "summary": "Explore immune-checkpoint therapy patent landscapes",
+    "contribution": "Dashboard and analysis code identified",
+    "methods": [
+      "Python",
+      "dashboard framework (to verify)"
+    ],
+    "skills": [
+      "Competitive intelligence",
+      "interactive visualization",
+      "patent mapping"
+    ],
+    "outputs": "Several dashboard repositories and application pages",
+    "evidenceType": "GitHub screenshots + prior review",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/immune-checkpoint-therapy-patent-analysis-dashboard"
+      }
+    ],
+    "verification": "Choose canonical repository and verify functionality",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P25",
+    "slug": "biomedical-ner-tf-idf-and-topic-modelling-tools",
+    "title": "Biomedical NER, TF-IDF and topic-modelling tools",
+    "category": "Applied AI & NLP",
+    "domains": [
+      "ai",
+      "data"
+    ],
+    "status": "Public notebooks",
+    "summary": "Extract entities, terms and themes from biomedical/scientific text",
+    "contribution": "Method-focused notebooks and analysis scripts",
+    "methods": [
+      "Python",
+      "NER",
+      "TF-IDF",
+      "LDA",
+      "Jupyter"
+    ],
+    "skills": [
+      "Text mining",
+      "keyword extraction",
+      "topic modelling"
+    ],
+    "outputs": "NER, TF-IDF, LDA and biomedical-mining repositories",
+    "evidenceType": "GitHub screenshots",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/topic-modeling-lda"
+      }
+    ],
+    "verification": "Separate original implementations from tutorials/forks",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P26",
+    "slug": "scientific-network-analysis-and-patent-preparation",
+    "title": "Scientific network analysis and patent preparation",
+    "category": "Science of science",
+    "domains": [
+      "science",
+      "patents"
+    ],
+    "status": "Public notebooks",
+    "summary": "Prepare bibliometric and patent data for networks and VOSviewer",
+    "contribution": "Country extraction, Lens preparation and network scripts",
+    "methods": [
+      "Python",
+      "Lens.org",
+      "VOSviewer",
+      "network analysis"
+    ],
+    "skills": [
+      "Data transformation",
+      "network mapping",
+      "data cleaning"
+    ],
+    "outputs": "Public methodological notebooks",
+    "evidenceType": "GitHub screenshots",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/social-network-analysis"
+      }
+    ],
+    "verification": "Review code and avoid duplicate case studies",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P27",
+    "slug": "postgresql-data-transfer-utility",
+    "title": "PostgreSQL data transfer utility",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Public repository",
+    "summary": "Move research data into PostgreSQL",
+    "contribution": "Python utility repository identified",
+    "methods": [
+      "Python",
+      "PostgreSQL"
+    ],
+    "skills": [
+      "Database loading",
+      "ETL"
+    ],
+    "outputs": "Data-Transfer-to-PostgreSQL repository",
+    "evidenceType": "GitHub screenshot",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/Data-Transfer-to-PostgreSQL"
+      }
+    ],
+    "verification": "Test, document input and output",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P28",
+    "slug": "biotech-sosci-research-pipelines",
+    "title": "Biotech / sosci research pipelines",
+    "category": "Scientific data & software",
+    "domains": [
+      "data",
+      "ai"
+    ],
+    "status": "Ongoing; public/private components",
+    "summary": "Develop reusable scientific analytics pipelines",
+    "contribution": "Python, notebooks, database and BERTopic pipeline work",
+    "methods": [
+      "Python",
+      "DuckDB",
+      "BERTopic",
+      "cuML",
+      "UMAP",
+      "HDBSCAN",
+      "embeddings"
+    ],
+    "skills": [
+      "Pipeline architecture",
+      "multilingual NLP",
+      "GPU workflow"
+    ],
+    "outputs": "biotech repository and research pipeline scripts",
+    "evidenceType": "Prior code discussions + GitHub",
+    "priority": "High",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/cognosx/biotech"
+      }
+    ],
+    "verification": "Check data licensing and reproducibility",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P29",
+    "slug": "research-intelligence-dashboards-and-web-portfolio",
+    "title": "Research intelligence dashboards and web portfolio",
+    "category": "Scientific data & software",
+    "domains": [
+      "data"
+    ],
+    "status": "Prototypes",
+    "summary": "Publish analyses and project information via interactive apps",
+    "contribution": "Django portfolio and dashboard prototypes",
+    "methods": [
+      "Python",
+      "Django",
+      "Streamlit",
+      "GitHub"
+    ],
+    "skills": [
+      "Web development",
+      "UX",
+      "research communication"
+    ],
+    "outputs": "my-portfolio repository; app prototypes",
+    "evidenceType": "GitHub repository",
+    "priority": "Medium",
+    "links": [
+      {
+        "label": "Evidence / project link",
+        "url": "https://github.com/descartesmbogning/my-portfolio"
+      }
+    ],
+    "verification": "Review deployed status and ownership",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P30",
+    "slug": "cognosx-field-intelligence-initiative",
+    "title": "CognosX field intelligence initiative",
+    "category": "Patent & technology intelligence",
+    "domains": [
+      "patents",
+      "science",
+      "data"
+    ],
+    "status": "Business development",
+    "summary": "Offer scientific, patent and technology intelligence products/services",
+    "contribution": "Branding, research workflows, service concept and prototypes",
+    "methods": [
+      "Python",
+      "scientific APIs",
+      "NLP",
+      "visualization",
+      "patent data"
+    ],
+    "skills": [
+      "Consulting design",
+      "stakeholder communication",
+      "product strategy"
+    ],
+    "outputs": "Brand assets, proposals, pipelines, project archive",
+    "evidenceType": "Drive + private GitHub repository",
+    "priority": "High",
+    "links": [],
+    "verification": "Do not imply paying clients or verified revenues",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P31",
+    "slug": "research-meets-policy-communication",
+    "title": "Research meets policy communication",
+    "category": "Science of science",
+    "domains": [
+      "science",
+      "public-health"
+    ],
+    "status": "Training completed",
+    "summary": "Explain evidence and preprints for decision makers",
+    "contribution": "Research policy course and public-facing message development",
+    "methods": [
+      "Research synthesis",
+      "presentation",
+      "Canva (discussed)"
+    ],
+    "skills": [
+      "Policy communication",
+      "stakeholder targeting"
+    ],
+    "outputs": "Course certificate; one-page policy communication drafts",
+    "evidenceType": "Prior course discussion",
+    "priority": "Medium",
+    "links": [],
+    "verification": "Separate training outputs from peer-reviewed publications",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  },
+  {
+    "id": "P32",
+    "slug": "who-one-health-ai-hubs-mapping",
+    "title": "WHO / One Health AI hubs mapping",
+    "category": "Public health & One Health",
+    "domains": [
+      "public-health",
+      "science"
+    ],
+    "status": "Research contribution",
+    "summary": "Map One Health AI hubs and institutional capacity",
+    "contribution": "Institution mapping and intelligence gathering",
+    "methods": [
+      "Desk research",
+      "institutional datasets"
+    ],
+    "skills": [
+      "Institutional landscape analysis",
+      "research intelligence"
+    ],
+    "outputs": "List/map of research hubs and institutions",
+    "evidenceType": "Prior project discussions",
+    "priority": "Low",
+    "links": [],
+    "verification": "Verify deliverable and project ownership",
+    "curation": "Working inventory: project-specific outputs and authorship subject to verification"
+  }
 ]

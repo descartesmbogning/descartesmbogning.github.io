@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Scientific data engineering",
+    "items": [
+      "Python",
+      "SQL",
+      "DuckDB",
+      "PostgreSQL",
+      "Parquet",
+      "DOI normalization",
+      "OpenAlex",
+      "Crossref",
+      "DataCite"
+    ]
+  },
+  {
+    "name": "Science of science",
+    "items": [
+      "Bibliometrics",
+      "Scientometrics",
+      "Research equity",
+      "Funding analysis",
+      "Open access",
+      "Social network analysis",
+      "VOSviewer"
+    ]
+  },
+  {
+    "name": "NLP & applied AI",
+    "items": [
+      "TF-IDF",
+      "LDA",
+      "BERTopic",
+      "spaCy",
+      "LLM screening",
+      "Multi-label classification",
+      "Data quality checks"
+    ]
+  },
+  {
+    "name": "Biomedical & public health",
+    "items": [
+      "Culturomics",
+      "Taxonogenomics",
+      "Microbial discovery",
+      "Evidence synthesis",
+      "Epidemiology",
+      "One Health"
+    ]
+  },
+  {
+    "name": "Research communication & products",
+    "items": [
+      "Scientific writing",
+      "Knowledge mobilization",
+      "Interactive dashboards",
+      "Streamlit",
+      "Research policy",
+      "Patent landscapes"
+    ]
+  }
+]
