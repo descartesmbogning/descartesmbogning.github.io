@@ -4,7 +4,7 @@
     "title": "A microbiota-modulated checkpoint directs immunosuppressive intestinal T cells into cancers",
     "year": "2023",
     "venue": "Science",
-    "domain": "Biomedical science", "Collaborative biomedical research",
+    "domain": "Biomedical science",# "Collaborative biomedical research",
     "status": "Published article",
     "url": "",
     "note": "Bibliographic record visible in supplied Google Scholar screenshots; reconcile DOI, authorship and notices before final release."
