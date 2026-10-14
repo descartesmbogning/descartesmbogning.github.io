@@ -1,0 +1,8 @@
+---
+import projects from '../../data/projects.json';
+import profile from '../../data/profile.json';
+export function getStaticPaths(){return projects.map(p=>({params:{slug:p.slug},props:{project:p}}))}
+const {project:p}=Astro.props;
+const base=import.meta.env.BASE_URL;
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{p.title} — {profile.name}</title><style>body{margin:0;font-family:system-ui,sans-serif;background:#f5f8fb;color:#183047;line-height:1.7}.wrap{max-width:850px;margin:auto;padding:30px 24px}header{background:#102b42;color:white}header a{color:white}main{padding-top:50px;padding-bottom:80px}h1{font-size:clamp(30px,5vw,50px);line-height:1.15}h2{margin-top:36px}.tag{display:inline-block;background:#dbeef7;color:#174f71;border-radius:30px;padding:5px 12px;font-size:13px}.panel{background:white;border:1px solid #dce6ef;border-radius:14px;padding:24px;margin-top:22px}a{color:#136b9b}ul{padding-left:24px}li{margin-bottom:7px}</style></head><body><header><div class="wrap"><a href={base}>← All projects</a></div></header><main class="wrap"><span class="tag">{p.category}</span><p><strong>Status:</strong> {p.status}</p><h1>{p.title}</h1><p style="font-size:20px">{p.summary}</p><div class="panel"><h2>My contribution</h2><p>{p.role}</p><h2>Tools and methods</h2><ul>{p.methods.map(m=><li>{m}</li>)}</ul><h2>Outputs</h2><p>{p.outcome}</p>{p.links.length>0&&<><h2>Evidence and links</h2><ul>{p.links.map(l=><li><a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a></li>)}</ul></>}</div><p style="color:#627789;font-size:13px">Project descriptions are provisional where indicated and should be updated as evidence is verified.</p></main></body></html>
