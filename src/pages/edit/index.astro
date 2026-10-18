@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import profile from '../../data/profile.json';
+import projects from '../../data/projects.json';
+import publications from '../../data/publications.json';
+import experience from '../../data/experience.json';
+import qualifications from '../../data/qualifications.json';
+import certificates from '../../data/certificates.json';
+import skills from '../../data/skills.json';
+import talks from '../../data/talks.json';
+import domains from '../../data/domains.json';
+const files = { profile, projects, publications, experience, qualifications, certificates, skills, talks, domains };
+const names = { profile: 'Profile, headline, numbers and links', projects: 'Projects (tick "featured" 1–6 for the home page)', publications: 'Publications', experience: 'Experience and "Beyond research"', qualifications: 'Degrees', certificates: 'Certificates', skills: 'Skills with proof', talks: 'Talks', domains: 'Research areas' };
+---
+<Base title="Edit content" description="Edit the content files of this website." noindex={true}>
+  <section class="band"><div class="wrap"><div class="page-hero">
+    <span class="label">For the site owner</span><h1 style="font-size:clamp(30px,4.6vw,48px)">Edit content</h1>
+    <p>Pick a file, change the fields, then copy the result and paste it over the same file on GitHub. The site republishes itself in about a minute.</p>
+  </div></div></section>
+  <section class="section"><div class="wrap" style="display:flex;flex-direction:column;gap:16px;max-width:860px">
+    <label class="label" for="file">File</label>
+    <select id="file" class="search">{Object.keys(files).map((k) => <option value={k}>{names[k]} — {k}.json</option>)}</select>
+    <div id="form" style="display:flex;flex-direction:column;gap:12px"></div>
+    <div class="btns">
+      <button class="btn" type="button" id="copy">Copy updated file</button>
+      <a class="btn dark" id="gh" target="_blank" rel="noopener noreferrer" href="#">Open this file on GitHub ↗</a>
+      <button class="btn dark" type="button" id="reset">Undo my changes</button>
+    </div>
+    <p class="source">On GitHub: open the file, click the pencil icon, select all, paste, then "Commit changes". Changes stay in this browser until you reset them.</p>
+    <textarea id="out" hidden readonly class="search" style="min-height:160px;font:12px var(--mono)"></textarea>
+  </div></section>
+  <script type="application/json" id="data" set:html={JSON.stringify(files)}></script>
+</Base>
+<style is:global>
+  #form label{display:flex;flex-direction:column;gap:4px;font:500 12px var(--mono);color:var(--muted)}
+  #form input[type=text],#form textarea{font:15px/1.45 var(--body);color:var(--ink);background:var(--surface);border:1.5px solid var(--rule);border-radius:8px;padding:8px 10px;width:100%}
+  #form textarea{min-height:64px;resize:vertical}
+  #form fieldset{border:1px solid var(--rule);border-radius:10px;padding:12px;margin:0;display:flex;flex-direction:column;gap:12px;min-width:0}
+  #form legend{font:600 13px var(--body);padding:0 6px}
+  #form details{border:1px solid var(--rule);border-radius:10px;background:var(--alt)}
+  #form summary{cursor:pointer;padding:10px 12px;font-weight:600}
+  #form details>div{padding:0 12px 12px;display:flex;flex-direction:column;gap:12px}
+  #form .row{display:flex;gap:6px;flex-wrap:wrap}
+  #form .row button,#form .add{font:600 12px var(--body);padding:6px 10px;border-radius:999px;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+  #form .check{flex-direction:row;align-items:center;gap:8px}
+</style>
+<script>
+  const KEY = 'site-edit-draft-v2';
+  const base = JSON.parse(document.getElementById('data').textContent);
+  let drafts = {}; try { drafts = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch {}
+  const sel = document.getElementById('file'), form = document.getElementById('form');
+  let cur = sel.value; const data = () => (drafts[cur] ??= structuredClone(base[cur]));
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(drafts)); } catch {} };
+  const human = (k) => String(k).replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase());
+  const titleOf = (o) => (o && typeof o === 'object' ? o.title || o.name || o.label || o.role || o.skill || o.group || o.value || 'Item' : String(o));
+  const blank = (t) => Array.isArray(t) ? [] : t && typeof t === 'object' ? Object.fromEntries(Object.keys(t).map((k) => [k, blank(t[k])])) : typeof t === 'number' ? 0 : typeof t === 'boolean' ? false : '';
+  const get = (path) => path.reduce((o, k) => o[k], drafts);
+  const set = (path, v) => { get(path.slice(0, -1))[path.at(-1)] = v; save(); };
+  function field(path, val, key) {
+    if (Array.isArray(val)) {
+      if (!val.length || typeof val[0] !== 'object') { const l = document.createElement('label'); l.textContent = human(key) + ' (one per line)'; const t = document.createElement('textarea'); t.value = val.join('\n'); t.oninput = () => set(path, t.value.split('\n').map((s) => s.trim()).filter(Boolean)); l.append(t); return l; }
+      const fs = document.createElement('fieldset'); const lg = document.createElement('legend'); lg.textContent = human(key); fs.append(lg);
+      val.forEach((item, i) => {
+        const d = document.createElement('details'); const s = document.createElement('summary'); s.textContent = titleOf(item); d.append(s);
+        const inner = document.createElement('div'); const row = document.createElement('div'); row.className = 'row';
+        [['Move up', -1], ['Move down', 1]].forEach(([lab, dir]) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = lab; b.disabled = i + dir < 0 || i + dir >= val.length; b.onclick = () => { const a = get(path); [a[i], a[i + dir]] = [a[i + dir], a[i]]; save(); build(); }; row.append(b); });
+        const del = document.createElement('button'); del.type = 'button'; del.textContent = 'Remove'; del.onclick = () => { if (del.dataset.a) { get(path).splice(i, 1); save(); build(); } else { del.dataset.a = 1; del.textContent = 'Click again to remove'; } }; row.append(del);
+        inner.append(row); for (const k in item) inner.append(field(path.concat(i, k), item[k], k));
+        inner.addEventListener('input', () => { s.textContent = titleOf(get(path)[i]); }); d.append(inner); fs.append(d);
+      });
+      const add = document.createElement('button'); add.type = 'button'; add.className = 'add'; add.textContent = 'Add item'; add.onclick = () => { const a = get(path); a.push(blank(a[0] || { title: '' })); save(); build(true); }; fs.append(add);
+      return fs;
+    }
+    if (val && typeof val === 'object') { const fs = document.createElement('fieldset'); const lg = document.createElement('legend'); lg.textContent = human(key); fs.append(lg); for (const k in val) fs.append(field(path.concat(k), val[k], k)); return fs; }
+    if (typeof val === 'boolean') { const l = document.createElement('label'); l.className = 'check'; const c = document.createElement('input'); c.type = 'checkbox'; c.checked = val; c.onchange = () => set(path, c.checked); l.append(c, human(key)); return l; }
+    const l = document.createElement('label'); l.textContent = human(key);
+    const long = String(val ?? '').length > 70 || /summary|problem|approach|result|detail|intro|contribution|about/i.test(key);
+    const inp = document.createElement(long ? 'textarea' : 'input'); if (!long) inp.type = 'text'; inp.value = val ?? '';
+    inp.oninput = () => set(path, typeof val === 'number' ? Number(inp.value) : inp.value); l.append(inp); return l;
+  }
+  function build(openLast) {
+    form.innerHTML = ''; data(); form.append(field([cur], drafts[cur], cur));
+    if (openLast) { const all = form.querySelectorAll('details'); if (all.length) all[all.length - 1].open = true; }
+    document.getElementById('gh').href = `https://github.com/descartesmbogning/descartesmbogning.github.io/edit/main/src/data/${cur}.json`;
+  }
+  sel.onchange = () => { cur = sel.value; build(); };
+  document.getElementById('copy').onclick = async () => {
+    const txt = JSON.stringify(data(), null, 2) + '\n';
+    try { await navigator.clipboard.writeText(txt); document.getElementById('copy').textContent = 'Copied – now paste it on GitHub'; }
+    catch { const o = document.getElementById('out'); o.hidden = false; o.value = txt; o.select(); }
+  };
+  const r = document.getElementById('reset');
+  r.onclick = () => { if (!r.dataset.a) { r.dataset.a = 1; r.textContent = 'Click again to undo'; return; } delete drafts[cur]; save(); r.dataset.a = ''; r.textContent = 'Undo my changes'; build(); };
+  build();
+</script>

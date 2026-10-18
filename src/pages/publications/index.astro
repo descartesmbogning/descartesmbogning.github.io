@@ -1,5 +1,45 @@
 ---
-import Base from '../../layouts/Base.astro';import RecordSearch from '../../components/RecordSearch.astro';import pubs from '../../data/publications.json';
-const filters=[...new Set(pubs.map(p=>p.domain))];
+import Base from '../../layouts/Base.astro';
+import Filter from '../../components/Filter.astro';
+import pubs from '../../data/publications.json';
+import talks from '../../data/talks.json';
+import profile from '../../data/profile.json';
+const types = [...new Set(pubs.map((p) => p.type))];
+const groups = [
+  { key: 'type', label: 'Type', options: types.map((t) => ({ value: t, label: t })) },
+  { key: 'role', label: 'Role', options: [{ value: 'first', label: 'First author' }] },
+];
+const first = pubs.filter((p) => p.firstAuthor).length;
 ---
-<Base title="Publications"><div class="page-hero"><div class="container"><p class="eyebrow on-dark">Scholarly outputs</p><h1>Publication archive</h1><p>An initial indexed bibliography covering biomedical discovery, public health and science of science, and patent intelligence. The full Scholar bibliography remains to be reconciled.</p></div></div><section class="section container"><div class="notice" style="margin-bottom:25px">This is not the complete publication list. Entries requiring notice or correction are explicitly identified. Citation counts are intentionally omitted until the full profile can be reconciled.</div><RecordSearch kind="publication records" placeholder="Search publication title, journal, year or topic…" filters={filters}><div class="record-grid">{pubs.map(p=><article class="record" data-record data-categories={p.domain} data-search={`${p.title} ${p.venue} ${p.year} ${p.status} ${p.domain}`}><span class="status">{p.status}</span><h3>{p.title}</h3><p>{p.venue} · {p.year}</p><div><span class="pill">{p.domain}</span></div>{p.url&&<p><a class="arrow" href={p.url} rel="noopener noreferrer">Publication ↗</a></p>}</article>)}</div></RecordSearch><p class="source" style="margin-top:25px">Metadata derived from supplied Google Scholar screenshots. DOI and author-role checks are continuing. For the full changing record, consult <a href="https://scholar.google.com/citations?user=j32BUrIAAAAJ&hl=fr">Google Scholar</a>.</p></section></Base>
+<Base title="Publications" current="/publications/" description="Peer-reviewed articles, preprints and thesis by Maxime Descartes Mbogning Fonkou.">
+  <section class="band dots"><div class="wrap"><div class="page-hero">
+    <span class="label">{pubs.length} works · {first} as first author</span>
+    <h1>Publications</h1>
+    <p>Peer-reviewed articles, preprints and my doctoral thesis, newest first. For live citation counts see <a href={profile.links.find((l) => l.label === 'Google Scholar')?.url}>Google Scholar</a> or <a href={profile.metricsSourceUrl}>OpenAlex</a>.</p>
+  </div></div></section>
+  <section class="section"><div class="wrap">
+    <p class="notice" style="margin-bottom:22px">Six papers from my doctoral period at IHU Méditerranée Infection carry publisher notices (five expressions of concern and one retraction) issued as part of institution-wide reviews. They are labelled below.</p>
+    <Filter groups={groups} placeholder="Search title, journal or year" noun="works" />
+    <ol class="pubs">
+      {pubs.map((p) => (
+        <li data-item data-type={p.type} data-role={p.firstAuthor ? 'first' : ''} data-text={`${p.title} ${p.venue} ${p.year} ${p.authors}`.toLowerCase()}>
+          <span class="yr">{p.year}</span>
+          <div>
+            <div class="t">{p.title}</div>
+            <div class="a">{p.authors}</div>
+            <div class="v"><i>{p.venue}</i></div>
+            <div class="meta">
+              <span class="badge">{p.type}</span>
+              {p.firstAuthor && <span class="badge first">First author</span>}
+              {p.notice && <span class="badge notice">{p.notice}</span>}
+              <a href={p.url} target="_blank" rel="noopener noreferrer">{p.linkLabel} ↗</a>
+            </div>
+          </div>
+        </li>))}
+    </ol>
+  </div></section>
+  <section class="section alt"><div class="wrap">
+    <div class="sec-head"><h2>Talks</h2></div>
+    <ol class="pubs">{talks.talks.map((t) => <li><span class="yr">{t.year}</span><div><div class="t">{t.title}</div><div class="v">{t.event}</div></div></li>)}</ol>
+  </div></section>
+</Base>

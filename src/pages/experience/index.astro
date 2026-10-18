@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import exp from '../../data/experience.json';
+import quals from '../../data/qualifications.json';
+import certs from '../../data/certificates.json';
+const cats = [...new Set(certs.map((c) => c.category))];
+---
+<Base title="Experience & credentials" current="/experience/" description="Career, degrees and certificates of Maxime Descartes Mbogning Fonkou.">
+  <section class="band dots"><div class="wrap"><div class="page-hero">
+    <span class="label">Cameroon · France · Canada</span>
+    <h1>Experience &amp; credentials</h1>
+    <p>Ten years of research and analysis, front-line work that built transferable skills, and the degrees and courses behind them.</p>
+  </div></div></section>
+  <section class="section"><div class="wrap">
+    <div class="sec-head"><h2>Career</h2></div>
+    <ol class="timeline">{exp.jobs.map((j, i) => <li><div class="when">{i === 0 ? <mark>{j.period}</mark> : j.period}</div><div><div class="what">{j.role}</div><div class="where">{j.organisation} · {j.place}</div><p>{j.summary}</p></div></li>)}</ol>
+  </div></section>
+  <section class="section alt"><div class="wrap">
+    <div class="sec-head"><h2>Beyond research</h2></div>
+    <p class="lede" style="margin-bottom:18px">{exp.beyond.intro}</p>
+    <div class="beyond">{exp.beyond.items.map((b) => <div><b>{b.skill}</b><span>{b.where}</span></div>)}</div>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="sec-head"><h2>Degrees</h2></div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Year</th><th>Degree</th><th>Institution</th></tr></thead>
+      <tbody>{quals.map((q) => <tr><td class="yr">{q.year}</td><td><b>{q.url ? <a href={q.url} target="_blank" rel="noopener noreferrer">{q.title}</a> : q.title}</b><div class="source" style="margin-top:4px">{q.detail}</div></td><td>{q.institution}</td></tr>)}</tbody>
+    </table></div>
+  </div></section>
+  <section class="section alt"><div class="wrap">
+    <div class="sec-head"><h2>Certificates</h2><span class="count">{certs.length} courses and certificates</span></div>
+    {cats.map((c, i) => (
+      <details class="more-list" open={i < 2}>
+        <summary>{c} ({certs.filter((x) => x.category === c).length})</summary>
+        <div class="tablewrap"><table><tbody>
+          {certs.filter((x) => x.category === c).map((x) => <tr><td class="yr">{x.year}</td><td>{x.url ? <a href={x.url} target="_blank" rel="noopener noreferrer">{x.title} ↗</a> : x.title}</td><td>{x.issuer}</td></tr>)}
+        </tbody></table></div>
+      </details>))}
+  </div></section>
+</Base>

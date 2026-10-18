@@ -1,7 +1,46 @@
 ---
 import profile from '../data/profile.json';
 import '../styles/global.css';
-const {title,description=profile.intro}=Astro.props;
-const nav=[['/','Home'],['/research/','Research'],['/projects/','All projects'],['/publications/','Publications'],['/credentials/','Credentials'],['/methods/','Methods'],['/about/','About'],['/portfolio/','Portfolio']];
+const { title, description = profile.summary, current = '', noindex = false } = Astro.props;
+const site = 'https://descartesmbogning.github.io';
+const url = new URL(Astro.url.pathname, site).href;
+const pageTitle = title ? `${title} · ${profile.name}` : `${profile.name} · ${profile.headline}`;
+const nav = [['/', 'Home'], ['/projects/', 'Projects'], ['/publications/', 'Publications'], ['/experience/', 'Experience'], ['/about/', 'About']];
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#082b3b"/><title>{title ? `${title} · ${profile.name}` : `${profile.name} · Research archive`}</title></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="container nav-inner"><a class="brand" href="/">{profile.name}<small>Scientific contributions archive</small></a><nav class="nav-links" aria-label="Primary navigation">{nav.map(([url,label])=><a href={url}>{label}</a>)}</nav></div></header><main id="main"><slot/></main><footer class="footer"><div class="container footer-cols"><div><strong>{profile.name}</strong><p>Biomedical research · Science of science · Research intelligence</p><small>© {new Date().getFullYear()} · Built with Astro · Updated through GitHub</small></div><div class="linkline"><a href={profile.github} rel="noopener noreferrer">GitHub ↗</a><a href={profile.scholar} rel="noopener noreferrer">Google Scholar ↗</a><a href={profile.linkedin} rel="noopener noreferrer">LinkedIn ↗</a></div></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={url} />
+{noindex && <meta name="robots" content="noindex" />}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#0B0B0B" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={`${site}/og.png`} />
+<meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><b>{profile.name}</b><small>Founder, Cognos<i>X.</i></small></a>
+    <nav class="nav" aria-label="Main">
+      {nav.map(([href, label]) => <a href={href} aria-current={current === href ? 'page' : undefined}>{label}</a>)}
+    </nav>
+  </div>
+</header>
+<main id="main"><slot /></main>
+<footer class="footer">
+  <div class="wrap">
+    <div><b>{profile.name}</b><br />{profile.location} · {profile.languages}</div>
+    <div>{profile.links.map((l) => <><a href={l.url} rel="noopener noreferrer" target="_blank">{l.label}</a>{' · '}</>)}<a href="/edit/">Edit content</a></div>
+  </div>
+</footer>
+</body>
+</html>

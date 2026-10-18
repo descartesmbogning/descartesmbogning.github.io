@@ -4,14 +4,15 @@ Astro-powered, editable research archive for `https://descartesmbogning.github.i
 
 ## Contents
 
-- Homepage with the scientific journey and transparent record counts.
-- Six interconnected research domains, with dedicated pages.
-- Searchable **all-projects index** with 32 project areas and evidence notes.
-- Project details generated automatically for each record.
-- Publication catalogue (initial subset, pending complete reconciliation).
-- Academic qualifications separated from course certificates.
-- Searchable certification catalogue with 39 sourced entries.
-- Methods & skills, About, and contact links.
+One site in the CognosX palette (black, white, yellow) with five pages:
+
+- **Home** – headline, research numbers, six featured projects, experience, skills with proof, contact.
+- **Projects** – all projects, filterable by research area and status; one page per project.
+- **Publications** – articles, preprints and thesis, with publisher notices labelled.
+- **Experience** – career, "beyond research" skills, degrees and certificates.
+- **About** – story, methods and contact.
+
+Old addresses (`/portfolio/`, `/research/…`, `/methods/`, `/credentials/`) forward to the new pages.
 
 ## Run locally
 
@@ -24,21 +25,19 @@ npm run preview
 
 ## Update content without redesigning
 
-Edit the appropriate JSON file:
+Use **/edit/** on the live site: pick a file, edit the form, copy the result, then paste it over the file on GitHub (pencil icon, then "Commit changes"). Or edit the JSON directly:
 
 | Information | File |
 | --- | --- |
-| Name, headline, links, location | `src/data/profile.json` |
-| Every research or software project | `src/data/projects.json` |
-| Research domain labels and descriptions | `src/data/domains.json` |
-| Publications and status notices | `src/data/publications.json` |
-| Certificates and training | `src/data/certificates.json` |
-| Academic degrees and qualifications | `src/data/qualifications.json` |
-| Method and technical skill categories | `src/data/skills.json` |
-
-Each project requires a unique slug and uses `domains` ids from `domains.json`. The build automatically makes `/projects/SLUG/` pages and connects them across their research domains. For citations and project figures, extend the relevant JSON record with public `links`, then update the `src/pages/projects/[slug].astro` detail template.
-
-For source control, create a branch and pull request for future changes. The `.github/workflows/deploy.yml` workflow publishes the `main` branch automatically after a successful build.
+| Name, headline, summary, numbers, links, email, About text | `src/data/profile.json` |
+| Projects (set `featured` 1–6 to show on Home; `status` is Published, In preparation, Software & data or Ongoing work) | `src/data/projects.json` |
+| Research areas used as filters | `src/data/domains.json` |
+| Publications | `src/data/publications.json` |
+| Career and "Beyond research" | `src/data/experience.json` |
+| Degrees | `src/data/qualifications.json` |
+| Certificates | `src/data/certificates.json` |
+| Skills with proof | `src/data/skills.json` |
+| Talks | `src/data/talks.json` |
 
 ### Privacy / academic integrity
 

@@ -1,0 +1,89 @@
+{
+  "jobs": [
+    {
+      "period": "2024–present",
+      "role": "Founder and research-intelligence consultant",
+      "organisation": "CognosX Inc.",
+      "place": "Burnaby, BC",
+      "summary": "Publication, patent and funding analytics; dashboards and data tools; public writing on science data."
+    },
+    {
+      "period": "2025–2026",
+      "role": "Postdoctoral fellow, preprints and peer review",
+      "organisation": "ScholCommLab, Simon Fraser University",
+      "place": "Burnaby, BC",
+      "summary": "Global preprint dataset, preprint-server identification framework, open peer review."
+    },
+    {
+      "period": "2023–2024",
+      "role": "Postdoctoral visitor, bibliometrics and data analysis",
+      "organisation": "York University, Department of Mathematics and Statistics",
+      "place": "Toronto, ON",
+      "summary": "Phage-therapy patent landscape; dashboards; trained students in bibliometrics and systematic reviews."
+    },
+    {
+      "period": "2021–2023",
+      "role": "Postdoctoral researcher, Clinicobiome programme",
+      "organisation": "Gustave Roussy (INSERM U1015)",
+      "place": "Villejuif, France",
+      "summary": "Managed a bacterial biobank and microbiome data; co-author in Science (2023) and Cancer Discovery (2022)."
+    },
+    {
+      "period": "2018–2020",
+      "role": "Research and development scientist, culture media",
+      "organisation": "Culture Top / Eurobio Scientific (IHU spin-off)",
+      "place": "Marseille, France",
+      "summary": "Rapid culture media for hard-to-grow pathogens; stability testing for CE marking; patent watch."
+    },
+    {
+      "period": "2016–2018",
+      "role": "PhD researcher, human pathology and infectious diseases",
+      "organisation": "IHU Méditerranée Infection, Aix-Marseille Université",
+      "place": "Marseille, France",
+      "summary": "Culturomics and metagenomics of the respiratory microbiota; new-species descriptions."
+    },
+    {
+      "period": "2014–2015",
+      "role": "Field investigator, then supervisor of investigators",
+      "organisation": "National AIDS Control Committee & World Bank",
+      "place": "Cameroon",
+      "summary": "Programmatic mapping to inform HIV programme design."
+    },
+    {
+      "period": "2013–2015",
+      "role": "Teaching assistant and lecturer",
+      "organisation": "FMSB Université de Yaoundé I, Université Bengono Touré Geneviève, École des Métiers de la Santé, Université Évangélique du Cameroun",
+      "place": "Cameroon",
+      "summary": "Practical microbiology, laboratory techniques and research methodology."
+    }
+  ],
+  "beyond": {
+    "intro": "Front-line jobs taught me things a lab does not. Each line below is a skill employers screen for, and where I practised it.",
+    "items": [
+      {
+        "skill": "Client service under pressure",
+        "where": "Pre-board screening officer, GardaWorld, Toronto (2024–2025)"
+      },
+      {
+        "skill": "Person-centred care",
+        "where": "Personal support worker placement, Rekai Centre – Wellesley Central Place, Toronto (2025)"
+      },
+      {
+        "skill": "Safety & infection control",
+        "where": "WHMIS, First Aid/CPR C, GPA dementia care; hospital bio-cleaning, Elior (2018)"
+      },
+      {
+        "skill": "Teamwork in fast kitchens",
+        "where": "Kitchen team, Grand Hôtel Roi René, Aix-en-Provence (2017–2018)"
+      },
+      {
+        "skill": "Explaining technical things by phone",
+        "where": "Smart-meter appointment setting, Marseille (2019)"
+      },
+      {
+        "skill": "Community health organising",
+        "where": "Blood-donation drives, FECADOBES volunteer, Cameroon (2012–2016)"
+      }
+    ]
+  }
+}

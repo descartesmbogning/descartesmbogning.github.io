@@ -1,62 +1,118 @@
 [
   {
-    "name": "Scientific data engineering",
+    "group": "Research intelligence",
     "items": [
-      "Python",
-      "SQL",
-      "DuckDB",
-      "PostgreSQL",
-      "Parquet",
-      "DOI normalization",
-      "OpenAlex",
-      "Crossref",
-      "DataCite"
+      {
+        "name": "Bibliometrics & scientometrics",
+        "level": "Expert",
+        "proof": "COVID-19 Africa study; open-access study",
+        "url": "https://www.mdpi.com/1660-4601/18/14/7273"
+      },
+      {
+        "name": "Patent analytics",
+        "level": "Expert",
+        "proof": "Nature Biotechnology 2024",
+        "url": "https://www.nature.com/articles/s41587-024-02493-9"
+      },
+      {
+        "name": "Systematic & scoping reviews",
+        "level": "Advanced",
+        "proof": "Future Microbiology 2018",
+        "url": "https://doi.org/10.2217/fmb-2018-0181"
+      },
+      {
+        "name": "Technology watch",
+        "level": "Advanced",
+        "proof": "Master in scientific & technical information",
+        "url": ""
+      }
     ]
   },
   {
-    "name": "Science of science",
+    "group": "Data & code",
     "items": [
-      "Bibliometrics",
-      "Scientometrics",
-      "Research equity",
-      "Funding analysis",
-      "Open access",
-      "Social network analysis",
-      "VOSviewer"
+      {
+        "name": "Python (pandas, Jupyter)",
+        "level": "Advanced",
+        "proof": "phage-therapy-patents-analysis",
+        "url": "https://github.com/descartesmbogning/phage-therapy-patents-analysis"
+      },
+      {
+        "name": "Scholarly APIs (OpenAlex, Crossref, DataCite, Unpaywall)",
+        "level": "Expert",
+        "proof": "crossref-preprints-harvester",
+        "url": "https://github.com/descartesmbogning/crossref-preprints-harvester"
+      },
+      {
+        "name": "Dashboards (Dash, Plotly, Streamlit)",
+        "level": "Advanced",
+        "proof": "Preprint Servers Explorer",
+        "url": "https://github.com/descartesmbogning/Preprint-Servers-Explorer"
+      },
+      {
+        "name": "NLP & text mining (LDA, TF-IDF, NER)",
+        "level": "Working",
+        "proof": "topic-modeling-lda",
+        "url": "https://github.com/descartesmbogning/topic-modeling-lda"
+      },
+      {
+        "name": "SQL & PostgreSQL",
+        "level": "Working",
+        "proof": "Data-Transfer-to-PostgreSQL",
+        "url": "https://github.com/descartesmbogning/Data-Transfer-to-PostgreSQL"
+      },
+      {
+        "name": "R & statistics",
+        "level": "Working",
+        "proof": "CESU biostatistics; Johns Hopkins R Programming",
+        "url": ""
+      }
     ]
   },
   {
-    "name": "NLP & applied AI",
+    "group": "Life sciences",
     "items": [
-      "TF-IDF",
-      "LDA",
-      "BERTopic",
-      "spaCy",
-      "LLM screening",
-      "Multi-label classification",
-      "Data quality checks"
+      {
+        "name": "Microbiology & culturomics",
+        "level": "Expert",
+        "proof": "PhD thesis, about 20 new species",
+        "url": "https://theses.fr/2018AIXM0693"
+      },
+      {
+        "name": "Clinical laboratory testing",
+        "level": "Working",
+        "proof": "HIV, hepatitis and HPV studies in Cameroon",
+        "url": ""
+      },
+      {
+        "name": "Public-health field surveys",
+        "level": "Working",
+        "proof": "CNLS / World Bank mapping, 2014–2015",
+        "url": ""
+      }
     ]
   },
   {
-    "name": "Biomedical & public health",
+    "group": "Working with people",
     "items": [
-      "Culturomics",
-      "Taxonogenomics",
-      "Microbial discovery",
-      "Evidence synthesis",
-      "Epidemiology",
-      "One Health"
-    ]
-  },
-  {
-    "name": "Research communication & products",
-    "items": [
-      "Scientific writing",
-      "Knowledge mobilization",
-      "Interactive dashboards",
-      "Streamlit",
-      "Research policy",
-      "Patent landscapes"
+      {
+        "name": "Teaching & mentoring",
+        "level": "Advanced",
+        "proof": "Four institutions; AuthorAID mentor",
+        "url": ""
+      },
+      {
+        "name": "Scientific writing",
+        "level": "Expert",
+        "proof": "49 works, first author in Nature Biotechnology",
+        "url": "https://api.openalex.org/authors/A5023046200"
+      },
+      {
+        "name": "Bilingual communication",
+        "level": "Native FR / professional EN",
+        "proof": "Teaching, client service and research in both languages",
+        "url": ""
+      }
     ]
   }
 ]
