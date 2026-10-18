@@ -39,6 +39,10 @@ const first = pubs.filter((p) => p.firstAuthor).length;
     </ol>
   </div></section>
   <section class="section alt"><div class="wrap">
+    <div class="sec-head"><h2>Writing for a wider audience</h2></div>
+    <ol class="pubs">{(talks.writing || []).map((w) => <li><span class="yr">{w.year}</span><div><div class="t"><a href={w.url} target="_blank" rel="noopener noreferrer">{w.title} ↗</a></div><div class="v">LinkedIn article</div></div></li>)}</ol>
+  </div></section>
+  <section class="section"><div class="wrap">
     <div class="sec-head"><h2>Talks</h2></div>
     <ol class="pubs">{talks.talks.map((t) => <li><span class="yr">{t.year}</span><div><div class="t">{t.title}</div><div class="v">{t.event}</div></div></li>)}</ol>
   </div></section>
