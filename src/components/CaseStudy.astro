@@ -1,0 +1,16 @@
+---
+const { p } = Astro.props;
+---
+<article class="case">
+  <div class="top"><span class="label">{p.status}</span></div>
+  <div class="body">
+    <h3><a href={`/projects/${p.slug}/`}>{p.title}</a></h3>
+    <dl class="psr">
+      {p.problem && <><dt class="label">Problem</dt><dd>{p.problem}</dd></>}
+      {p.approach && <><dt class="label">Approach</dt><dd>{p.approach}</dd></>}
+      {p.result && <><dt class="label">Result</dt><dd>{p.result}</dd></>}
+    </dl>
+    <ul class="tags" aria-label="Methods">{p.methods.slice(0, 6).map((m) => <li>{m}</li>)}</ul>
+    <div class="links">{p.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}<a href={`/projects/${p.slug}/`}>Details →</a></div>
+  </div>
+</article>

@@ -1,0 +1,50 @@
+---
+// groups: [{ key: 'areas'|'status'|..., label, options: [{value,label}] }]
+const { groups = [], placeholder = 'Search…', noun = 'items' } = Astro.props;
+---
+<div class="toolbar" data-filter-root>
+  <input class="search" type="search" placeholder={placeholder} aria-label={placeholder} data-q />
+  {groups.map((g) => (
+    <div class="chip-row" role="group" aria-label={g.label} data-group={g.key}>
+      <span class="label">{g.label}</span>
+      <button type="button" class="chip" aria-pressed="true" data-v="">All</button>
+      {g.options.map((o) => <button type="button" class="chip" aria-pressed="false" data-v={o.value} id={g.key === 'areas' ? `area-${o.value}` : undefined}>{o.label}</button>)}
+    </div>
+  ))}
+  <p class="count" aria-live="polite"><span data-n></span> {noun} shown</p>
+</div>
+<script>
+  for (const root of document.querySelectorAll('[data-filter-root]')) {
+    const list = root.closest('section') || document;
+    const items = [...list.querySelectorAll('[data-item]')];
+    const state = {};
+    const q = root.querySelector('[data-q]');
+    const apply = () => {
+      const t = (q.value || '').trim().toLowerCase();
+      let n = 0;
+      for (const it of items) {
+        let ok = !t || it.dataset.text.includes(t);
+        for (const [k, v] of Object.entries(state)) {
+          if (!v) continue;
+          const have = (it.dataset[k] || '').split(k === 'areas' ? ' ' : '|');
+          if (!have.includes(v)) ok = false;
+        }
+        it.hidden = !ok; if (ok) n++;
+      }
+      root.querySelector('[data-n]').textContent = String(n);
+    };
+    for (const row of root.querySelectorAll('[data-group]')) {
+      const key = row.dataset.group;
+      state[key] = '';
+      for (const b of row.querySelectorAll('.chip')) b.addEventListener('click', () => {
+        state[key] = b.dataset.v;
+        row.querySelectorAll('.chip').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+        apply();
+      });
+    }
+    q.addEventListener('input', apply);
+    const h = location.hash.match(/^#area-([a-z-]+)$/);
+    if (h) { const b = root.querySelector(`[data-group="areas"] [data-v="${h[1]}"]`); if (b) b.click(); }
+    apply();
+  }
+</script>

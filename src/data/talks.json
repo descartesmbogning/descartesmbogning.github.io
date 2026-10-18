@@ -1,0 +1,19 @@
+{
+  "talks": [
+    {
+      "title": "Mapping the phage therapy innovation landscape: a big data and machine learning approach",
+      "event": "BRIC conference",
+      "year": "2024"
+    },
+    {
+      "title": "Culturomics and metagenomics to enhance the respiratory microbiota",
+      "event": "Journée Méditerranée Infection, Marseille",
+      "year": "2017"
+    },
+    {
+      "title": "À la recherche des bactéries du poumon (school outreach)",
+      "event": "Experimentarium, Marseille and Miramas",
+      "year": "2017"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /edit/
+Sitemap: https://descartesmbogning.github.io/sitemap-index.xml

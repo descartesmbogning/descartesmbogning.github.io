@@ -1,29 +1,37 @@
 [
   {
-    "title": "Doctorate (PhD)",
-    "field": "Microbiology / biomedical sciences",
+    "title": "PhD, Human Pathology – Infectious Diseases",
     "institution": "Aix-Marseille Université",
-    "year": "Confirm year on diploma",
-    "detail": "Doctoral work in culturomics, taxonogenomics and microbial discovery.",
-    "evidence": "Doctorate diploma located in selected Drive folders",
-    "publicDocument": false
+    "year": "2018",
+    "detail": "Thesis: exploration of the human respiratory microbiota (culturomics, metagenomics, taxonogenomics). Defended 22 November 2018. Assessed by WES as a Canadian earned doctorate.",
+    "url": "https://theses.fr/2018AIXM0693"
   },
   {
-    "title": "Master — Veille technologique et innovation",
-    "field": "Information et médiation scientifique et technique",
+    "title": "Master 2, Scientific and Technical Information – Technology Watch & Innovation",
     "institution": "Aix-Marseille Université",
-    "year": "2019–2020",
-    "detail": "Master in science and technology; pathway Veille technologique et innovation (VTI).",
-    "evidence": "Master completion attestation dated November 26, 2020",
-    "publicDocument": false
+    "year": "2020",
+    "detail": "Bibliometrics, text analysis and competitive intelligence; internship as bibliometric engineer.",
+    "url": ""
   },
   {
-    "title": "Other academic qualifications",
-    "field": "Biomedical and foundational studies",
-    "institution": "Various institutions",
-    "year": "To verify",
-    "detail": "Additional master, licence and baccalaureate documents found in selected Drive folders; confirm precise titles, institutions, dates before publishing.",
-    "evidence": "Drive diploma files",
-    "publicDocument": false
+    "title": "MSc Biomedical Sciences, Medical Bacteriology & Virology (Mention Bien)",
+    "institution": "Université de Yaoundé I, Faculty of Medicine and Biomedical Sciences",
+    "year": "2014",
+    "detail": "Thesis on high-risk HPV in women living with HIV; published in Health Sciences and Disease (2015).",
+    "url": "https://hsd-fmsb.org/index.php/hsd/article/view/524"
+  },
+  {
+    "title": "BSc Biomedical Sciences, Clinical Biology (Mention Bien)",
+    "institution": "Université de Yaoundé I, Faculty of Medicine and Biomedical Sciences",
+    "year": "2012",
+    "detail": "Clinical laboratory rotations in bacteriology, haematology, biochemistry and parasitology.",
+    "url": ""
+  },
+  {
+    "title": "CESU Biostatistics & Research Methodology",
+    "institution": "Aix-Marseille Université",
+    "year": "2017",
+    "detail": "University certificate in biostatistics and research methods for biology and medicine.",
+    "url": ""
   }
 ]

@@ -1,4 +1,36 @@
 ---
-import Base from '../../layouts/Base.astro';import profile from '../../data/profile.json';
+import Base from '../../layouts/Base.astro';
+import profile from '../../data/profile.json';
+import skills from '../../data/skills.json';
+import domains from '../../data/domains.json';
 ---
-<Base title="About"><div class="page-hero"><div class="container"><p class="eyebrow on-dark">Research identity</p><h1>From laboratory science to science-of-science intelligence</h1><p>{profile.intro}</p></div></div><section class="section container"><div class="sides"><div><p class="eyebrow">Approach</p><h2>Science, data and interpretation</h2><p>I began with experimental biomedical research: culturomics, bacterial characterization and scientific writing. This domain experience provides the foundation for my work on how scientific knowledge is produced, shared, connected and translated into decisions.</p><p>My research has expanded into bibliometrics, research equity, patent landscapes, scholarly metadata engineering and applied NLP/AI. These activities connect domain science to computational approaches for making complex evidence more accessible.</p><p>The archive preserves research contributions together with software outputs, training and documentation. Not every project is finished or published; transparency about evidence and research status is part of the design.</p><h3>Opportunities & collaboration</h3><p>Interested in multidisciplinary biomedical evidence, research analytics, scientific data science, technology intelligence, or knowledge mobilization? Reach out via LinkedIn or GitHub.</p><div class="linkline"><a href={profile.linkedin}>LinkedIn ↗</a><a href={profile.github}>GitHub ↗</a><a href={profile.scholar}>Google Scholar ↗</a></div></div><aside class="card"><p class="eyebrow">Explore the archive</p><p><a href="/research/">Research domains →</a></p><p><a href="/projects/">All projects →</a></p><p><a href="/publications/">Publications →</a></p><p><a href="/credentials/">Education & certificates →</a></p><p><a href="/methods/">Methods & technical skills →</a></p><p class="source">Location: {profile.location}</p></aside></div></section></Base>
+<Base title="About" current="/about/">
+  <section class="band dots"><div class="wrap"><div class="page-hero">
+    <span class="label">{profile.badge}</span>
+    <h1>About</h1>
+    <p>{profile.headline}. {profile.availability}.</p>
+  </div></div></section>
+  <section class="section"><div class="wrap about">
+    <div class="story">
+      {profile.about.map((t) => <p>{t}</p>)}
+      <h2 style="font-size:24px;margin-top:18px">Research areas</h2>
+      <ul class="tags">{domains.map((d) => <li><a href={`/projects/#area-${d.id}`}>{d.label}</a></li>)}</ul>
+      <h2 style="font-size:24px;margin-top:18px">Methods and tools</h2>
+      <div class="skills">{skills.map((g) => <div><h3>{g.group}</h3><ul>{g.items.map((i) => <li><span class="nm">{i.name}</span><span class="lv">{i.level}</span></li>)}</ul></div>)}</div>
+    </div>
+    <aside class="contact" id="contact">
+      <h2 style="font-size:26px">Contact</h2>
+      <p>{profile.location}</p>
+      <p>{profile.languages}</p>
+      <span class="email" id="email">{profile.email}</span>
+      <button class="copy" type="button" data-copy={profile.email}>Copy email address</button>
+      <div class="links">{profile.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div>
+    </aside>
+  </div></section>
+</Base>
+<script>
+  for (const b of document.querySelectorAll('[data-copy]')) b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
+    catch { const r = document.createRange(); r.selectNodeContents(document.getElementById('email')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Press Ctrl+C to copy'; }
+  });
+</script>

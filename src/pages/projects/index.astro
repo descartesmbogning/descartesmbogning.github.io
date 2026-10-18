@@ -1,4 +1,23 @@
 ---
-import Base from '../../layouts/Base.astro';import RecordSearch from '../../components/RecordSearch.astro';import projects from '../../data/projects.json';import domains from '../../data/domains.json';
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import Filter from '../../components/Filter.astro';
+import projects from '../../data/projects.json';
+import domains from '../../data/domains.json';
+const statuses = ['Published', 'In preparation', 'Software & data', 'Ongoing work'];
+const groups = [
+  { key: 'areas', label: 'Area', options: domains.map((d) => ({ value: d.id, label: d.label })) },
+  { key: 'status', label: 'Status', options: statuses.map((s) => ({ value: s, label: s })) },
+];
 ---
-<Base title="All projects"><div class="page-hero"><div class="container"><p class="eyebrow on-dark">Complete working project index</p><h1>All research & software projects</h1><p>{projects.length} inventoried project areas, grouped through six interconnected domains. Projects, prototypes and published work are labelled by status.</p></div></div><section class="section container"><RecordSearch kind="projects" placeholder="Search projects, tools, questions and outputs…" filters={domains.map(d=>d.label)}><div class="record-grid">{projects.map(p=><article class="record" data-record data-categories={p.domains.map(id=>domains.find(x=>x.id===id)?.label).join('|')} data-search={`${p.title} ${p.summary} ${p.status} ${p.methods.join(' ')} ${p.outputs} ${p.skills.join(' ')}`}><span class="status">{p.status}</span><h3><a href={`/projects/${p.slug}/`}>{p.title} ↗</a></h3><p>{p.summary}</p><div>{p.domains.map(id=><span class="pill">{domains.find(x=>x.id===id)?.label}</span>)}</div></article>)}</div></RecordSearch></section></Base>
+<Base title="Projects" current="/projects/" description="Research, data and software projects in bibliometrics, patent analytics, public health and microbiology.">
+  <section class="band dots"><div class="wrap"><div class="page-hero">
+    <span class="label">{projects.length} projects · 6 research areas</span>
+    <h1>Projects</h1>
+    <p>Research studies, datasets and software tools, from microbial discovery to science-of-science and patent intelligence. The strongest work is listed first.</p>
+  </div></div></section>
+  <section class="section"><div class="wrap">
+    <Filter groups={groups} placeholder="Search projects, methods or tools" noun="projects" />
+    <div class="cards">{projects.map((p) => <ProjectCard p={p} domains={domains} />)}</div>
+  </div></section>
+</Base>

@@ -1,13 +1,80 @@
 ---
 import Base from '../layouts/Base.astro';
+import CaseStudy from '../components/CaseStudy.astro';
 import profile from '../data/profile.json';
 import projects from '../data/projects.json';
-import domains from '../data/domains.json';
-import certs from '../data/certificates.json';
-import publications from '../data/publications.json';
+import exp from '../data/experience.json';
+import skills from '../data/skills.json';
+const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - b.featured);
 ---
-<Base><div class="hero"><div class="container hero-inner"><div class="eyebrow on-dark">The scientific contributions archive</div><h1>From <span class="accent">biomedical discovery</span> to understanding science itself.</h1><p>{profile.intro}</p><div class="actions"><a class="btn" href="/research/">Explore research domains ↗</a><a class="btn outline" href="/projects/">Browse all contributions</a><a class="btn outline" href="/credentials/">Degrees & certificates</a></div><div class="stats"><div class="stat"><strong>{domains.length}</strong><span>Interconnected research domains</span></div><div class="stat"><strong>{projects.length}</strong><span>Documented project areas</span></div><div class="stat"><strong>{publications.length}</strong><span>Initial indexed publications*</span></div><div class="stat"><strong>{certs.length}</strong><span>Training & certificate entries</span></div></div><p class="mini" style="margin-top:15px;color:#9fcad0">*The publication catalogue is a growing, source-checked subset; it is not yet a complete bibliography.</p></div></div>
-<section class="section container"><p class="eyebrow">An interconnected body of work</p><h2>Explore the research domains</h2><p class="lede">Scientific contributions grouped by subject, not by a small selection of showcase projects. Many projects connect several domains.</p><div class="grid">{domains.map((d,i)=><a class="card" href={`/research/${d.id}/`}><span class="num">0{i+1}</span><h3>{d.label} →</h3><p>{d.desc}</p><span class="arrow">Explore {projects.filter(p=>p.domains.includes(d.id)).length} related project areas ↗</span></a>)}</div></section>
-<section class="section section-tint"><div class="container"><p class="eyebrow">The research journey</p><h2>From the laboratory to data-driven intelligence</h2><div class="timeline"><div class="timeline-item"><h3>Experimental biomedical research</h3><p>Culturomics, bacterial discovery, microbiome studies, and collaborative cancer immunotherapy research.</p></div><div class="timeline-item"><h3>Bibliometrics, epidemiology & science of science</h3><p>Research patterns, inequalities, funding, collaboration, open access and African public health research.</p></div><div class="timeline-item"><h3>Technology & patent intelligence</h3><p>Patent landscaping, topic models, network analysis, innovation actors and emerging technology landscapes.</p></div><div class="timeline-item"><h3>Research metadata engineering & applied AI</h3><p>Cross-source data integration, preprint metadata pipelines, research applications and LLM-assisted evidence workflows.</p></div></div><a class="btn teal" href="/about/">Read the research story →</a></div></section>
-<section class="section container"><div class="sides"><div><p class="eyebrow">Explore every contribution</p><h2>Research, tools, outputs and evidence — together.</h2><p class="lede">Search a complete working inventory, then follow connections to peer-reviewed publications, GitHub repositories, datasets, software applications and training.</p><div class="actions"><a class="btn teal" href="/projects/">All {projects.length} project areas ↗</a><a class="btn teal" href="/publications/">Publication catalogue ↗</a></div></div><div class="card"><p class="eyebrow">Professional development</p><h3>Degrees, certifications and continuing education</h3><p>Academic diplomas are distinguished from specialized and short-course certificates. Files remain private unless independently approved for publication.</p><a class="arrow" href="/credentials/">Explore the credentials archive ↗</a></div></div></section>
-<section class="section section-tint"><div class="container"><p class="eyebrow">Collaborate & connect</p><h2>Working across disciplines</h2><p class="lede">For scientific collaborations, data science and research intelligence opportunities, technology landscaping, and evidence-oriented research partnerships.</p><div class="actions"><a class="btn teal" href={profile.linkedin}>Connect on LinkedIn ↗</a><a class="btn teal" href={profile.github}>Explore GitHub ↗</a><a class="btn teal" href={profile.scholar}>Google Scholar ↗</a></div></div></section></Base>
+<Base current="/">
+  <section class="band dots">
+    <div class="wrap">
+      <div class="hero">
+        <span class="label">{profile.location}</span>
+        <h1>{profile.name}</h1>
+        <div class="headline">{profile.headline}</div>
+        <p class="lead">{profile.summary}</p>
+        <div class="facts"><span>{profile.languages}</span><span>{profile.availability}</span></div>
+        <div class="btns">
+          <a class="btn" href="#contact">Contact me</a>
+          <a class="btn ghost" href="/projects/">See all projects</a>
+          <a class="btn ghost" href="/publications/">Publications</a>
+        </div>
+      </div>
+      <div class="metrics">{profile.metrics.map((m) => <div class="metric"><b>{m.value}</b><span>{m.label}</span></div>)}</div>
+      <p class="source" style="padding-bottom:28px;position:relative;z-index:1">Counts from the <a href={profile.metricsSourceUrl}>{profile.metricsSource}</a>.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head"><h2>Selected work</h2><a class="more" href="/projects/">All {projects.length} projects →</a></div>
+      <div class="cases">{featured.map((p) => <CaseStudy p={p} />)}</div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head"><h2>Experience</h2><a class="more" href="/experience/">Full experience and credentials →</a></div>
+      <ol class="timeline">
+        {exp.jobs.slice(0, 5).map((j, i) => <li><div class="when">{i === 0 ? <mark>{j.period}</mark> : j.period}</div><div><div class="what">{j.role}</div><div class="where">{j.organisation} · {j.place}</div><p>{j.summary}</p></div></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head"><h2>Skills, with proof</h2></div>
+      <div class="skills">
+        {skills.map((g) => <div><h3>{g.group}</h3><ul>{g.items.map((i) => <li><span class="nm">{i.name}</span><span class="lv">{i.level}</span><span class="pf">{i.url ? <a href={i.url} target="_blank" rel="noopener noreferrer">{i.proof}</a> : i.proof}</span></li>)}</ul></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head"><h2>Beyond research</h2></div>
+      <p class="lede" style="margin-bottom:18px">{exp.beyond.intro}</p>
+      <div class="beyond">{exp.beyond.items.map((b) => <div><b>{b.skill}</b><span>{b.where}</span></div>)}</div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Let's work together</h2>
+        <p>I reply in English or French. The fastest way to reach me is by email.</p>
+        <span class="email" id="email">{profile.email}</span>
+        <button class="copy" type="button" data-copy={profile.email}>Copy email address</button>
+        <div class="links">{profile.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div>
+      </div>
+    </div>
+  </section>
+</Base>
+<script>
+  for (const b of document.querySelectorAll('[data-copy]')) b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
+    catch { const r = document.createRange(); r.selectNodeContents(document.getElementById('email')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Press Ctrl+C to copy'; }
+  });
+</script>

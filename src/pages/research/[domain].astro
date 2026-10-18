@@ -1,6 +1,0 @@
----
-import Base from '../../layouts/Base.astro';import RecordSearch from '../../components/RecordSearch.astro';import domains from '../../data/domains.json';import projects from '../../data/projects.json';
-export function getStaticPaths(){return domains.map(d=>({params:{domain:d.id},props:{d}}));}
-const {d}=Astro.props;const items=projects.filter(p=>p.domains.includes(d.id));const statuses=[...new Set(items.map(p=>p.status))].slice(0,12);
----
-<Base title={d.label}><div class="page-hero"><div class="container"><div class="breadcrumb"><a href="/research/" style="color:#a3cbd1">Research domains</a> / {d.label}</div><h1>{d.label}</h1><p>{d.desc}</p></div></div><section class="section container"><RecordSearch kind="projects" placeholder="Search these projects, tools or outcomes…" filters={statuses}><div class="record-grid">{items.map(p=><article class="record" data-record data-categories={p.status} data-search={`${p.title} ${p.summary} ${p.methods.join(' ')} ${p.outputs}`}><span class="status">{p.status}</span><h3><a href={`/projects/${p.slug}/`}>{p.title} ↗</a></h3><p>{p.summary}</p><div>{p.methods.slice(0,5).map(m=><span class="pill">{m}</span>)}</div></article>)}</div></RecordSearch></section></Base>

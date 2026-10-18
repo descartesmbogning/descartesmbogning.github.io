@@ -1,6 +1,31 @@
 ---
-import Base from '../../layouts/Base.astro';import projects from '../../data/projects.json';import domains from '../../data/domains.json';
-export function getStaticPaths(){return projects.map(p=>({params:{slug:p.slug},props:{p}}));}
-const {p}=Astro.props;
+import Base from '../../layouts/Base.astro';
+import projects from '../../data/projects.json';
+import domains from '../../data/domains.json';
+export function getStaticPaths() { return projects.map((p) => ({ params: { slug: p.slug }, props: { p } })); }
+const { p } = Astro.props;
+const names = p.domains.map((id) => ({ id, label: domains.find((d) => d.id === id)?.label })).filter((d) => d.label);
 ---
-<Base title={p.title} description={p.summary}><div class="page-hero"><div class="container"><div class="breadcrumb"><a href="/projects/" style="color:#a3cbd1">All projects</a> / {p.id}</div><p class="eyebrow on-dark">{p.status}</p><h1>{p.title}</h1><p>{p.summary}</p><div>{p.domains.map(id=><span class="pill dark">{domains.find(d=>d.id===id)?.label}</span>)}</div></div></div><div class="container detail"><div class="notice">This entry belongs to an evolving research archive. The evidence and verification notes below explain what has been documented and what remains to be confirmed.</div><h2>Research question / objective</h2><p>{p.summary}</p><div class="detail-line"><strong>Documented / provisional contribution</strong><p>{p.contribution}</p></div><div class="detail-line"><strong>Methods, software and data sources</strong><div class="skill-list">{p.methods.map(x=><span class="pill">{x}</span>)}</div></div><div class="detail-line"><strong>Skills demonstrated</strong><div class="skill-list">{p.skills.map(x=><span class="pill">{x}</span>)}</div></div><div class="detail-line"><strong>Outputs</strong><p>{p.outputs}</p></div><div class="detail-line"><strong>Evidence</strong><p class="source">{p.evidenceType}</p><div class="linkline">{p.links.map(l=><a href={l.url} target="_blank" rel="noreferrer">{l.label} ↗</a>)}</div></div><div class="detail-line"><strong>What still needs verification</strong><p>{p.verification}</p></div><div style="margin-top:30px"><a href="/projects/">← All projects</a></div></div></Base>
+<Base title={p.title} description={p.summary} current="/projects/">
+  <section class="band dots"><div class="wrap"><div class="page-hero">
+    <a href="/projects/" class="label" style="color:var(--on-black-muted)">← All projects</a>
+    <span class="status" data-s={p.status} style="color:var(--brand)">{p.status}</span>
+    <h1 style="font-size:clamp(30px,4.6vw,52px)">{p.title}</h1>
+    <p>{p.summary}</p>
+  </div></div></section>
+  <section class="section"><div class="wrap detail">
+    <div class="main">
+      {p.problem && <div><h2 style="font-size:22px;margin-bottom:8px">Problem</h2><p>{p.problem}</p></div>}
+      {p.approach && <div><h2 style="font-size:22px;margin-bottom:8px">Approach</h2><p>{p.approach}</p></div>}
+      {p.result && <div><h2 style="font-size:22px;margin-bottom:8px">Result</h2><p>{p.result}</p></div>}
+      <div><h2 style="font-size:22px;margin-bottom:8px">My role</h2><p>{p.contribution}</p></div>
+      <div><h2 style="font-size:22px;margin-bottom:8px">Outputs</h2><p>{p.outputs}</p></div>
+      <div><h2 style="font-size:22px;margin-bottom:10px">Methods and tools</h2><ul class="tags">{p.methods.map((m) => <li>{m}</li>)}</ul></div>
+      <div><h2 style="font-size:22px;margin-bottom:10px">Skills</h2><ul class="tags">{p.skills.map((m) => <li>{m}</li>)}</ul></div>
+    </div>
+    <aside class="side">
+      {p.links.length > 0 && <div><h3>Evidence</h3><div class="links">{p.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div></div>}
+      <div><h3>Research areas</h3><div class="links">{names.map((d) => <a href={`/projects/#area-${d.id}`}>{d.label}</a>)}</div></div>
+    </aside>
+  </div></section>
+</Base>

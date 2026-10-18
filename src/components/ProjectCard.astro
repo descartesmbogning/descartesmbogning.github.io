@@ -1,0 +1,11 @@
+---
+const { p, domains } = Astro.props;
+const names = p.domains.map((id) => domains.find((d) => d.id === id)?.label).filter(Boolean);
+---
+<article class="card" data-item data-areas={p.domains.join(' ')} data-status={p.status}
+  data-text={`${p.title} ${p.summary} ${p.methods.join(' ')} ${p.skills.join(' ')} ${names.join(' ')}`.toLowerCase()}>
+  <span class="status" data-s={p.status}>{p.status}</span>
+  <h3><a href={`/projects/${p.slug}/`}>{p.title}</a></h3>
+  <p>{p.summary}</p>
+  <div class="foot"><span class="source">{names.join(' · ')}</span></div>
+</article>

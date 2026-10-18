@@ -3,429 +3,259 @@
     "title": "Research Meets Policy at SFU Summer Institute",
     "issuer": "Simon Fraser University",
     "year": 2026,
-    "month": "",
     "category": "Research & policy",
-    "evidence": "Uploaded certificate and Gmail confirmation",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
+    "url": ""
   },
   {
     "title": "Personal Support Worker — PSW DE",
     "issuer": "National Association of Career Colleges",
     "year": 2025,
-    "month": "",
     "category": "Healthcare",
-    "evidence": "LinkedIn export and Gmail digital credential",
-    "url": "https://www.credential.net/7f1caf0d-a578-4a92-adb6-edec828271ea",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Generative AI for Data Scientists Specialization",
-    "issuer": "IBM",
-    "year": 2024,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Generative AI for Data Analysts Specialization",
-    "issuer": "IBM",
-    "year": 2024,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Generative AI Fundamentals Specialization",
-    "issuer": "IBM",
-    "year": 2024,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Data Analysis and Visualization Foundations Specialization",
-    "issuer": "IBM",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "Some specialization/course entries may represent the same credential; confirm deduplication.",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Data Visualization and Dashboards with Excel and Cognos",
-    "issuer": "IBM",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Excel Basics for Data Analysis",
-    "issuer": "IBM",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Introduction to Data Analytics",
-    "issuer": "IBM",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Data Analysis and Visualization Foundations",
-    "issuer": "IBM",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "Some specialization/course entries may represent the same credential; confirm deduplication.",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Verified International Academic Qualifications",
-    "issuer": "World Education Services",
-    "year": 2023,
-    "month": "",
-    "category": "Academic recognition",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "Credential evaluation, not a degree.",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Réussissez votre transformation digitale",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Use Python Libraries for Data Science",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Analysez vos données textuelles",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Développer sa posture d’ouverture",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Participer à l’émergence de l’économie du partage",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Découvrir la posture d’agilité",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Se mettre en posture de partage",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Comment le modèle économique des entreprises se bouleverse pour aller vers de nouveaux clients",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Réalisez des rapports statistiques clairs et impactants",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Initiez-vous à la statistique inférentielle",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Décrivez et nettoyez votre jeu de données",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Initiez-vous à Python pour l’analyse de données",
-    "issuer": "OpenClassrooms",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Initiez-vous au langage R pour analyser vos données",
-    "issuer": "ENSAE–ENSAI Formation Continue (CEPE)",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "R Programming",
-    "issuer": "Johns Hopkins University",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "https://www.coursera.org/verify/6329BZN9JY8J",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "The Data Scientist’s Toolbox",
-    "issuer": "Johns Hopkins University",
-    "year": 2021,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "https://www.coursera.org/verify/ATEF2SSZNS78",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Databases: Relational Databases and SQL",
-    "issuer": "Stanford University",
-    "year": 2020,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Search strategies",
-    "issuer": "INASP",
-    "year": 2020,
-    "month": "",
-    "category": "Research & policy",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Elements of AI",
-    "issuer": "University of Helsinki",
-    "year": 2020,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export",
-    "url": "https://certificates.mooc.fi/validate/spfkqcl3m4",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Usages du Web",
-    "issuer": "Université Paris Seine",
-    "year": 2020,
-    "month": "",
-    "category": "Digital skills",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Beginner HTML and CSS",
-    "issuer": "Udemy",
-    "year": 2019,
-    "month": "",
-    "category": "Digital skills",
-    "evidence": "LinkedIn export and Drive folder",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Ce que vous devez savoir AVANT d’apprendre la PROGRAMMATION",
-    "issuer": "Udemy",
-    "year": 2019,
-    "month": "",
-    "category": "Digital skills",
-    "evidence": "LinkedIn export and Drive folder",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "AI For Everyone",
-    "issuer": "DeepLearning.AI",
-    "year": 2019,
-    "month": "",
-    "category": "AI & data",
-    "evidence": "LinkedIn export and Drive folder",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Fabriquer l’innovation",
-    "issuer": "CNAM",
-    "year": 2019,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export and Drive folder",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Création d’entreprises innovantes : de l’idée à la start-up",
-    "issuer": "Université de Montpellier",
-    "year": 2018,
-    "month": "",
-    "category": "Innovation & business",
-    "evidence": "LinkedIn export and Drive folder",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "CESU Biostatistique et méthodologies de base pour la recherche en biologie et en médecine",
-    "issuer": "SESSTIM",
-    "year": 2017,
-    "month": "",
-    "category": "Biomedical training",
-    "evidence": "LinkedIn export and Drive folders",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
-  },
-  {
-    "title": "Introduction à la transfusion sanguine (BSSP)",
-    "issuer": "Safe Blood for Africa Foundation",
-    "year": 2014,
-    "month": "",
-    "category": "Biomedical training",
-    "evidence": "LinkedIn export",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
+    "url": "https://www.credential.net/7f1caf0d-a578-4a92-adb6-edec828271ea"
   },
   {
     "title": "Worker Health and Safety Awareness in 4 Steps",
     "issuer": "Ontario Ministry of Labour",
     "year": 2025,
-    "month": "",
     "category": "Healthcare",
-    "evidence": "Gmail completion certificate link",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
+    "url": ""
   },
   {
     "title": "Les Fondamentaux du Swahili : Les Bases Essentielles de la Langue",
     "issuer": "Le Micro",
     "year": 2025,
-    "month": "",
     "category": "Languages",
-    "evidence": "Gmail completion message; certificate URL may have expired",
-    "url": "",
-    "note": "",
-    "visibility": "public-summary"
+    "url": ""
+  },
+  {
+    "title": "Generative AI for Data Scientists Specialization",
+    "issuer": "IBM",
+    "year": 2024,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Generative AI for Data Analysts Specialization",
+    "issuer": "IBM",
+    "year": 2024,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Generative AI Fundamentals Specialization",
+    "issuer": "IBM",
+    "year": 2024,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Verified International Academic Qualifications",
+    "issuer": "World Education Services",
+    "year": 2023,
+    "category": "Academic recognition",
+    "url": ""
+  },
+  {
+    "title": "Data Analysis and Visualization Foundations Specialization",
+    "issuer": "IBM",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Data Visualization and Dashboards with Excel and Cognos",
+    "issuer": "IBM",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Excel Basics for Data Analysis",
+    "issuer": "IBM",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Introduction to Data Analytics",
+    "issuer": "IBM",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Réussissez votre transformation digitale",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Use Python Libraries for Data Science",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Analysez vos données textuelles",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Développer sa posture d’ouverture",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Participer à l’émergence de l’économie du partage",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Découvrir la posture d’agilité",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Se mettre en posture de partage",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Comment le modèle économique des entreprises se bouleverse pour aller vers de nouveaux clients",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Réalisez des rapports statistiques clairs et impactants",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Initiez-vous à la statistique inférentielle",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Décrivez et nettoyez votre jeu de données",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Initiez-vous à Python pour l’analyse de données",
+    "issuer": "OpenClassrooms",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Initiez-vous au langage R pour analyser vos données",
+    "issuer": "ENSAE–ENSAI Formation Continue (CEPE)",
+    "year": 2021,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "R Programming",
+    "issuer": "Johns Hopkins University",
+    "year": 2021,
+    "category": "AI & data",
+    "url": "https://www.coursera.org/verify/6329BZN9JY8J"
+  },
+  {
+    "title": "The Data Scientist’s Toolbox",
+    "issuer": "Johns Hopkins University",
+    "year": 2021,
+    "category": "AI & data",
+    "url": "https://www.coursera.org/verify/ATEF2SSZNS78"
+  },
+  {
+    "title": "Databases: Relational Databases and SQL",
+    "issuer": "Stanford University",
+    "year": 2020,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Search strategies",
+    "issuer": "INASP",
+    "year": 2020,
+    "category": "Research & policy",
+    "url": ""
+  },
+  {
+    "title": "Elements of AI",
+    "issuer": "University of Helsinki",
+    "year": 2020,
+    "category": "AI & data",
+    "url": "https://certificates.mooc.fi/validate/spfkqcl3m4"
+  },
+  {
+    "title": "Usages du Web",
+    "issuer": "Université Paris Seine",
+    "year": 2020,
+    "category": "Digital skills",
+    "url": ""
+  },
+  {
+    "title": "Beginner HTML and CSS",
+    "issuer": "Udemy",
+    "year": 2019,
+    "category": "Digital skills",
+    "url": ""
+  },
+  {
+    "title": "Ce que vous devez savoir AVANT d’apprendre la PROGRAMMATION",
+    "issuer": "Udemy",
+    "year": 2019,
+    "category": "Digital skills",
+    "url": ""
+  },
+  {
+    "title": "AI For Everyone",
+    "issuer": "DeepLearning.AI",
+    "year": 2019,
+    "category": "AI & data",
+    "url": ""
+  },
+  {
+    "title": "Fabriquer l’innovation",
+    "issuer": "CNAM",
+    "year": 2019,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Création d’entreprises innovantes : de l’idée à la start-up",
+    "issuer": "Université de Montpellier",
+    "year": 2018,
+    "category": "Innovation & business",
+    "url": ""
+  },
+  {
+    "title": "Introduction à la transfusion sanguine (BSSP)",
+    "issuer": "Safe Blood for Africa Foundation",
+    "year": 2014,
+    "category": "Biomedical training",
+    "url": ""
   }
 ]
