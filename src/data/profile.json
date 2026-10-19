@@ -1,12 +1,12 @@
 {
   "name": "Maxime Descartes Mbogning Fonkou",
   "shortName": "Maxime D. Mbogning Fonkou",
-  "headline": "Research-intelligence analyst, PhD",
+  "headline": "Research & data analyst, PhD",
   "summary": "I turn publication, patent and funding records into evidence people can act on. Ten years of research across Cameroon, France and Canada, from clinical microbiology labs to bibliometrics, patent analytics and data tools.",
   "badge": "Founder, CognosX",
   "location": "Burnaby, British Columbia, Canada",
   "languages": "French (native) · English (professional) · Bamileke languages (native)",
-  "availability": "Open to research-evaluation, data-analysis and public-service roles",
+  "availability": "Open to research-evaluation, data-analysis and public-service roles in Canada",
   "email": "cognosxx@gmail.com",
   "links": [
     {
@@ -32,36 +32,29 @@
   ],
   "metrics": [
     {
+      "value": "7.9M",
+      "label": "preprint records harmonised from 109 servers"
+    },
+    {
+      "value": "5,753",
+      "label": "patents mapped for a first-author Nature Biotechnology paper"
+    },
+    {
       "value": "49",
       "label": "research works"
     },
     {
-      "value": "693",
-      "label": "citations"
-    },
-    {
-      "value": "12",
-      "label": "h-index"
-    },
-    {
-      "value": "7.9M",
-      "label": "preprint records harmonised"
-    },
-    {
-      "value": "5,753",
-      "label": "patents analysed for Nature Biotechnology"
-    },
-    {
-      "value": "3",
-      "label": "countries worked in"
+      "value": "10",
+      "label": "years of research in Cameroon, France and Canada"
     }
   ],
-  "metricsSource": "OpenAlex author record, October 2026",
+  "metricsSource": "OpenAlex author record, October 2026 (research works)",
   "metricsSourceUrl": "https://api.openalex.org/authors/A5023046200",
   "about": [
     "I began in experimental biomedical research: clinical laboratories in Yaoundé, then culturomics and new-species discovery at IHU Méditerranée Infection in Marseille, and microbiome–cancer research at Gustave Roussy.",
     "That domain experience now underpins my work on how science is produced, funded, shared and patented. I build reproducible pipelines on OpenAlex, Crossref, DataCite and patent data, and turn them into dashboards, papers and decisions.",
     "Through CognosX, the science-intelligence company I founded, I help research teams and biotech recruiters read publication and patent landscapes. I work in English and French."
   ],
-  "lastUpdated": "2026-10-18"
+  "lastUpdated": "2026-10-19",
+  "specialties": "bibliometrics, patent analytics, research evaluation"
 }

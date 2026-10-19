@@ -25,7 +25,7 @@ npm run preview
 
 ## Update content without redesigning
 
-Use **/edit/** on the live site: pick a file, edit the form, copy the result, then paste it over the file on GitHub (pencil icon, then "Commit changes"). Or edit the JSON directly:
+Use **/edit/** on the live site (not linked from the public pages, so bookmark https://descartesmbogning.github.io/edit/): pick a file, edit the form, copy the result, then paste it over the file on GitHub (pencil icon, then "Commit changes"). Or edit the JSON directly:
 
 | Information | File |
 | --- | --- |
