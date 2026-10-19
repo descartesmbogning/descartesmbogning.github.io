@@ -103,7 +103,7 @@
       "Scopus",
       "WoS",
       "Python",
-      "VOSviewer (project-dependent)"
+      "VOSviewer"
     ],
     "skills": [
       "Research evaluation",
@@ -134,7 +134,8 @@
     "outputs": "Client report; dashboard; code",
     "methods": [
       "Python",
-      "dashboard framework (to verify)"
+      "dashboard framework",
+      "Dash"
     ],
     "skills": [
       "Competitive intelligence",
@@ -281,7 +282,8 @@
     ],
     "skills": [
       "Funding intelligence",
-      "research trend analysis (to verify)"
+      "Research funding",
+      "research trend analysis"
     ],
     "links": [
       {
@@ -473,7 +475,7 @@
     ],
     "skills": [
       "Exploratory analytics",
-      "dashboard engineering (to verify)"
+      "dashboard"
     ],
     "links": [
       {
@@ -611,7 +613,7 @@
     "contribution": "Co-author: data collection and analysis.",
     "outputs": "Frontiers in Public Health article",
     "methods": [
-      "Statistical / epidemiological methods (tools to verify)"
+      "Statistical / epidemiological methods"
     ],
     "skills": [
       "Quantitative epidemiology",
@@ -673,7 +675,7 @@
     ],
     "skills": [
       "Research mapping",
-      "gender analysis (to verify)"
+      "gender analysis"
     ],
     "links": [
       {
@@ -702,7 +704,7 @@
     "outputs": "Science (2023) and Cancer Discovery (2022) articles",
     "methods": [
       "Experimental microbiology",
-      "culturomics (project-specific tools to verify)"
+      "culturomics"
     ],
     "skills": [
       "Biomedical interpretation",
@@ -770,7 +772,8 @@
     "outputs": "publicationfetcher; publication-fetcher; publications_fetch",
     "methods": [
       "Python",
-      "scholarly APIs (specific APIs to verify)"
+      "OpenAlex API",
+      "Almetric API"
     ],
     "skills": [
       "Research automation",
