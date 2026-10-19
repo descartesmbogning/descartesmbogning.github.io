@@ -51,9 +51,9 @@
   "metricsSource": "OpenAlex author record, October 2026 (research works)",
   "metricsSourceUrl": "https://api.openalex.org/authors/A5023046200",
   "about": [
-    "I began in experimental biomedical research: clinical laboratories in Yaoundé, then culturomics and new-species discovery at IHU Méditerranée Infection in Marseille, and microbiome–cancer research at Gustave Roussy.",
-    "That domain experience now underpins my work on how science is produced, funded, shared and patented. I build reproducible pipelines on OpenAlex, Crossref, DataCite and patent data, and turn them into dashboards, papers and decisions.",
-    "Through CognosX, the science-intelligence company I founded, I help research teams and biotech recruiters read publication and patent landscapes. I work in English and French."
+    "I started at the lab bench: clinical laboratories in Yaoundé, about 20 new bacterial species described during my PhD in Marseille, then microbiome and cancer research at Gustave Roussy. Ten years of biomedical research showed me how science is really made: who funds it, who publishes it and who patents it.",
+    "Now I measure that system. At York University I mapped the global patent landscape of phage therapy, published in Nature Biotechnology. At Simon Fraser University's ScholCommLab I built a harmonised dataset of 7.9 million preprint records from 109 servers.",
+    "Through CognosX, the science-intelligence company I founded, I help research teams and biotech companies read publication, patent and funding landscapes, and turn them into decisions. I work in French and English."
   ],
   "lastUpdated": "2026-10-19",
   "specialties": "bibliometrics, patent analytics, research evaluation"
