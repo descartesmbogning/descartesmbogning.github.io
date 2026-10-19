@@ -12,7 +12,7 @@ proj="".join(f'<li><b>{E(x["title"])}.</b> {E(x["result"] or x["summary"])}</li>
 skills="".join(f'<div><b>{E(g["group"])}:</b> {E(", ".join(i["name"] for i in g["items"]))}</div>' for g in sk)
 pub="".join(f'<li>{'<b>Mbogning Fonkou MD</b> et al.' if x['firstAuthor'] else E(x['authors'].split(';')[0].split(',')[0])+' et al., incl. Mbogning Fonkou MD'} ({E(x["year"])}). {E(x["title"])}. <i>{E(x["venue"])}</i>.</li>' for x in sel)
 edu="".join(f'<div class="job"><div class="when">{E(x["year"])}</div><div><b>{E(x["title"])}</b> — {E(x["institution"])}</div></div>' for x in sorted(q,key=lambda x:-int(x['year'])))
-certs=[c for c in ce if int(c['year'] or 0)>=2021 and c['category'] in ('AI & data','Healthcare')][:6]
+certs=[c for c in ce if c['category']=='Healthcare & safety' and c['url']][:3]+[c for c in ce if c['category']=='AI & data' and int(c['year'] or 0)>=2021][:3]
 cert=", ".join(f'{E(c["title"])} ({E(c["issuer"])}, {E(c["year"])})' for c in certs)
 beyond="; ".join(f'{E(b["skill"])} ({E(b["where"])})' for b in e['beyond']['items'])
 html_out=f'''<!doctype html><html><head><meta charset="utf-8"><title>CV – {E(p["name"])}</title><style>

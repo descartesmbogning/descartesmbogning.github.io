@@ -42,7 +42,7 @@ const cats = [...new Set(certs.map((c) => c.category))];
       <details class="more-list" open={i < 2 || c === 'AI & data'}>
         <summary>{c} ({certs.filter((x) => x.category === c).length})</summary>
         <div class="tablewrap"><table><tbody>
-          {certs.filter((x) => x.category === c).map((x) => <tr><td class="yr">{x.year}</td><td><b>{x.title}</b>{x.url && <div class="cert-link"><a href={x.url} target="_blank" rel="noopener noreferrer">{x.url.endsWith('.pdf') ? 'View attestation (PDF)' : 'View certificate'} ↗</a></div>}</td><td>{x.issuer}</td></tr>)}
+          {certs.filter((x) => x.category === c).map((x) => <tr><td class="yr">{x.year}</td><td><b>{x.title}</b>{x.url && <div class="cert-link"><a href={x.url} target="_blank" rel="noopener noreferrer">{x.url.endsWith('.pdf') ? 'View attestation (PDF)' : x.url.includes('drive.google.com') ? 'View certificate (PDF)' : 'View certificate'} ↗</a></div>}</td><td>{x.issuer}</td></tr>)}
         </tbody></table></div>
       </details>))}
   </div></section>
