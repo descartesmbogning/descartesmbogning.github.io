@@ -47,7 +47,7 @@ def get(url, accept="application/json"):
                 return json.load(r)
         except Exception as e:  # network hiccups: retry, then give up on this source
             if attempt == 2:
-                print(f"warning: {url}: {e}", file=sys.stderr)
+                print(f"::warning::{url.split('?')[0]}: {e}")
                 return None
             time.sleep(3 * (attempt + 1))
 
@@ -252,5 +252,17 @@ def main():
     print("\n".join(lines))
 
 
+def annotate(level, msg):
+    """Show a message on the GitHub Actions run page (::notice / ::error)."""
+    print(f"::{level}::" + msg.replace("%", "%25").replace("\r", "").replace("\n", "%0A"))
+
+
 if __name__ == "__main__":
-    main()
+    import traceback
+    try:
+        main()
+        body = Path(sys.argv[sys.argv.index("--body") + 1] if "--body" in sys.argv else "pr_body.md")
+        annotate("notice", body.read_text()[:1500] if body.exists() else "done")
+    except Exception:
+        annotate("error", traceback.format_exc()[-3000:])
+        raise
