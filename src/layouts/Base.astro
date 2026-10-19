@@ -5,7 +5,7 @@ const { title, description = profile.summary, current = '', noindex = false } = 
 const site = 'https://descartesmbogning.github.io';
 const url = new URL(Astro.url.pathname, site).href;
 const pageTitle = title ? `${title} · ${profile.name}` : `${profile.name} · ${profile.headline}`;
-const nav = [['/', 'Home'], ['/projects/', 'Projects'], ['/publications/', 'Publications'], ['/experience/', 'Experience'], ['/about/', 'About']];
+const nav = [['/', 'Home'], ['/projects/', 'Projects'], ['/publications/', 'Publications'], ['/experience/', 'Experience'], ['/#about', 'About'], ['/#contact', 'Contact']];
 ---
 <!doctype html>
 <html lang="en">

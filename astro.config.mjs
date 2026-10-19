@@ -6,7 +6,8 @@ const areas = ['biomedical', 'public-health', 'science', 'patents', 'data', 'ai'
 const redirects = {
   '/portfolio': '/',
   '/research': '/projects/',
-  '/methods': '/about/',
+  '/methods': '/experience/',
+  '/about': '/#about',
   '/credentials': '/experience/',
   '/projects/research-intelligence-dashboards-and-web-portfolio': '/projects/',
   '/projects/research-meets-policy-communication': '/experience/',

@@ -203,3 +203,18 @@ a.copy{text-decoration:none;display:inline-block}
 .case .links a,.pubs .meta a,.contact .links a,.page-hero a.label,a.label{display:inline-block;padding-block:4px;min-height:24px}
 .pubs .a b{color:var(--ink,inherit);font-weight:700}
 .tags a,a.more,details>summary{display:inline-block;padding-block:5px;min-height:24px}
+
+/* home: about story, next links, contact routes */
+.about-home{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:20px 48px;align-items:start}
+.about-home .sec-head{grid-column:1/-1;margin-bottom:0}
+.about-home .story p{font-size:18px;line-height:1.65;margin:0 0 14px;max-width:62ch}
+@media (max-width:800px){.about-home{grid-template-columns:1fr}}
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.next a{display:flex;flex-direction:column;gap:6px;padding:20px;border:1px solid var(--rule);border-radius:14px;background:var(--surface);color:var(--ink);text-decoration:none}
+.next a:hover{border-color:var(--brand)}
+.next b{font:700 19px var(--display)}
+.next span{color:var(--muted);font-size:15px}
+.routes{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.avail-line{font-weight:600;color:var(--on-black)}
+.avail-line a{color:var(--brand)}
+.cert-link{font-size:14px;margin-top:2px}

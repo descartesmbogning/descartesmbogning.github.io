@@ -3,8 +3,7 @@ import Base from '../layouts/Base.astro';
 import CaseStudy from '../components/CaseStudy.astro';
 import profile from '../data/profile.json';
 import projects from '../data/projects.json';
-import exp from '../data/experience.json';
-import skills from '../data/skills.json';
+import domains from '../data/domains.json';
 const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - b.featured);
 ---
 <Base current="/">
@@ -14,7 +13,6 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
         <span class="label">{profile.location}</span>
         <h1>{profile.name}</h1>
         <div class="headline">{profile.headline} · {profile.specialties}</div>
-        <p class="avail">{profile.availability}</p>
         <p class="lead">{profile.summary}</p>
         <div class="facts"><span>{profile.languages}</span></div>
         <div class="btns">
@@ -27,6 +25,17 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
     </div>
   </section>
 
+  <section class="section" id="about">
+    <div class="wrap about-home">
+      <div class="sec-head"><h2>About me</h2></div>
+      <div class="story">{profile.about.map((t) => <p>{t}</p>)}</div>
+      <div>
+        <h3 class="label" style="margin-bottom:10px">Research areas</h3>
+        <ul class="tags">{domains.map((d) => <li><a href={`/projects/#area-${d.id}`}>{d.label}</a></li>)}</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="sec-head"><h2>Selected work</h2><a class="more" href="/projects/">All {projects.length} projects →</a></div>
@@ -36,35 +45,24 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
 
   <section class="section alt">
     <div class="wrap">
-      <div class="sec-head"><h2>Experience</h2><a class="more" href="/experience/">Full experience and credentials →</a></div>
-      <ol class="timeline">
-        {exp.jobs.slice(0, 5).map((j, i) => <li><div class="when">{i === 0 ? <mark>{j.period}</mark> : j.period}</div><div><div class="what">{j.role}</div><div class="where">{j.organisation} · {j.place}</div><p>{j.summary}</p></div></li>)}
-      </ol>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="sec-head"><h2>Skills, with proof</h2></div>
-      <div class="skills">
-        {skills.map((g) => <div><h3>{g.group}</h3><ul>{g.items.map((i) => <li><span class="nm">{i.name}</span><span class="lv">{i.level}</span><span class="pf">{i.url ? <a href={i.url} target="_blank" rel="noopener noreferrer">{i.proof}</a> : i.proof}</span></li>)}</ul></div>)}
+      <div class="sec-head"><h2>Find out more</h2></div>
+      <div class="next">
+        <a href="/projects/"><b>Projects →</b><span>All {projects.length} studies, datasets and tools, filterable by research area.</span></a>
+        <a href="/publications/"><b>Publications →</b><span>Articles, preprints and thesis, with links to each paper.</span></a>
+        <a href="/experience/"><b>Experience &amp; skills →</b><span>Career, skills with proof, degrees and certificates.</span></a>
       </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="wrap">
-      <div class="sec-head"><h2>Beyond research</h2></div>
-      <p class="lede" style="margin-bottom:18px">{exp.beyond.intro}</p>
-      <div class="beyond">{exp.beyond.items.map((b) => <div><b>{b.skill}</b><span>{b.where}</span></div>)}</div>
     </div>
   </section>
 
   <section class="section" id="contact">
     <div class="wrap">
       <div class="contact">
-        <h2>Hiring, or need research intelligence?</h2>
-        <p>Write to me about research-evaluation, data-analysis or public-service roles, or about a publication, patent or funding landscape for your team. I reply in English or French.</p>
+        <h2>Work with me</h2>
+        <ul class="routes">
+          <li><b>Roles</b> in research evaluation, data analysis and the public service: my CV is below.</li>
+          <li><b>CognosX projects</b>: publication, patent and funding landscapes for research teams and companies.</li>
+        </ul>
+        <p>I reply in English or French.</p>
         <a class="email" id="email" href={`mailto:${profile.email}`}>{profile.email}</a>
         <div class="contact-actions"><button class="copy" type="button" data-copy={profile.email}>Copy email address</button><a class="copy" href="/cv/Mbogning-Fonkou-CV.pdf" download>Download CV (PDF, 2 pages)</a></div>
         <div class="links">{profile.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div>
