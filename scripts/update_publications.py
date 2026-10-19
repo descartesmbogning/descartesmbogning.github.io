@@ -24,6 +24,8 @@ from pathlib import Path
 AUTHOR = "A5023046200"          # OpenAlex author ID
 ORCID = "0000-0001-5581-3891"
 NAME_RE = re.compile(r"mbogning|fonkou", re.I)
+# Publisher notices that OpenAlex lists as separate works: never added as papers.
+NOTICE_RE = re.compile(r"^\s*(expression of concern|retraction( note)?|retracted|erratum|corrigendum|correction)\b", re.I)
 CONTACT = "cognosxx@gmail.com"  # public contact; OpenAlex and Crossref ask for one
 ROOT = Path(__file__).resolve().parent.parent
 PUBS = ROOT / "src/data/publications.json"
@@ -193,10 +195,13 @@ def main():
                 candidates.append(("ORCID", w))
                 seen.add(o["doi"])
 
-    added, versions, skipped = [], [], []
+    added, versions, skipped, notices = [], [], [], []
     for source, w in candidates:
         doi, title = norm_doi(w.get("doi")), (w.get("display_name") or "")
         nt = norm_title(title)
+        if NOTICE_RE.search(title):
+            notices.append(title)
+            continue
         if not nt or doi in have_dois or nt in have_titles or doi in skip_dois or nt in skip_titles:
             continue
         if nt in {norm_title(a["title"]) for a in added}:
@@ -248,6 +253,10 @@ def main():
               "to `scripts/publications_ignore.json` so it is not proposed again."]
     if skipped:
         lines += ["", "Not added (types the site doesn't list): " + "; ".join(skipped)]
+    if notices:
+        lines += ["", f"Skipped {len(notices)} publisher notice(s) (expressions of concern, corrections). "
+                  "If one concerns a paper already listed, set its `notice` field:"]
+        lines += [f"- {t}" for t in notices]
     Path(args.body).write_text("\n".join(lines) + "\n")
     print("\n".join(lines))
 
@@ -262,7 +271,7 @@ if __name__ == "__main__":
     try:
         main()
         body = Path(sys.argv[sys.argv.index("--body") + 1] if "--body" in sys.argv else "pr_body.md")
-        annotate("notice", body.read_text()[:1500] if body.exists() else "done")
+        annotate("notice", body.read_text()[:20000] if body.exists() else "done")
     except Exception:
         annotate("error", traceback.format_exc()[-3000:])
         raise
