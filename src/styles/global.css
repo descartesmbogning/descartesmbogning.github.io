@@ -186,6 +186,8 @@ details.more-list>summary{cursor:pointer;font:600 15px var(--body);margin:14px 0
 .contact{background:var(--black);color:var(--on-black);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px}
 .contact .email{font:500 18px var(--mono);color:var(--brand);word-break:break-all}
 .copy{font:600 13px var(--body);padding:8px 12px;border-radius:999px;border:1.5px solid var(--brand);background:transparent;color:var(--on-black);cursor:pointer;align-self:flex-start}
+.contact-actions{display:flex;flex-wrap:wrap;gap:8px}
+a.copy{text-decoration:none;display:inline-block}
 .contact .links{display:flex;flex-wrap:wrap;gap:8px 16px;font-weight:600}
 
 /* footer */

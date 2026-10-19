@@ -54,3 +54,14 @@ The repository name is `descartesmbogning.github.io` and `astro.config.mjs` has 
 3. Add verified project figures and dashboard screenshots in `public/images` (with alt text and rights clearance).
 4. Review GitHub project source, reproducibility, licences, and individual authorship.
 5. Add a downloadable redacted CV and portfolio narrative when approved for publication.
+
+## Downloadable CV
+
+The public CV lives at `public/cv/Mbogning-Fonkou-CV.pdf` (2 pages, no phone number or address).
+To update it, either replace that file with a new PDF of the same name, or regenerate it from the data files:
+
+```bash
+python3 scripts/build_cv.py . cv.html          # builds the CV page from src/data
+npx playwright install chromium                # once
+node scripts/cv_to_pdf.js "$PWD/cv.html" public/cv/Mbogning-Fonkou-CV.pdf
+```

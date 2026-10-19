@@ -23,7 +23,7 @@ import domains from '../../data/domains.json';
       <p>{profile.location}</p>
       <p>{profile.languages}</p>
       <span class="email" id="email">{profile.email}</span>
-      <button class="copy" type="button" data-copy={profile.email}>Copy email address</button>
+      <div class="contact-actions"><button class="copy" type="button" data-copy={profile.email}>Copy email address</button><a class="copy" href="/cv/Mbogning-Fonkou-CV.pdf" download>Download CV (PDF, 2 pages)</a></div>
       <div class="links">{profile.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div>
     </aside>
   </div></section>

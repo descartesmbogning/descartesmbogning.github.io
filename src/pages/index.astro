@@ -18,6 +18,7 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
         <div class="facts"><span>{profile.languages}</span><span>{profile.availability}</span></div>
         <div class="btns">
           <a class="btn" href="#contact">Contact me</a>
+          <a class="btn ghost" href="/cv/Mbogning-Fonkou-CV.pdf" download>Download CV</a>
           <a class="btn ghost" href="/projects/">See all projects</a>
           <a class="btn ghost" href="/publications/">Publications</a>
         </div>
@@ -66,7 +67,7 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
         <h2>Let's work together</h2>
         <p>I reply in English or French. The fastest way to reach me is by email.</p>
         <span class="email" id="email">{profile.email}</span>
-        <button class="copy" type="button" data-copy={profile.email}>Copy email address</button>
+        <div class="contact-actions"><button class="copy" type="button" data-copy={profile.email}>Copy email address</button><a class="copy" href="/cv/Mbogning-Fonkou-CV.pdf" download>Download CV (PDF, 2 pages)</a></div>
         <div class="links">{profile.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div>
       </div>
     </div>
