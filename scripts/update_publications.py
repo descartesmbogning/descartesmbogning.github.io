@@ -116,8 +116,8 @@ def crossref_authors(doi):
     msg = (data or {}).get("message") or {}
     names = []
     for a in msg.get("author", []):
-        fam, giv = a.get("family", ""), a.get("given", "")
-        names.append(f"{fam}, {giv}".strip(", ") if fam else a.get("name", ""))
+        fam, giv = a.get("family") or "", a.get("given") or ""
+        names.append(f"{fam}, {giv}".strip(", ") if fam else (a.get("name") or ""))
     return names
 
 
@@ -136,11 +136,11 @@ def from_openalex(w, use_crossref=True):
     auths = w.get("authorships") or []
     names = crossref_authors(doi) if (doi and use_crossref) else []
     if not names:
-        names = [surname_first((a.get("author") or {}).get("display_name", "")) for a in auths]
-    first = bool(auths) and ((auths[0].get("author") or {}).get("id", "")).endswith(AUTHOR)
+        names = [surname_first((a.get("author") or {}).get("display_name") or a.get("raw_author_name") or "") for a in auths]
+    first = bool(auths) and str((auths[0].get("author") or {}).get("id") or "").endswith(AUTHOR)
     if not first and names:
         first = bool(NAME_RE.search(names[0]))
-    url = f"https://doi.org/{doi}" if doi else (loc.get("landing_page_url") or w.get("id", ""))
+    url = f"https://doi.org/{doi}" if doi else (loc.get("landing_page_url") or w.get("id") or "")
     return {
         "title": (w.get("display_name") or w.get("title") or "").strip(),
         "authors": author_string(names),
