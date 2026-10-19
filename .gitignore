@@ -2,3 +2,4 @@ node_modules/
 dist/
 .astro/
 cv.html
+__pycache__/

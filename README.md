@@ -64,3 +64,23 @@ python3 scripts/build_cv.py . cv.html          # builds the CV page from src/dat
 npx playwright install chromium                # once
 node scripts/cv_to_pdf.js "$PWD/cv.html" public/cv/Mbogning-Fonkou-CV.pdf
 ```
+
+## New publications are found automatically
+
+Every Monday, `.github/workflows/publications.yml` runs `scripts/update_publications.py`. It asks
+OpenAlex (author `A5023046200`) and ORCID (`0000-0001-5581-3891`) for your works and adds any whose
+DOI and title are not already in `src/data/publications.json`. It also refreshes the "research works"
+number on the home page. It never edits or removes existing entries.
+
+The changes arrive as a pull request called **"New publications found"**, which GitHub emails you about.
+Check that each work is yours, add a `notice` if a publisher issued one, then **Merge**. The site updates
+a minute later. To run it right away, open **Actions → Check for new publications → Run workflow**.
+
+To stop a work from being proposed again, add its DOI or exact title to `scripts/publications_ignore.json`:
+
+```json
+{ "dois": ["10.1234/example"], "titles": ["A paper that is not mine"] }
+```
+
+One-time setting (already needed for this to work): **Settings → Actions → General → Workflow permissions →
+tick "Allow GitHub Actions to create and approve pull requests"**.

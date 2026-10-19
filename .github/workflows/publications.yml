@@ -1,0 +1,45 @@
+name: Check for new publications
+
+# Every Monday, look for new works on OpenAlex and ORCID and open a pull request
+# with any that are not on the Publications page yet. Nothing goes live until the
+# pull request is merged. Run it by hand from the Actions tab ("Run workflow").
+on:
+  schedule:
+    - cron: '17 14 * * 1'   # Mondays 14:17 UTC (7:17 in Vancouver in summer)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_publications.py
+      - scripts/publications_ignore.json
+      - .github/workflows/publications.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publications
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Look for new works
+        run: python3 scripts/update_publications.py --body "$RUNNER_TEMP/pr_body.md"
+      - name: Open or update the pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: auto/new-publications
+          delete-branch: true
+          add-paths: |
+            src/data/publications.json
+            src/data/profile.json
+          commit-message: Add new publications from OpenAlex and ORCID
+          title: New publications found
+          body-path: ${{ runner.temp }}/pr_body.md
