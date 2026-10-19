@@ -39,7 +39,7 @@ const nav = [['/', 'Home'], ['/projects/', 'Projects'], ['/publications/', 'Publ
 <footer class="footer">
   <div class="wrap">
     <div><b>{profile.name}</b><br />{profile.location} · {profile.languages}</div>
-    <div>{profile.links.map((l) => <><a href={l.url} rel="noopener noreferrer" target="_blank">{l.label}</a>{' · '}</>)}<a href="/edit/">Edit content</a></div>
+    <div>{profile.links.map((l, i) => <>{i > 0 && ' · '}<a href={l.url} rel="noopener noreferrer" target="_blank">{l.label}</a></>)}</div>
   </div>
 </footer>
 </body>
