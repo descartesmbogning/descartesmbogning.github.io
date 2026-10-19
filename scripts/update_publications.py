@@ -211,8 +211,9 @@ def main():
             skipped.append(f"{title} ({w.get('type')})")
             continue
         close = difflib.get_close_matches(nt, list(have_titles), n=1, cutoff=0.9)
-        if close:
+        if close:  # same work under a slightly different title: mention it, don't add it
             versions.append((rec, have_titles[close[0]]))
+            continue
         rec["_source"] = source
         added.append(rec)
 
@@ -243,8 +244,8 @@ def main():
         Path(args.body).write_text("No changes.\n")
         return
     if versions:
-        lines += ["", "**Possible duplicates** (very similar title already listed, maybe a preprint and its article). "
-                  "Keep both or delete one before merging:"]
+        lines += ["", "**Not added: very similar title already listed** (usually the same work). "
+                  "If one is really a separate work, add it by hand:"]
         lines += [f"- {r['title']} ({r['venue']}) ≈ already listed: {old}" for r, old in versions]
     lines += ["", "**Before merging, check:**",
               "- Each work is really yours (OpenAlex sometimes mixes up similar names).",
