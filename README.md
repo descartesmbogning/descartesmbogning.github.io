@@ -7,7 +7,7 @@ Astro-powered, editable research archive for `https://descartesmbogning.github.i
 One site in the CognosX palette (black, white, yellow) with five pages:
 
 - **Home** – headline, research numbers, "About me" story and research areas, six featured projects, links to the other pages, contact.
-- **Projects** – six research programmes plus an open-source toolbox (from `src/data/programmes.json`), each with its lead study, related projects, and the tools and skills used across them; search and status filter; one page per project.
+- **Projects** – research programmes plus an open-source toolbox (from `src/data/programmes.json`), each with its lead study, related projects, and the tools and skills used across them; search and status filter; one page per project.
 - **Publications** – articles, preprints and thesis, with publisher notices labelled.
 - **Experience & skills** – career, skills with proof, "beyond research" skills, degrees, and certificates (each with a "View certificate" link when `url` is set).
 
