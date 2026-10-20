@@ -11,6 +11,14 @@
     ]
   },
   {
+    "id": "genai",
+    "title": "Generative AI in science",
+    "question": "How do researchers build, use, evaluate and debate generative AI?",
+    "summary": "A large, screened corpus of generative-AI research, classified one facet at a time with LLM coding that is checked against hand-coded gold standards. Current work at CognosX.",
+    "lead": "genai-publication-intelligence",
+    "members": []
+  },
+  {
     "id": "preprints",
     "title": "The global preprint ecosystem",
     "question": "How big is the preprint world, and how can we count it reliably?",
@@ -58,7 +66,6 @@
     "lead": "immune-checkpoint-patent-intelligence-dashboard",
     "members": [
       "cognosx-field-intelligence-initiative",
-      "genai-publication-intelligence",
       "biotech-sosci-research-pipelines",
       "scientific-network-analysis-and-patent-preparation"
     ]

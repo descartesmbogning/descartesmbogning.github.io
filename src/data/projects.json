@@ -656,7 +656,7 @@
   },
   {
     "slug": "genai-publication-intelligence",
-    "title": "GenAI publication intelligence",
+    "title": "How science builds, uses and studies generative AI",
     "status": "Ongoing work",
     "featured": 0,
     "domains": [
@@ -664,30 +664,47 @@
       "science",
       "data"
     ],
-    "summary": "Screen and classify the research literature on generative AI, using an OpenAlex corpus and LLM screening.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Built the harvester and a multi-provider LLM classification workflow.",
-    "outputs": "Screened corpora; classification rules; validation workbooks",
+    "summary": "A screened OpenAlex corpus of generative-AI research since 2020, classified facet by facet with validated LLM coding.",
+    "problem": "Generative-AI papers are usually counted by keyword, which mixes papers that build models with papers that only mention ChatGPT. There is no reliable picture of how the balance of building, using, evaluating and debating GenAI has shifted since 2022.",
+    "approach": "Harvested an OpenAlex corpus with GenAI concept and tool terms (2020 onward), screened every title and abstract with LLMs, and wrote a codebook for each classification facet, starting with GenAI's role in the paper, tested against hand-coded records.",
+    "result": "Facet 1, GenAI's role, agrees with 300 blind hand-coded records at κ 0.89 (91% agreement). More facets, articles on CognosX Insights and a public dashboard are in progress.",
+    "contribution": "Lead, through CognosX: corpus design, LLM screening and classification pipeline, facet codebooks, hand-coded gold standards and analysis.",
+    "outputs": "Screened corpus; facet codebooks; validated gold sets; forthcoming articles and dashboard",
     "methods": [
-      "OpenAlex",
+      "OpenAlex API",
       "Python",
       "GPT",
       "Gemini",
       "DeepSeek",
       "Parquet",
-      "regex"
+      "regex",
+      "Cohen's kappa"
     ],
     "skills": [
       "Prompt engineering",
       "LLM orchestration",
-      "screening",
-      "QA",
-      "caching"
+      "Codebook design",
+      "Inter-rater reliability",
+      "Screening",
+      "Science of science"
     ],
-    "links": [],
-    "images": []
+    "links": [
+      {
+        "label": "CognosX Insights",
+        "url": "https://cognosxinsights.substack.com"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/projects/genai-publication-intelligence.webp",
+        "fit": "contain",
+        "width": 1600,
+        "height": 827,
+        "alt": "Grouped bar chart comparing hand and LLM codes for nine GenAI roles on 300 gold-standard records",
+        "caption": "Facet 1, GenAI's role in each paper: hand codes and LLM codes on 300 blind gold-standard records (κ 0.89).",
+        "credit": "CognosX, October 2026"
+      }
+    ]
   },
   {
     "slug": "ticks-and-climate-change-research-mapping",

@@ -8,13 +8,14 @@ import { programmeList, areaToProgramme } from '../../lib/programmes.js';
 const statuses = ['Published', 'In preparation', 'Software & data', 'Ongoing work'];
 const groups = [{ key: 'status', label: 'Status', options: statuses.map((s) => ({ value: s, label: s })) }];
 const research = programmeList.filter((g) => g.id !== 'toolbox');
+const words = ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten'];
 const textOf = (p) => `${p.title} ${p.summary} ${p.methods.join(' ')} ${p.skills.join(' ')}`.toLowerCase();
 ---
 <Base title="Projects" current="/projects/" description="Research programmes in phage therapy, preprints, research equity in Africa, epidemics, biotech intelligence and microbiology, plus open-source tools.">
   <section class="band dots"><div class="wrap"><div class="page-hero">
     <span class="label">{projects.length} projects · {research.length} research programmes · open-source toolbox</span>
     <h1>Projects</h1>
-    <p>Six research programmes, each led by its main study, with the related studies, datasets and tools grouped underneath.</p>
+    <p>{words[research.length] ?? research.length} research programmes, each led by its main study, with the related studies, datasets and tools grouped underneath.</p>
   </div></div></section>
   <section class="section"><div class="wrap">
     <nav class="prog-nav" aria-label="Programmes">
