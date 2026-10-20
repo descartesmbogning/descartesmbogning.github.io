@@ -158,7 +158,44 @@
         "url": "https://github.com/descartesmbogning/get_Unpaywall_data_via_the_API"
       }
     ],
-    "images": []
+    "images": [
+      {
+        "src": "/images/projects/african-research-production-and-inequalities.webp",
+        "fit": "contain",
+        "alt": "Line chart of the open-access share of articles by African region, 2002–2021, with Eastern Africa highest and Northern Africa lowest",
+        "caption": "Open-access share of articles by African region, 2002–2021: Eastern Africa leads at about 76%, while Northern Africa reaches about 50%.",
+        "credit": "From the manuscript in preparation",
+        "width": 1242,
+        "height": 1060
+      },
+      {
+        "src": "/images/projects/african-research-production-and-inequalities-2.webp",
+        "fit": "contain",
+        "alt": "Stacked area chart of open-access types over time, with gold growing and bronze and green shrinking",
+        "caption": "Mix of open-access types, 2002–2021: gold grows to most open articles while bronze and green shrink.",
+        "credit": "From the manuscript in preparation",
+        "width": 1600,
+        "height": 925
+      },
+      {
+        "src": "/images/projects/african-research-production-and-inequalities-3.webp",
+        "fit": "contain",
+        "alt": "Waterfall chart of 854,785 articles by access type: hybrid, bronze, green, gold and closed",
+        "caption": "854,785 articles by access type: 378,955 open (212,310 gold) and 475,830 closed.",
+        "credit": "From the manuscript in preparation",
+        "width": 1460,
+        "height": 1416
+      },
+      {
+        "src": "/images/projects/african-research-production-and-inequalities-4.webp",
+        "fit": "contain",
+        "alt": "Line chart of open-access share by collaboration type, 2002–2021",
+        "caption": "Open-access share by collaboration type: international collaborations are the most open (63% in 2021), national ones the least (52.5%).",
+        "credit": "From the manuscript in preparation",
+        "width": 1600,
+        "height": 1357
+      }
+    ]
   },
   {
     "slug": "immune-checkpoint-patent-intelligence-dashboard",
