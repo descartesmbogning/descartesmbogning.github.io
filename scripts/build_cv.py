@@ -1,6 +1,6 @@
 import json,html,sys
 D=sys.argv[1]+'/src/data/';J=lambda f:json.load(open(D+f))
-p=J('profile.json');e=J('experience.json');pr=J('projects.json');pubs=J('publications.json');q=J('qualifications.json');sk=J('skills.json');ce=J('certificates.json')
+p=J('profile.json');sp=J('species.json');e=J('experience.json');pr=J('projects.json');pubs=J('publications.json');q=J('qualifications.json');sk=J('skills.json');ce=J('certificates.json')
 E=lambda s:html.escape(str(s))
 feat=sorted([x for x in pr if x['featured']],key=lambda x:x['featured'])
 sel=[x for x in pubs if x['firstAuthor'] and not x['notice'] and 'rxiv' not in x['venue'].lower()][:3]
@@ -29,7 +29,7 @@ p{{margin:5px 0}} .skills div{{margin:2px 0}}
 <div class="head"><div><h1>{E(p["name"])}, PhD</h1><div class="t">{E(p["headline"].replace(", PhD",""))} · Founder, Cognos<span class="x">X.</span></div></div>
 <div class="c">{E(p["email"])}<br>{E(p["location"])}<br><a href="https://descartesmbogning.github.io">descartesmbogning.github.io</a></div></div>
 <p>{E(p["summary"])} {E(p["languages"])}.</p>
-<div class="nums">{"".join(f'<div><b>{E(m["value"])}</b> {E(m["label"])}</div>' for m in p["metrics"][:5])}</div>
+<div class="nums">{"".join(f'<div><b>{E(m["value"])}</b> {E(m["label"])}</div>' for m in [{"value":len(sp),"label":"bacterial species described, "+str(sum(1 for s in sp if s["role"]=="lead"))+" as lead author"},{"value":len(pubs),"label":"publications"}]+p["metrics"])}</div>
 <h2>Experience</h2>{jobs}
 <h2>Selected work</h2><ul>{proj}</ul>
 <h2>Skills</h2><div class="skills">{skills}</div>
