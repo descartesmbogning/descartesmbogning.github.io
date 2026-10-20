@@ -34,7 +34,7 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
   <section class="section" id="about">
     <div class="wrap about-home">
       <div class="sec-head"><h2>About me</h2></div>
-      <div class="story">{profile.about.map((t) => <p>{t}</p>)}</div>
+      <div class="story">{profile.about.map((t) => typeof t === 'string' ? <p set:html={t} /> : <><h3>{t.heading}</h3><p set:html={t.text} /></>)}</div>
       <div>
         <h3 class="label" style="margin-bottom:10px">Research programmes</h3>
         <ul class="tags">{programmeList.filter((g) => g.id !== 'toolbox').map((g) => <li><a href={`/projects/#${g.id}`}>{g.title}</a></li>)}</ul>
