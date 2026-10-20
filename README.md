@@ -91,3 +91,11 @@ tick "Allow GitHub Actions to create and approve pull requests"**.
 `name`, `role` (`lead` or `co`), `status` (`Validly published` or `Effectively published`), `authority` (the LPSN
 citation, for validly published names), `typeStrain`, `source`, `lpsn` (link), `papers` and an optional `note`.
 When a name is validated on a new IJSEM Validation List, change its `status` and add its `authority`.
+
+## Project images
+
+Images live in `public/images/projects/` (WebP, at most 1600 px wide). Each project in `projects.json` has an
+`images` list; the first image appears on the project's card and at the top of its page. Each entry has
+`src`, `alt` (what the image shows, for screen readers), `caption`, `credit`, `fit` (`contain` for charts,
+`cover` for photos), `width` and `height`, and `dark: true` for dark screenshots. Name new files after the
+project's slug, e.g. `phage-therapy-patent-landscape-3.webp`.

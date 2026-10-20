@@ -42,6 +42,26 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/phage-therapy-patents-analysis"
       }
+    ],
+    "images": [
+      {
+        "src": "/images/projects/phage-therapy-patent-landscape.webp",
+        "fit": "contain",
+        "alt": "Line chart of patent families per application year for ten phage-therapy technology themes, rising sharply after 2010",
+        "caption": "Patent families per year for the ten technology themes found by topic modelling, 1955–2023.",
+        "credit": "Figure from Mbogning Fonkou & Kong, Nature Biotechnology (2024)",
+        "width": 1148,
+        "height": 724
+      },
+      {
+        "src": "/images/projects/phage-therapy-patent-landscape-2.webp",
+        "fit": "contain",
+        "alt": "Line chart of patent families per year by IPC subclass, led by A61K, C12N and A61P",
+        "caption": "Patent families per year by IPC subclass; A61K, C12N and A61P lead.",
+        "credit": "Figure from Mbogning Fonkou & Kong, Nature Biotechnology (2024)",
+        "width": 1132,
+        "height": 708
+      }
     ]
   },
   {
@@ -82,6 +102,28 @@
         "label": "Preprint Servers Explorer",
         "url": "https://github.com/descartesmbogning/Preprint-Servers-Explorer"
       }
+    ],
+    "images": [
+      {
+        "src": "/images/projects/global-preprint-metadata-integration.webp",
+        "fit": "contain",
+        "dark": true,
+        "alt": "Bar chart of the top 15 preprint sources from 1990 to 2025, led by arXiv, SSRN and HAL",
+        "caption": "Top 15 preprint sources, 1990–2025, in the Preprint Servers Explorer.",
+        "credit": "Preprint Servers Explorer, data collected 16 May 2026",
+        "width": 1520,
+        "height": 1184
+      },
+      {
+        "src": "/images/projects/global-preprint-metadata-integration-2.webp",
+        "fit": "contain",
+        "dark": true,
+        "alt": "Dashboard overview: 109 sources, 7,347,311 preprints in range, 24% with published links",
+        "caption": "Overview: 109 sources and 7.3 million preprints in the 1990–2025 range; 24% link to a published version.",
+        "credit": "Preprint Servers Explorer",
+        "width": 1520,
+        "height": 1056
+      }
     ]
   },
   {
@@ -115,7 +157,8 @@
         "label": "Unpaywall API helper",
         "url": "https://github.com/descartesmbogning/get_Unpaywall_data_via_the_API"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "immune-checkpoint-patent-intelligence-dashboard",
@@ -150,6 +193,26 @@
       {
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/immune-checkpoint-therapy-patent-analysis-dashboard"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/projects/immune-checkpoint-patent-intelligence-dashboard.webp",
+        "fit": "contain",
+        "alt": "Co-inventor network map with clusters of inventors in different colours",
+        "caption": "Co-inventor network from the public dashboard (VOSviewer).",
+        "credit": "Immune Checkpoint Therapy Patent Analysis dashboard; data from Lens.org",
+        "width": 1440,
+        "height": 932
+      },
+      {
+        "src": "/images/projects/immune-checkpoint-patent-intelligence-dashboard-2.webp",
+        "fit": "contain",
+        "alt": "Bar chart of the top 20 inventors by patent count, coloured by 2023 activity class",
+        "caption": "Top 20 inventors by patent count, coloured by their 2023 activity class.",
+        "credit": "Immune Checkpoint Therapy Patent Analysis dashboard",
+        "width": 1552,
+        "height": 502
       }
     ]
   },
@@ -186,6 +249,17 @@
       {
         "label": "Dataset on GitHub",
         "url": "https://github.com/descartesmbogning/How-the-COVID-19-pandemic-is-shaping-research-in-Africa-inequalities-in-scholarly-output-and-collab"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/projects/african-covid-19-research-bibliometrics.webp",
+        "fit": "contain",
+        "alt": "Correlation matrix between world regions, with African sub-regions in rows and columns",
+        "caption": "Correlations between world regions, with Africa's sub-regions broken out.",
+        "credit": "Figure from Mbogning Fonkou et al., IJERPH (2021), CC BY 4.0",
+        "width": 1600,
+        "height": 1309
       }
     ]
   },
@@ -226,6 +300,53 @@
         "label": "Systematic review (Future Microbiology)",
         "url": "https://doi.org/10.2217/fmb-2018-0181"
       }
+    ],
+    "images": [
+      {
+        "src": "/images/projects/bacterial-discovery-and-taxonogenomics-tree.webp",
+        "fit": "contain",
+        "alt": "16S rRNA phylogenetic tree with Enterococcus timonensis highlighted in red among related Enterococcus species",
+        "caption": "16S rRNA tree placing Enterococcus timonensis (red) among its closest relatives.",
+        "credit": "",
+        "width": 1538,
+        "height": 1084
+      },
+      {
+        "src": "/images/projects/bacterial-discovery-and-taxonogenomics-sem.webp",
+        "fit": "cover",
+        "alt": "Scanning electron micrograph of curved rod-shaped bacteria with flagella, scale bar 5 micrometres",
+        "caption": "Scanning electron micrograph of a new isolate (scale bar 5 µm).",
+        "credit": "",
+        "width": 1496,
+        "height": 974
+      },
+      {
+        "src": "/images/projects/bacterial-discovery-and-taxonogenomics-gram.webp",
+        "fit": "cover",
+        "alt": "Gram stain showing pink Gram-negative rods under the microscope",
+        "caption": "Gram stain of a new isolate.",
+        "credit": "",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/projects/bacterial-discovery-and-taxonogenomics-culture.webp",
+        "fit": "cover",
+        "alt": "Blood agar plate with small white bacterial colonies along streak lines",
+        "caption": "Colonies of a new isolate on blood agar.",
+        "credit": "",
+        "width": 960,
+        "height": 960
+      },
+      {
+        "src": "/images/projects/bacterial-discovery-and-taxonogenomics-biochem.webp",
+        "fit": "cover",
+        "alt": "Five rapid ID 32 A biochemical test strips with coloured wells, one labelled S. felix",
+        "caption": "rapid ID 32 A biochemical profiles, including Selenomonas felix (fourth strip).",
+        "credit": "",
+        "width": 665,
+        "height": 780
+      }
     ]
   },
   {
@@ -263,7 +384,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/Deciphering_Bacteriophage_Revolution"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "phage-therapy-funding-intelligence",
@@ -294,7 +416,8 @@
         "label": "Notebooks on GitHub",
         "url": "https://github.com/descartesmbogning/phage-therapy-funding"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "preprint-harvester-toolkit",
@@ -326,7 +449,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/preprint-harvester"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "crossref-preprint-harvesting-and-labeling",
@@ -362,7 +486,8 @@
         "label": "Labelling rules",
         "url": "https://github.com/descartesmbogning/crossref_preprint_labeling"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "datacite-preprint-harvesting",
@@ -392,7 +517,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/datacite-preprints-harvester"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "openalex-preprint-metadata-extraction",
@@ -423,7 +549,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/openalex_preprints_metada"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "preprint-servers-explorer",
@@ -458,7 +585,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/Preprint-Servers-Explorer"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "crossref-preprints-explorer",
@@ -486,7 +614,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/Crossref-Preprints-Explorer"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "genai-publication-intelligence",
@@ -520,7 +649,8 @@
       "QA",
       "caching"
     ],
-    "links": []
+    "links": [],
+    "images": []
   },
   {
     "slug": "ticks-and-climate-change-research-mapping",
@@ -549,7 +679,8 @@
       "research mapping",
       "NLP"
     ],
-    "links": []
+    "links": [],
+    "images": []
   },
   {
     "slug": "rsv-integrated-surveillance-review",
@@ -575,7 +706,8 @@
       "public health surveillance",
       "synthesis"
     ],
-    "links": []
+    "links": [],
+    "images": []
   },
   {
     "slug": "cameroon-malaria-under-reporting-analysis",
@@ -600,7 +732,8 @@
       "variable specification",
       "synthesis"
     ],
-    "links": []
+    "links": [],
+    "images": []
   },
   {
     "slug": "covid-19-transmission-and-mortality-in-africa",
@@ -628,7 +761,8 @@
         "label": "Frontiers in Public Health article",
         "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8568130/"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "covid-19-case-reporting-in-africa",
@@ -656,7 +790,8 @@
         "label": "Frontiers in Public Health article",
         "url": "https://doi.org/10.3389/fpubh.2024.1406363"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "marburg-virus-bibliometrics-and-gender",
@@ -690,7 +825,8 @@
         "label": "Gender analysis",
         "url": "https://github.com/descartesmbogning/Marburg-virus-research-gender"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "gut-microbiota-and-cancer-immunotherapy",
@@ -722,6 +858,26 @@
       {
         "label": "Cancer Discovery article",
         "url": "https://doi.org/10.1158/2159-8290.CD-22-0201"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/projects/gut-microbiota-and-cancer-immunotherapy.webp",
+        "fit": "cover",
+        "alt": "Square agar plate with antibiotic discs and clear inhibition zones, held in a gloved hand",
+        "caption": "Antibiotic disc-diffusion test on a bacterial isolate, Villejuif, 2022.",
+        "credit": "",
+        "width": 1079,
+        "height": 1371
+      },
+      {
+        "src": "/images/projects/gut-microbiota-and-cancer-immunotherapy-2.webp",
+        "fit": "cover",
+        "alt": "Vi-CELL XR cell viability analyser next to a computer showing cell counts",
+        "caption": "Cell viability counting on a Vi-CELL XR analyser.",
+        "credit": "",
+        "width": 1080,
+        "height": 954
       }
     ]
   },
@@ -758,7 +914,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/cognosx/OpenAlexDataEnricher"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "publication-fetcher",
@@ -788,7 +945,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/cognosx/publicationfetcher"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "biomedical-ner-tf-idf-and-topic-modelling-tools",
@@ -830,7 +988,8 @@
         "label": "Named-entity recognition",
         "url": "https://github.com/descartesmbogning/Named-Entity-Recognition-NER-"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "scientific-network-analysis-and-patent-preparation",
@@ -867,7 +1026,8 @@
         "label": "Lens.org to VOSviewer",
         "url": "https://github.com/descartesmbogning/prepare_patent_data_from_Lens.org_for_visualization_in_VosViewer"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "postgresql-data-transfer-utility",
@@ -896,7 +1056,8 @@
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/Data-Transfer-to-PostgreSQL"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "biotech-sosci-research-pipelines",
@@ -927,7 +1088,8 @@
       "multilingual NLP",
       "GPU workflow"
     ],
-    "links": []
+    "links": [],
+    "images": []
   },
   {
     "slug": "cognosx-field-intelligence-initiative",
@@ -962,7 +1124,8 @@
         "label": "CognosX Insights",
         "url": "https://cognosxinsights.substack.com"
       }
-    ]
+    ],
+    "images": []
   },
   {
     "slug": "who-one-health-ai-hubs-mapping",
@@ -987,6 +1150,7 @@
       "Institutional landscape analysis",
       "research intelligence"
     ],
-    "links": []
+    "links": [],
+    "images": []
   }
 ]

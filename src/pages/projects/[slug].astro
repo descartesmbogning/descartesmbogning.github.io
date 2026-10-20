@@ -15,6 +15,14 @@ const names = p.domains.map((id) => ({ id, label: domains.find((d) => d.id === i
   </div></div></section>
   <section class="section"><div class="wrap detail">
     <div class="main">
+      {p.images?.length > 0 && (
+        <div class="gallery">
+          {p.images.map((im, i) => (
+            <figure class={`fig ${im.fit}${im.dark ? ' dark' : ''}${i === 0 ? ' lead' : ''}`}>
+              <a href={im.src} target="_blank" rel="noopener"><img src={im.src} alt={im.alt} width={im.width} height={im.height} loading={i === 0 ? 'eager' : 'lazy'} decoding="async" /></a>
+              <figcaption>{im.caption}{im.credit && <span class="credit"> {im.credit}.</span>}</figcaption>
+            </figure>))}
+        </div>)}
       {p.problem && <div><h2 style="font-size:22px;margin-bottom:8px">Problem</h2><p>{p.problem}</p></div>}
       {p.approach && <div><h2 style="font-size:22px;margin-bottom:8px">Approach</h2><p>{p.approach}</p></div>}
       {p.result && <div><h2 style="font-size:22px;margin-bottom:8px">Result</h2><p>{p.result}</p></div>}
