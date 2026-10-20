@@ -7,7 +7,7 @@ Astro-powered, editable research archive for `https://descartesmbogning.github.i
 One site in the CognosX palette (black, white, yellow) with five pages:
 
 - **Home** – headline, research numbers, "About me" story and research areas, six featured projects, links to the other pages, contact.
-- **Projects** – all projects, filterable by research area and status; one page per project.
+- **Projects** – six research programmes plus an open-source toolbox (from `src/data/programmes.json`), each with its lead study, related projects, and the tools and skills used across them; search and status filter; one page per project.
 - **Publications** – articles, preprints and thesis, with publisher notices labelled.
 - **Experience & skills** – career, skills with proof, "beyond research" skills, degrees, and certificates (each with a "View certificate" link when `url` is set).
 
@@ -99,3 +99,10 @@ Images live in `public/images/projects/` (WebP, at most 1600 px wide). Each proj
 `src`, `alt` (what the image shows, for screen readers), `caption`, `credit`, `fit` (`contain` for charts,
 `cover` for photos), `width` and `height`, and `dark: true` for dark screenshots. Name new files after the
 project's slug, e.g. `phage-therapy-patent-landscape-3.webp`.
+
+## Research programmes
+
+`src/data/programmes.json` decides how projects are grouped on the Projects page. Each programme has an `id`
+(used in links such as `/projects/#preprints`), `title`, `question`, `summary`, a `lead` project slug and a
+`members` list of slugs. Every project should appear in exactly one programme. The "Tools used" and "Skills"
+lists are counted automatically from each project's `methods` and `skills`.

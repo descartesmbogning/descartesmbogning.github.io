@@ -1,0 +1,93 @@
+[
+  {
+    "id": "phage",
+    "title": "Phage therapy intelligence",
+    "question": "Who invents, funds and studies phage therapy, and where?",
+    "summary": "Patents, research grants and literature mapped together to show how phage therapy is moving from the lab to the clinic.",
+    "lead": "phage-therapy-patent-landscape",
+    "members": [
+      "phage-therapy-funding-intelligence",
+      "bacteriophage-one-health-literature-mapping"
+    ]
+  },
+  {
+    "id": "preprints",
+    "title": "The global preprint ecosystem",
+    "question": "How big is the preprint world, and how can we count it reliably?",
+    "summary": "Harvesters for Crossref, DataCite and OpenAlex, rules to identify preprint servers, and public explorers built on the resulting dataset.",
+    "lead": "global-preprint-metadata-integration",
+    "members": [
+      "preprint-servers-explorer",
+      "crossref-preprints-explorer",
+      "preprint-harvester-toolkit",
+      "crossref-preprint-harvesting-and-labeling",
+      "datacite-preprint-harvesting",
+      "openalex-preprint-metadata-extraction"
+    ]
+  },
+  {
+    "id": "africa-equity",
+    "title": "Research equity in Africa",
+    "question": "Who gets to publish, share and lead research in Africa?",
+    "summary": "Continent-wide measures of open access, collaboration, leadership and gender in African research output.",
+    "lead": "african-research-production-and-inequalities",
+    "members": [
+      "marburg-virus-bibliometrics-and-gender"
+    ]
+  },
+  {
+    "id": "epidemics",
+    "title": "Epidemics, surveillance and One Health",
+    "question": "How well do research and surveillance data track outbreaks, from COVID-19 to malaria and ticks?",
+    "summary": "Studies of epidemic research output, case reporting, under-reporting and surveillance, across human, animal and environmental health.",
+    "lead": "african-covid-19-research-bibliometrics",
+    "members": [
+      "covid-19-case-reporting-in-africa",
+      "covid-19-transmission-and-mortality-in-africa",
+      "cameroon-malaria-under-reporting-analysis",
+      "rsv-integrated-surveillance-review",
+      "ticks-and-climate-change-research-mapping",
+      "who-one-health-ai-hubs-mapping"
+    ]
+  },
+  {
+    "id": "innovation",
+    "title": "Biotech and innovation intelligence",
+    "question": "Which companies, inventors and technologies lead a field, and where is it heading?",
+    "summary": "Patent and publication intelligence for biotech teams and recruiters, delivered through CognosX as reports, dashboards and pipelines.",
+    "lead": "immune-checkpoint-patent-intelligence-dashboard",
+    "members": [
+      "cognosx-field-intelligence-initiative",
+      "genai-publication-intelligence",
+      "biotech-sosci-research-pipelines",
+      "scientific-network-analysis-and-patent-preparation"
+    ]
+  },
+  {
+    "id": "microbes",
+    "title": "Microbes in health and disease",
+    "question": "Which bacteria live in us, and how do they shape disease and treatment?",
+    "summary": "Culturomics and taxonogenomics of the human microbiota, from new respiratory species to the gut bacteria that affect cancer immunotherapy.",
+    "lead": "bacterial-discovery-and-taxonogenomics",
+    "members": [
+      "gut-microbiota-and-cancer-immunotherapy"
+    ],
+    "extra": {
+      "label": "All 35 species I described",
+      "url": "/species/"
+    }
+  },
+  {
+    "id": "toolbox",
+    "title": "Open-source toolbox",
+    "question": "Reusable code behind the studies, free on GitHub.",
+    "summary": "General-purpose tools for collecting, enriching, analysing and moving scholarly data.",
+    "lead": "",
+    "members": [
+      "openalex-data-enricher",
+      "publication-fetcher",
+      "biomedical-ner-tf-idf-and-topic-modelling-tools",
+      "postgresql-data-transfer-utility"
+    ]
+  }
+]

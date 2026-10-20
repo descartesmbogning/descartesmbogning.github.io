@@ -1,23 +1,55 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
+import CaseStudy from '../../components/CaseStudy.astro';
 import Filter from '../../components/Filter.astro';
 import projects from '../../data/projects.json';
-import domains from '../../data/domains.json';
+import { programmeList, areaToProgramme } from '../../lib/programmes.js';
 const statuses = ['Published', 'In preparation', 'Software & data', 'Ongoing work'];
-const groups = [
-  { key: 'areas', label: 'Area', options: domains.map((d) => ({ value: d.id, label: d.label })) },
-  { key: 'status', label: 'Status', options: statuses.map((s) => ({ value: s, label: s })) },
-];
+const groups = [{ key: 'status', label: 'Status', options: statuses.map((s) => ({ value: s, label: s })) }];
+const research = programmeList.filter((g) => g.id !== 'toolbox');
+const textOf = (p) => `${p.title} ${p.summary} ${p.methods.join(' ')} ${p.skills.join(' ')}`.toLowerCase();
 ---
-<Base title="Projects" current="/projects/" description="Research, data and software projects in bibliometrics, patent analytics, public health and microbiology.">
+<Base title="Projects" current="/projects/" description="Research programmes in phage therapy, preprints, research equity in Africa, epidemics, biotech intelligence and microbiology, plus open-source tools.">
   <section class="band dots"><div class="wrap"><div class="page-hero">
-    <span class="label">{projects.length} projects · 6 research areas</span>
+    <span class="label">{projects.length} projects · {research.length} research programmes · open-source toolbox</span>
     <h1>Projects</h1>
-    <p>Research studies, datasets and software tools, from microbial discovery to science-of-science and patent intelligence. The strongest work is listed first.</p>
+    <p>Six research programmes, each led by its main study, with the related studies, datasets and tools grouped underneath.</p>
   </div></div></section>
   <section class="section"><div class="wrap">
-    <Filter groups={groups} placeholder="Search projects, methods or tools" noun="projects" />
-    <div class="cards">{projects.map((p) => <ProjectCard p={p} domains={domains} />)}</div>
+    <nav class="prog-nav" aria-label="Programmes">
+      {programmeList.map((g) => <a href={`#${g.id}`}>{g.title}<span>{g.all.length}</span></a>)}
+    </nav>
+    <Filter groups={groups} placeholder="Search projects, tools or skills" noun="projects" />
+    {programmeList.map((g, i) => (
+      <div class="programme" id={g.id} data-programme>
+        <div class="prog-head">
+          <span class="label">{g.id === 'toolbox' ? 'Tools' : `Programme ${i + 1}`} · {g.all.length} {g.all.length === 1 ? 'project' : 'projects'}</span>
+          <h2>{g.title}</h2>
+          <p class="prog-q">{g.question}</p>
+          <p class="lede">{g.summary}</p>
+          <div class="prog-tags">
+            <div><h3 class="label">Tools used</h3><ul class="tags counted">{g.tools.slice(0, 14).map((t) => <li>{t.name}{t.n > 1 && <b>×{t.n}</b>}</li>)}</ul></div>
+            <div><h3 class="label">Skills</h3><ul class="tags counted">{g.skills.slice(0, 12).map((t) => <li>{t.name}{t.n > 1 && <b>×{t.n}</b>}</li>)}</ul></div>
+          </div>
+          {g.extra && <a class="more" href={g.extra.url}>{g.extra.label} →</a>}
+        </div>
+        {g.leadProject && <div class="prog-lead" data-item data-status={g.leadProject.status} data-text={textOf(g.leadProject)}><CaseStudy p={g.leadProject} /></div>}
+        {g.memberProjects.length > 0 && <>
+          {g.leadProject && <h3 class="prog-sub">Also in this programme</h3>}
+          <div class="cards">{g.memberProjects.map((p) => <ProjectCard p={p} />)}</div>
+        </>}
+      </div>))}
   </div></section>
 </Base>
+<script define:vars={{ areaToProgramme }}>
+  // Hide a programme when the filter leaves none of its projects visible.
+  const sync = () => {
+    for (const g of document.querySelectorAll('[data-programme]')) {
+      g.hidden = ![...g.querySelectorAll('[data-item]')].some((it) => !it.hidden);
+    }
+  };
+  document.addEventListener('filtered', sync);
+  const m = location.hash.match(/^#area-([a-z-]+)$/);
+  if (m && areaToProgramme[m[1]]) { history.replaceState(null, '', `#${areaToProgramme[m[1]]}`); document.getElementById(areaToProgramme[m[1]])?.scrollIntoView(); }
+</script>
