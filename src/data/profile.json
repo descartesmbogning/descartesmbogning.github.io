@@ -38,9 +38,26 @@
   ],
   "metricsSourceUrl": "https://api.openalex.org/authors/A5023046200",
   "about": [
-    "I started at the lab bench: clinical laboratories in Yaoundé, then culturomics in Marseille, where I described 35 new bacterial species, then microbiome and cancer research at Gustave Roussy. Ten years of biomedical research showed me how science is really made: who funds it, who publishes it and who patents it.",
-    "Now I measure that system. At York University I mapped the global patent landscape of phage therapy, published in Nature Biotechnology. At Simon Fraser University's ScholCommLab I built a harmonised dataset of 7.9 million preprint records from 109 servers.",
-    "Through CognosX, the science-intelligence company I founded, I help research teams and biotech companies read publication, patent and funding landscapes, and turn them into decisions. I work in French and English."
+    {
+      "heading": "From the lab",
+      "text": "I started my career in the lab. In Yaoundé, Marseille and Paris, I worked on microbes, gut bacteria and cancer research. I <a href=\"/species/\">discovered and described new bacterial species</a>, and I loved the patience and care that this work asks for. The lab made me a rigorous scientist, and it made me curious."
+    },
+    {
+      "heading": "Why science of science",
+      "text": "Over time, my curiosity grew. Each study was one small piece of a bigger puzzle. I wanted to see the full picture: how research is made, who does it, who works with whom, and which ideas get money and attention. So I used the same care I learned in the lab to study science itself. This brought me to Canada, to York University in Toronto and Simon Fraser University in Vancouver."
+    },
+    {
+      "heading": "What I do",
+      "text": "I map how researchers connect and work together. I follow ideas as they move from papers to patents to policy. I measure the gaps between countries, institutions and fields. For example, my <a href=\"/projects/#phage\">study of phage therapy patents</a>, published in Nature Biotechnology, showed who is turning a promising treatment into real products, and where. My work on <a href=\"/projects/#preprints\">preprints</a> shows how quickly new research is shared around the world, and who is still left behind."
+    },
+    {
+      "heading": "Why it matters",
+      "text": "These patterns show who gets heard in science, and who does not. When research teams, funders and biotech organisations can see where a field is going, what is missing and who is left out, they can put their time and money where it matters most. I share this work through CognosX."
+    },
+    {
+      "heading": "What's next",
+      "text": "My goal is a fairer and more connected research world. I want good science from <a href=\"/projects/#africa-equity\">Africa</a> and other less visible places to be seen, and evidence to reach decision-makers in time to make a difference. I speak English and French, and I'm always happy to connect. My approach is simple: let science data speak."
+    }
   ],
   "lastUpdated": "2026-10-20",
   "specialties": "bibliometrics, patent analytics, research evaluation"

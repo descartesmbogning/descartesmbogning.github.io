@@ -209,6 +209,7 @@ a.copy{text-decoration:none;display:inline-block}
 /* home: about story, next links, contact routes */
 .about-home{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:20px 48px;align-items:start}
 .about-home .sec-head{grid-column:1/-1;margin-bottom:0}
+.about-home .story h3{font:700 15px var(--body);text-transform:uppercase;letter-spacing:.06em;margin:22px 0 6px}.about-home .story h3:first-child{margin-top:0}
 .about-home .story p{font-size:18px;line-height:1.65;margin:0 0 14px;max-width:62ch}
 @media (max-width:800px){.about-home{grid-template-columns:1fr}}
 .next{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
