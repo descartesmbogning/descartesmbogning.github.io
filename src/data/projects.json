@@ -215,6 +215,10 @@
     ],
     "links": [
       {
+        "label": "All 35 species I described",
+        "url": "/species/"
+      },
+      {
         "label": "Thesis record",
         "url": "https://theses.fr/2018AIXM0693"
       },
