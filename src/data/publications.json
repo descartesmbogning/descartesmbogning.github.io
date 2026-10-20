@@ -6,6 +6,7 @@
     "year": "2024",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://doi.org/10.3389/fpubh.2024.1406363",
     "linkLabel": "Read"
@@ -17,6 +18,7 @@
     "year": "2024",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22The%20application%20of%20Culturomics%20to%20explore%20African%20skin%20microbiota%22",
     "linkLabel": "Find on Google Scholar"
@@ -28,6 +30,7 @@
     "year": "2024",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.nature.com/articles/s41587-024-02493-9",
     "linkLabel": "Read"
@@ -39,6 +42,7 @@
     "year": "2024",
     "type": "Preprint",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://doi.org/10.21203/rs.3.pex-2537/v1",
     "linkLabel": "Read"
@@ -50,6 +54,7 @@
     "year": "2024",
     "type": "Preprint",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://doi.org/10.2139/ssrn.4771127",
     "linkLabel": "Read"
@@ -61,6 +66,7 @@
     "year": "2023",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.sciencedirect.com/science/article/abs/pii/S0001706X22004016",
     "linkLabel": "Read"
@@ -72,6 +78,7 @@
     "year": "2023",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.science.org/doi/10.1126/science.abo2296",
     "linkLabel": "Read"
@@ -83,6 +90,7 @@
     "year": "2022",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://aacrjournals.org/cancerdiscovery/article/12/10/2280/709451/Escherichia-coli-Specific-CXCL13-Producing-TFH-Are",
     "linkLabel": "Read"
@@ -94,6 +102,7 @@
     "year": "2022",
     "type": "Preprint",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Detection%20of%20horizontal%20sequence%20transfer%20in%20microorganisms%20in%20the%20genomic%20era%22",
     "linkLabel": "Find on Google Scholar"
@@ -105,6 +114,7 @@
     "year": "2021",
     "type": "Preprint",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://doi.org/10.1101/2021.04.24.21256053",
     "linkLabel": "Read"
@@ -116,6 +126,7 @@
     "year": "2021",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.mdpi.com/1660-4601/18/14/7273",
     "linkLabel": "Read"
@@ -127,6 +138,7 @@
     "year": "2021",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2021.751197/full",
     "linkLabel": "Read"
@@ -138,6 +150,7 @@
     "year": "2021",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "Retracted (2024)",
     "url": "https://link.springer.com/article/10.1007/s00203-021-02493-2",
     "linkLabel": "Read"
@@ -149,6 +162,7 @@
     "year": "2020",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Enorma%20burkinafasonensis%20sp.%20nov.%2C%20a%20new%20bacterium%20isolated%20from%20a%20human%20gut%20microbiota%22",
     "linkLabel": "Find on Google Scholar"
@@ -160,6 +174,7 @@
     "year": "2020",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": true,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Enterococcus%20burkinafasonensis%20sp.%20nov.%20isolated%20from%20human%20gut%20microbiota%22",
     "linkLabel": "Find on Google Scholar"
@@ -171,6 +186,7 @@
     "year": "2020",
     "type": "Preprint",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://doi.org/10.1101/2020.06.13.20122762",
     "linkLabel": "Read"
@@ -182,6 +198,7 @@
     "year": "2020",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.frontiersin.org/journals/cellular-and-infection-microbiology/articles/10.3389/fcimb.2020.524769/full",
     "linkLabel": "Read"
@@ -193,6 +210,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Parabacteroides%20massiliensis%20sp.%20nov.%2C%20a%20new%20bacterium%20isolated%20from%20a%20fresh%20human%20stool%20specimen%22",
     "linkLabel": "Find on Google Scholar"
@@ -204,6 +222,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "Expression of concern",
     "url": "https://scholar.google.com/scholar?q=%22Noncontiguous%20finished%20genome%20sequence%20and%20description%20of%20Raoultibacter%20massiliensis%20gen.%20nov.%2C%20sp.%20nov.%20and%20Raoultibact%22",
     "linkLabel": "Find on Google Scholar"
@@ -215,6 +234,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.sciencedirect.com/science/article/pii/S2052297519300289",
     "linkLabel": "Read"
@@ -226,6 +246,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Brachybacterium%20timonense%20sp.%20nov.%2C%20a%20new%20bacterium%20isolated%20from%20human%20sputum%22",
     "linkLabel": "Find on Google Scholar"
@@ -237,6 +258,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Selenomonas%20felix%20sp.%20nov.%2C%20a%20new%20bacterium%20isolated%20from%20human%20sputum%22",
     "linkLabel": "Find on Google Scholar"
@@ -248,6 +270,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Phoenicibacter%20congonensis%20gen.%20nov.%2C%20sp.%20nov.%2C%20a%20new%20genus%20isolated%20from%20the%20human%20gut%20and%20its%20description%20using%20a%20taxo%22",
     "linkLabel": "Find on Google Scholar"
@@ -259,6 +282,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "Expression of concern",
     "url": "https://scholar.google.com/scholar?q=%22Taxonogenomics%20description%20of%20Parabacteroides%20timonensis%20sp.%20nov.%20isolated%20from%20a%20human%20stool%20sample%22",
     "linkLabel": "Find on Google Scholar"
@@ -270,6 +294,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.sciencedirect.com/science/article/pii/S2452231718300381",
     "linkLabel": "Read"
@@ -281,6 +306,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Dysgonomonas%20massiliensis%20sp.%20nov.%2C%20a%20new%20species%20isolated%20from%20the%20human%20gut%20and%20its%20taxonogenomic%20description%22",
     "linkLabel": "Find on Google Scholar"
@@ -292,6 +318,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "Expression of concern",
     "url": "https://scholar.google.com/scholar?q=%22Miniphocibacter%20massiliensis%20gen.%20nov.%2C%20sp.%20nov.%2C%20a%20new%20species%20isolated%20from%20the%20human%20gut%20and%20its%20taxono%E2%80%90genomics%20desc%22",
     "linkLabel": "Find on Google Scholar"
@@ -303,6 +330,7 @@
     "year": "2019",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Molecular%20drivers%20of%20emerging%20multidrug%20resistance%20in%20Proteus%20mirabilis%20clinical%20isolates%20from%20Algeria%22",
     "linkLabel": "Find on Google Scholar"
@@ -314,6 +342,7 @@
     "year": "2018",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "Expression of concern",
     "url": "https://scholar.google.com/scholar?q=%22Eggerthella%20timonensis%20sp.%20nov%2C%20a%20new%20species%20isolated%20from%20the%20stool%20sample%20of%20a%20pygmy%20female%22",
     "linkLabel": "Find on Google Scholar"
@@ -325,6 +354,7 @@
     "year": "2018",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Noncontiguous%20finished%20genome%20sequences%20and%20description%20of%20Bacteroides%20mediterraneensis%20sp.%20nov.%2C%20Bacteroides%20ihuae%20sp.%20%22",
     "linkLabel": "Find on Google Scholar"
@@ -336,6 +366,7 @@
     "year": "2018",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "Expression of concern",
     "url": "https://scholar.google.com/scholar?q=%22Genomic%20and%20phenotypic%20description%20of%20the%20newly%20isolated%20human%20species%20Collinsella%20bouchesdurhonensis%20sp.%20nov.%22",
     "linkLabel": "Find on Google Scholar"
@@ -347,6 +378,7 @@
     "year": "2018",
     "type": "Thesis",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://theses.fr/2018AIXM0693",
     "linkLabel": "Read"
@@ -358,6 +390,7 @@
     "year": "2018",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://doi.org/10.2217/fmb-2018-0181",
     "linkLabel": "Read"
@@ -369,6 +402,7 @@
     "year": "2018",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://www.sciencedirect.com/science/article/pii/S2052297517301038",
     "linkLabel": "Read"
@@ -380,6 +414,7 @@
     "year": "2018",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Noncontiguous%20finished%20genome%20sequences%20and%20descriptions%20of%20Actinomyces%20ihuae%2C%20Actinomyces%20bouchesdurhonensis%2C%20Actinomyc%22",
     "linkLabel": "Find on Google Scholar"
@@ -391,6 +426,7 @@
     "year": "2018",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Sanguibacter%20massiliensis%20sp.%20nov.%2C%20Actinomyces%20minihominis%20sp.%20nov.%2C%20Clostridium%20minihomine%20sp.%20nov.%2C%20Neobittarella%20mas%22",
     "linkLabel": "Find on Google Scholar"
@@ -402,6 +438,7 @@
     "year": "2017",
     "type": "Article",
     "firstAuthor": true,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22%E2%80%98Bacteroides%20ihuae%E2%80%99%20sp.%20nov.%2C%20a%20new%20bacterial%20species%20isolated%20from%20the%20human%20respiratory%20microbiome.%22",
     "linkLabel": "Find on Google Scholar"
@@ -413,6 +450,7 @@
     "year": "2017",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22Sero-epidemiology%20of%20human%20immunodeficiency%20virus%2C%20hepatitis%20B%20virus%20and%20hepatitis%20C%20virus%3A%20a%20cross-sectional%20survey%20in%20%22",
     "linkLabel": "Find on Google Scholar"
@@ -424,6 +462,7 @@
     "year": "2016",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://scholar.google.com/scholar?q=%22%E2%80%98Pygmaiobacter%20massiliensis%E2%80%99%20sp.%20nov.%2C%20a%20new%20bacterium%20isolated%20from%20the%20human%20gut%20of%20a%20pygmy%20female%22",
     "linkLabel": "Find on Google Scholar"
@@ -435,6 +474,7 @@
     "year": "2015",
     "type": "Article",
     "firstAuthor": false,
+    "lastAuthor": false,
     "notice": "",
     "url": "https://hsd-fmsb.org/index.php/hsd/article/view/524",
     "linkLabel": "Read"

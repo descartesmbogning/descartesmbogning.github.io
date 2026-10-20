@@ -7,13 +7,14 @@ import profile from '../../data/profile.json';
 const types = [...new Set(pubs.map((p) => p.type))];
 const groups = [
   { key: 'type', label: 'Type', options: types.map((t) => ({ value: t, label: t })) },
-  { key: 'role', label: 'Role', options: [{ value: 'first', label: 'First author' }] },
+  { key: 'role', label: 'Role', options: [{ value: 'lead', label: 'Lead author (first or last)' }, { value: 'first', label: 'First author' }, { value: 'last', label: 'Last author' }] },
 ];
-const first = pubs.filter((p) => p.firstAuthor).length;
+const lead = pubs.filter((p) => p.firstAuthor || p.lastAuthor).length;
+const roleOf = (p) => [p.firstAuthor && 'first', p.lastAuthor && 'last', (p.firstAuthor || p.lastAuthor) && 'lead'].filter(Boolean).join('|');
 ---
 <Base title="Publications" current="/publications/" description="Peer-reviewed articles, preprints and thesis by Maxime Descartes Mbogning Fonkou.">
   <section class="band dots"><div class="wrap"><div class="page-hero">
-    <span class="label">{pubs.length} works · {first} as first author</span>
+    <span class="label">{pubs.length} works · {lead} as first or last author</span>
     <h1>Publications</h1>
     <p>Peer-reviewed articles, preprints and my doctoral thesis, newest first. For live citation counts see <a href={profile.links.find((l) => l.label === 'Google Scholar')?.url}>Google Scholar</a> or <a href={profile.metricsSourceUrl}>OpenAlex</a>.</p>
   </div></div></section>
@@ -21,7 +22,7 @@ const first = pubs.filter((p) => p.firstAuthor).length;
     <Filter groups={groups} placeholder="Search title, journal or year" noun="works" />
     <ol class="pubs">
       {pubs.map((p) => (
-        <li data-item data-type={p.type} data-role={p.firstAuthor ? 'first' : ''} data-text={`${p.title} ${p.venue} ${p.year} ${p.authors}`.toLowerCase()}>
+        <li data-item data-type={p.type} data-role={roleOf(p)} data-text={`${p.title} ${p.venue} ${p.year} ${p.authors}`.toLowerCase()}>
           <span class="yr">{p.year}</span>
           <div>
             <div class="t">{p.title}</div>
@@ -30,6 +31,7 @@ const first = pubs.filter((p) => p.firstAuthor).length;
             <div class="meta">
               <span class="badge">{p.type}</span>
               {p.firstAuthor && <span class="badge first">First author</span>}
+              {p.lastAuthor && <span class="badge first">Last author</span>}
               {p.notice && <span class="badge notice">{p.notice}</span>}
               <a href={p.url} target="_blank" rel="noopener noreferrer">{p.linkLabel} ↗</a>
             </div>
