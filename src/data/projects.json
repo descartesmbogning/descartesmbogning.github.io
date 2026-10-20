@@ -143,7 +143,7 @@
     "outputs": "Manuscript draft; figures; notebooks",
     "methods": [
       "Scopus",
-      "WoS",
+      "Web of Science",
       "Python",
       "VOSviewer"
     ],
@@ -441,7 +441,7 @@
     "outputs": "Analysis of 802 grants; manuscript in preparation",
     "methods": [
       "Python",
-      "Jupyter (repository evidence)"
+      "Jupyter"
     ],
     "skills": [
       "Funding intelligence",
@@ -606,7 +606,7 @@
     "outputs": "Streamlit app and code",
     "methods": [
       "Python",
-      "Streamlit (reported)"
+      "Streamlit"
     ],
     "skills": [
       "Dashboard design",
@@ -640,7 +640,7 @@
     "contribution": "Built the explorer application.",
     "outputs": "Public application repository",
     "methods": [
-      "Python (GitHub)"
+      "Python"
     ],
     "skills": [
       "Exploratory analytics",
@@ -762,7 +762,7 @@
     "outputs": "Variable framework; literature review material",
     "methods": [
       "Research literature",
-      "epidemiological modelling (specific software unverified)"
+      "Epidemiological modelling"
     ],
     "skills": [
       "Public health analytics",
@@ -816,7 +816,7 @@
     "contribution": "Co-author.",
     "outputs": "Frontiers in Public Health article",
     "methods": [
-      "Quantitative research methods (specific tools unverified)"
+      "Quantitative research methods"
     ],
     "skills": [
       "Reporting bias analysis",
@@ -847,7 +847,7 @@
     "outputs": "Two public repositories",
     "methods": [
       "Jupyter",
-      "bibliometric data (details unverified)"
+      "Bibliometric data"
     ],
     "skills": [
       "Research mapping",

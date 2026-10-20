@@ -12,7 +12,8 @@ const redirects = {
   '/projects/research-intelligence-dashboards-and-web-portfolio': '/projects/',
   '/projects/research-meets-policy-communication': '/experience/',
 };
-for (const a of areas) redirects[`/research/${a}`] = `/projects/#area-${a}`;
+const areaToProgramme = { biomedical: 'microbes', 'public-health': 'epidemics', science: 'africa-equity', patents: 'phage', data: 'preprints', ai: 'innovation' };
+for (const a of areas) redirects[`/research/${a}`] = `/projects/#${areaToProgramme[a]}`;
 
 export default defineConfig({
   site: 'https://descartesmbogning.github.io',

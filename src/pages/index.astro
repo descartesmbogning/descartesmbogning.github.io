@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import CaseStudy from '../components/CaseStudy.astro';
 import profile from '../data/profile.json';
 import projects from '../data/projects.json';
-import domains from '../data/domains.json';
+import { programmeList } from '../lib/programmes.js';
 const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - b.featured);
 ---
 <Base current="/">
@@ -30,8 +30,8 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
       <div class="sec-head"><h2>About me</h2></div>
       <div class="story">{profile.about.map((t) => <p>{t}</p>)}</div>
       <div>
-        <h3 class="label" style="margin-bottom:10px">Research areas</h3>
-        <ul class="tags">{domains.map((d) => <li><a href={`/projects/#area-${d.id}`}>{d.label}</a></li>)}</ul>
+        <h3 class="label" style="margin-bottom:10px">Research programmes</h3>
+        <ul class="tags">{programmeList.filter((g) => g.id !== 'toolbox').map((g) => <li><a href={`/projects/#${g.id}`}>{g.title}</a></li>)}</ul>
       </div>
     </div>
   </section>

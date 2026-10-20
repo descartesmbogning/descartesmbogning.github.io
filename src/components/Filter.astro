@@ -32,6 +32,7 @@ const { groups = [], placeholder = 'Search…', noun = 'items' } = Astro.props;
         it.hidden = !ok; if (ok) n++;
       }
       root.querySelector('[data-n]').textContent = String(n);
+      document.dispatchEvent(new CustomEvent('filtered'));
     };
     for (const row of root.querySelectorAll('[data-group]')) {
       const key = row.dataset.group;
