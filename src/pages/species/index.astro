@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import Filter from '../../components/Filter.astro';
 import species from '../../data/species.json';
+import projects from '../../data/projects.json';
+const lab = projects.find((p) => p.slug === 'bacterial-discovery-and-taxonogenomics')?.images ?? [];
 const lead = species.filter((s) => s.role === 'lead');
 const co = species.filter((s) => s.role === 'co');
 const valid = species.filter((s) => s.status === 'Validly published').length;
@@ -22,6 +24,10 @@ const sections = [
     <p>New bacterial species found by culturomics at IHU Méditerranée Infection, Marseille (2016–2020): {lead.length} as lead author and {co.length} with colleagues. Each name links to its page on <a href="https://lpsn.dsmz.de" target="_blank" rel="noopener noreferrer">LPSN</a>, the List of Prokaryotic names with Standing in Nomenclature.</p>
   </div></div></section>
   <section class="section"><div class="wrap">
+    {lab.length > 0 && (
+      <div class="lab-strip" aria-label="From the lab">
+        {lab.map((im) => <figure class={`fig ${im.fit}`}><a href={im.src} target="_blank" rel="noopener"><img src={im.src} alt={im.alt} width={im.width} height={im.height} loading="lazy" decoding="async" /></a><figcaption>{im.caption}</figcaption></figure>)}
+      </div>)}
     <div class="key">
       <p><span class="vbadge v">Validly published</span> The name is on an IJSEM Validation List under the International Code of Nomenclature of Prokaryotes. The citation under the name is the one LPSN records.</p>
       <p><span class="vbadge">Effectively published</span> Described in a peer-reviewed paper and recorded on LPSN; not yet validated.</p>

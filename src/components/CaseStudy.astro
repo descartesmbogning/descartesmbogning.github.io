@@ -3,11 +3,12 @@ const { p } = Astro.props;
 ---
 <article class="case">
   <div class="top"><span class="label">{p.status}</span></div>
+  {p.images?.[0] && <a class={`case-img ${p.images[0].fit}${p.images[0].dark ? ' dark' : ''}`} href={`/projects/${p.slug}/`} tabindex="-1" aria-hidden="true"><img src={p.images[0].src} alt="" width={p.images[0].width} height={p.images[0].height} loading="lazy" decoding="async" /></a>}
   <div class="body">
     <h3><a href={`/projects/${p.slug}/`}>{p.title}</a></h3>
     <dl class="psr">
       {p.problem && <><dt class="label">Problem</dt><dd>{p.problem}</dd></>}
-      {p.approach && <><dt class="label">Approach</dt><dd>{p.approach}</dd></>}
+      {p.approach && <><dt class="label hide-sm">Approach</dt><dd class="hide-sm">{p.approach}</dd></>}
       {p.result && <><dt class="label">Result</dt><dd>{p.result}</dd></>}
     </dl>
     <ul class="tags" aria-label="Methods">{p.methods.slice(0, 6).map((m) => <li>{m}</li>)}</ul>
