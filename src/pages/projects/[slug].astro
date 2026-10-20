@@ -24,7 +24,7 @@ const names = p.domains.map((id) => ({ id, label: domains.find((d) => d.id === i
       <div><h2 style="font-size:22px;margin-bottom:10px">Skills</h2><ul class="tags">{p.skills.map((m) => <li>{m}</li>)}</ul></div>
     </div>
     <aside class="side">
-      {p.links.length > 0 && <div><h3>Evidence</h3><div class="links">{p.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div></div>}
+      {p.links.length > 0 && <div><h3>Evidence</h3><div class="links">{p.links.map((l) => l.url.startsWith('/') ? <a href={l.url}>{l.label} →</a> : <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div></div>}
       <div><h3>Research areas</h3><div class="links">{names.map((d) => <a href={`/projects/#area-${d.id}`}>{d.label}</a>)}</div></div>
     </aside>
   </div></section>

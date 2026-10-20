@@ -84,3 +84,10 @@ To stop a work from being proposed again, add its DOI or exact title to `scripts
 
 One-time setting (already needed for this to work): **Settings → Actions → General → Workflow permissions →
 tick "Allow GitHub Actions to create and approve pull requests"**.
+
+## Bacteria I described
+
+`/species/` lists every bacterial species and genus you described, from `src/data/species.json`. Each entry has
+`name`, `role` (`lead` or `co`), `status` (`Validly published` or `Effectively published`), `authority` (the LPSN
+citation, for validly published names), `typeStrain`, `source`, `lpsn` (link), `papers` and an optional `note`.
+When a name is validated on a new IJSEM Validation List, change its `status` and add its `authority`.

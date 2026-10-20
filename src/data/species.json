@@ -1,0 +1,621 @@
+[
+  {
+    "name": "Actinomyces bouchesdurhonensis",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Validly published",
+    "authority": "Mbogning Fonkou et al. 2018",
+    "typeStrain": "Marseille-P2825 = CSUR P2825 = DSM 103075",
+    "source": "Gastric fluid",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-bouchesdurhonensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 25 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.004"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces culturomici",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3561 = CSUR P3561",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-culturomici",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 22 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.12.005"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces ihuae",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "SD1 = CSUR P2006 = DSM 100538",
+    "source": "Human sample (IHU Marseille)",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-ihuae",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 25 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.004"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces marseillensis",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Validly published",
+    "authority": "Mbogning Fonkou et al. 2018",
+    "typeStrain": "Marseille-P2818 = CSUR P2818 = CCUG 71898",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-marseillensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 22 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.12.005"
+      },
+      {
+        "label": "New Microbes and New Infections 25 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.004"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces mediterranea",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3257 = CSUR P3257 = CCUG 70143",
+    "source": "Duodenal fluid",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-mediterranea",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 25 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.004"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces oralis",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Validly published",
+    "authority": "Mbogning Fonkou et al. 2018",
+    "typeStrain": "Marseille-P3109 = CSUR P3109 = DSM 103942",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-oralis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 22 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.12.005"
+      },
+      {
+        "label": "New Microbes and New Infections 25 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.004"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces pacaensis",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P2985 = CSUR P2985",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-pacaensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 22 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.12.005"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces urinae",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P2225 = CSUR P2225",
+    "source": "Urine",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-urinae",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 25 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.004"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Bacteroides ihuae",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Validly published",
+    "authority": "Andrieu et al. 2018",
+    "typeStrain": "Marseille-P2824 = CSUR P2824 = CCUG 70550",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/bacteroides-ihuae",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 17 (2017)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.01.011"
+      },
+      {
+        "label": "New Microbes and New Infections 26 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.006"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Enterococcus timonensis",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P2817 = CSUR P2817 = DSM 103162",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/enterococcus-timonensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 22 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.12.005"
+      },
+      {
+        "label": "New Microbes and New Infections 29 (2019)",
+        "url": "https://doi.org/10.1016/j.nmni.2019.100532"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Gemella massiliensis",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Validly published",
+    "authority": "Mbogning Fonkou et al. 2023",
+    "typeStrain": "Marseille-P3249 = CSUR P3249 = DSM 103940",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/gemella-massiliensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 22 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.12.005"
+      },
+      {
+        "label": "Archives of Microbiology 203 (2021)",
+        "url": "https://doi.org/10.1007/s00203-021-02493-2"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Leptotrichia massiliensis",
+    "newGenus": false,
+    "role": "lead",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3007 = CSUR P3007",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/leptotrichia-massiliensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 22 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2017.12.005"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Actinomyces minihominis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/actinomyces-minihominis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 24 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.03.002"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Bacteroides congonensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3132",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/bacteroides-congonensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 26 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.006"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Bacteroides ilei",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3208",
+    "source": "Gut",
+    "lpsn": "https://lpsn.dsmz.de/species/bacteroides-ilei",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 26 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.006"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Bacteroides mediterraneensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P2644",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/bacteroides-mediterraneensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 26 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.006"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Bacteroides ndongoniae",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3108",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/bacteroides-ndongoniae",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 26 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.006"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Bacteroides togonis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3166",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/bacteroides-togonis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 26 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.06.006"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Brachybacterium timonense",
+    "newGenus": false,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Kuete et al. 2026",
+    "typeStrain": "Marseille-P4339 = CSUR P4339 = CECT 9821",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/brachybacterium-timonense",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 31 (2019)",
+        "url": "https://doi.org/10.1016/j.nmni.2019.100568"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Clostridium minihomine",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/clostridium-minihomine",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 24 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.03.002"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Collinsella bouchesdurhonensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3296 = CSUR P3296 = CCUG 70328",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/collinsella-bouchesdurhonensis",
+    "papers": [
+      {
+        "label": "MicrobiologyOpen 7 (2018)",
+        "url": "https://doi.org/10.1002/mbo3.580"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Dysgonomonas massiliensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Bilen et al. 2019",
+    "typeStrain": "Marseille-P4356 = CSUR P4356 = CCUG 71356",
+    "source": "Gut",
+    "lpsn": "https://lpsn.dsmz.de/species/dysgonomonas-massiliensis",
+    "papers": [
+      {
+        "label": "Antonie van Leeuwenhoek 112 (2019)",
+        "url": "https://doi.org/10.1007/s10482-019-01227-1"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Eggerthella timonensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Bilen et al. 2023",
+    "typeStrain": "Marseille-P3135 = CSUR P3135 = CCUG 70327",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/eggerthella-timonensis",
+    "papers": [
+      {
+        "label": "MicrobiologyOpen 7 (2018)",
+        "url": "https://doi.org/10.1002/mbo3.575"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Enorma burkinafasonensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P9525",
+    "source": "Gut (Burkina Faso)",
+    "lpsn": "https://lpsn.dsmz.de/species/enorma-burkinafasonensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 36 (2020)",
+        "url": "https://doi.org/10.1016/j.nmni.2020.100687"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Enterococcus burkinafasonensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-Q0835",
+    "source": "Gut (Burkina Faso)",
+    "lpsn": "https://lpsn.dsmz.de/species/enterococcus-burkinafasonensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 36 (2020)",
+        "url": "https://doi.org/10.1016/j.nmni.2020.100702"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Miniphocaeibacter massiliensis",
+    "newGenus": true,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Bilen et al. 2021",
+    "typeStrain": "Marseille-P4678 = CSUR P4678 = CCUG 71375",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/miniphocaeibacter-massiliensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 24 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.03.002"
+      },
+      {
+        "label": "MicrobiologyOpen 8 (2019)",
+        "url": "https://doi.org/10.1002/mbo3.735"
+      }
+    ],
+    "note": "Published as Miniphocibacter massiliensis; spelling corrected on validation."
+  },
+  {
+    "name": "Neobittarella massiliensis",
+    "newGenus": true,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/neobittarella-massiliensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 24 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.03.002"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Parabacteroides massiliensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P2231 = CSUR P2231 = DSM 101860",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/parabacteroides-massiliensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 32 (2019)",
+        "url": "https://doi.org/10.1016/j.nmni.2019.100602"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Parabacteroides timonensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Bilen et al. 2025",
+    "typeStrain": "Marseille-P3236",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/parabacteroides-timonensis",
+    "papers": [
+      {
+        "label": "MicrobiologyOpen 8 (2019)",
+        "url": "https://doi.org/10.1002/mbo3.702"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Phoenicibacter congonensis",
+    "newGenus": true,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3241 = CSUR P3241 = CCUG 70681",
+    "source": "Gut",
+    "lpsn": "https://lpsn.dsmz.de/species/phoenicibacter-congonensis",
+    "papers": [
+      {
+        "label": "Antonie van Leeuwenhoek 112 (2019)",
+        "url": "https://doi.org/10.1007/s10482-018-01211-1"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Pygmaiobacter massiliensis",
+    "newGenus": true,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "Marseille-P3336 = CSUR P3336",
+    "source": "Gut",
+    "lpsn": "https://lpsn.dsmz.de/species/pygmaiobacter-massiliensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 16 (2017)",
+        "url": "https://doi.org/10.1016/j.nmni.2016.12.015"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Raoultibacter massiliensis",
+    "newGenus": true,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Traore et al. 2022",
+    "typeStrain": "Marseille-P2849 = CSUR P2849 = DSM 103407",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/raoultibacter-massiliensis",
+    "papers": [
+      {
+        "label": "MicrobiologyOpen 8 (2019)",
+        "url": "https://doi.org/10.1002/mbo3.758"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Raoultibacter timonensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Traore et al. 2022",
+    "typeStrain": "Marseille-P3277 = CSUR P3277 = CCUG 70680",
+    "source": "Gut",
+    "lpsn": "https://lpsn.dsmz.de/species/raoultibacter-timonensis",
+    "papers": [
+      {
+        "label": "MicrobiologyOpen 8 (2019)",
+        "url": "https://doi.org/10.1002/mbo3.758"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Sanguibacter massiliensis",
+    "newGenus": false,
+    "role": "co",
+    "status": "Effectively published",
+    "authority": "",
+    "typeStrain": "",
+    "source": "Stool",
+    "lpsn": "https://lpsn.dsmz.de/species/sanguibacter-massiliensis",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 24 (2018)",
+        "url": "https://doi.org/10.1016/j.nmni.2018.03.002"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "name": "Selenomonas felix",
+    "newGenus": false,
+    "role": "co",
+    "status": "Validly published",
+    "authority": "Kuete et al. 2026",
+    "typeStrain": "Marseille-P3560 = CSUR P3560 = CECT 9822",
+    "source": "Sputum",
+    "lpsn": "https://lpsn.dsmz.de/species/selenomonas-felix",
+    "papers": [
+      {
+        "label": "New Microbes and New Infections 31 (2019)",
+        "url": "https://doi.org/10.1016/j.nmni.2019.100567"
+      }
+    ],
+    "note": ""
+  }
+]

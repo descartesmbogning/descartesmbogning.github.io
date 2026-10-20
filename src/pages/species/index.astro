@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import Filter from '../../components/Filter.astro';
+import species from '../../data/species.json';
+const lead = species.filter((s) => s.role === 'lead');
+const co = species.filter((s) => s.role === 'co');
+const valid = species.filter((s) => s.status === 'Validly published').length;
+const genera = species.filter((s) => s.newGenus).length;
+const groups = [
+  { key: 'role', label: 'Role', options: [{ value: 'lead', label: 'Lead author' }, { value: 'co', label: 'Co-described' }] },
+  { key: 'status', label: 'Status', options: [{ value: 'Validly published', label: 'Validly published' }, { value: 'Effectively published', label: 'Effectively published' }] },
+];
+const sections = [
+  { id: 'lead', title: 'Described as lead author', intro: 'Species I isolated or characterised during my PhD on the human respiratory microbiota, and described as first author.', items: lead },
+  { id: 'co', title: 'Co-described', intro: 'Species and genera described with colleagues from culturomics studies of the human gut and respiratory tract.', items: co },
+];
+---
+<Base title="Bacteria I described" current="/projects/" description={`${species.length} bacterial species and ${genera} new genera described by Maxime Descartes Mbogning Fonkou through culturomics, with LPSN links, type strains and describing papers.`}>
+  <section class="band dots"><div class="wrap"><div class="page-hero">
+    <span class="label">{species.length} species · {genera} new genera · {valid} validly published</span>
+    <h1>Bacteria I described</h1>
+    <p>New bacterial species found by culturomics at IHU Méditerranée Infection, Marseille (2016–2020): {lead.length} as lead author and {co.length} with colleagues. Each name links to its page on <a href="https://lpsn.dsmz.de" target="_blank" rel="noopener noreferrer">LPSN</a>, the List of Prokaryotic names with Standing in Nomenclature.</p>
+  </div></div></section>
+  <section class="section"><div class="wrap">
+    <div class="key">
+      <p><span class="vbadge v">Validly published</span> The name is on an IJSEM Validation List under the International Code of Nomenclature of Prokaryotes. The citation under the name is the one LPSN records.</p>
+      <p><span class="vbadge">Effectively published</span> Described in a peer-reviewed paper and recorded on LPSN; not yet validated.</p>
+    </div>
+    <Filter groups={groups} placeholder="Search a genus, species, strain or source" noun="species" />
+    {sections.map((sec) => (
+      <div class="sp-group" id={sec.id}>
+        <h2>{sec.title} <span class="count">({sec.items.length})</span></h2>
+        <p class="lede">{sec.intro}</p>
+        <ul class="species">
+          {sec.items.map((s) => (
+            <li data-item data-role={s.role} data-status={s.status} data-text={`${s.name} ${s.typeStrain} ${s.source} ${s.authority}`.toLowerCase()}>
+              <div class="sp-head">
+                <a class="sp-name" href={s.lpsn} target="_blank" rel="noopener noreferrer"><i>{s.name}</i></a>
+                {s.authority && <span class="sp-auth">{s.authority}</span>}
+                {s.newGenus && <span class="badge">gen. nov.</span>}
+                <span class={`vbadge ${s.status === 'Validly published' ? 'v' : ''}`}>{s.status}</span>
+              </div>
+              <dl class="sp-meta">
+                {s.typeStrain && <><dt>Type strain</dt><dd class="mono">{s.typeStrain}</dd></>}
+                <dt>Isolated from</dt><dd>{s.source}</dd>
+                <dt>Described in</dt><dd class="papers">{s.papers.map((p) => <a href={p.url} target="_blank" rel="noopener noreferrer">{p.label} ↗</a>)}</dd>
+                {s.note && <><dt>Note</dt><dd>{s.note}</dd></>}
+              </dl>
+              <a class="sp-lpsn" href={s.lpsn} target="_blank" rel="noopener noreferrer">LPSN record ↗</a>
+            </li>))}
+        </ul>
+      </div>))}
+    <p class="source" style="margin-top:24px">Nomenclature status from LPSN, checked October 2026. Statuses change as Validation Lists are published.</p>
+  </div></section>
+</Base>
