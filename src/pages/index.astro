@@ -6,9 +6,8 @@ import projects from '../data/projects.json';
 import { programmeList } from '../lib/programmes.js';
 import species from '../data/species.json';
 import pubs from '../data/publications.json';
-const leadSpecies = species.filter((s) => s.role === 'lead').length;
 const metrics = [
-  { value: String(species.length), label: `bacterial species described, ${leadSpecies} as lead author`, href: '/species/' },
+  { value: String(species.length), label: 'bacterial species described', href: '/species/' },
   { value: String(pubs.length), label: 'publications, from Nature Biotechnology to Science', href: '/publications/' },
   ...profile.metrics,
 ];

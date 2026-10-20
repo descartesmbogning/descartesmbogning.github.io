@@ -1,8 +1,8 @@
 """Find new publications on OpenAlex and ORCID and add them to src/data/publications.json.
 
-Run weekly by .github/workflows/publications.yml. It never deletes or edits existing
-entries: it only appends works whose DOI and title are not already listed, and refreshes
-the "research works" number on the home page. The workflow then opens a pull request
+Run weekly by .github/workflows/publications.yml. It never deletes existing entries: it
+appends works whose DOI and title are not already listed, and marks first or last
+authorship on listed works from OpenAlex author positions. The workflow then opens a pull request
 so a person reviews every change before it goes live.
 
 To stop a work from being proposed again, add its DOI (or exact title) to
@@ -125,6 +125,18 @@ def crossref_authors(doi):
 
 # ---------- conversion ----------
 
+def my_position(w):
+    """'first', 'last' or 'middle' for this author on an OpenAlex work, or '' if not found."""
+    auths = w.get("authorships") or []
+    for i, a in enumerate(auths):
+        aid = str((a.get("author") or {}).get("id") or "")
+        name = (a.get("author") or {}).get("display_name") or a.get("raw_author_name") or ""
+        if aid.endswith(AUTHOR) or NAME_RE.search(name):
+            if len(auths) > 1 and i == len(auths) - 1:
+                return "last"
+            return a.get("author_position") or ("first" if i == 0 else "middle")
+    return ""
+
 def from_openalex(w, use_crossref=True):
     doi = norm_doi(w.get("doi"))
     kind = TYPES.get(w.get("type") or "")
@@ -139,9 +151,11 @@ def from_openalex(w, use_crossref=True):
     names = crossref_authors(doi) if (doi and use_crossref) else []
     if not names:
         names = [surname_first((a.get("author") or {}).get("display_name") or a.get("raw_author_name") or "") for a in auths]
-    first = bool(auths) and str((auths[0].get("author") or {}).get("id") or "").endswith(AUTHOR)
+    pos = my_position(w)
+    first = pos == "first"
     if not first and names:
         first = bool(NAME_RE.search(names[0]))
+    last = pos == "last" and not first
     url = f"https://doi.org/{doi}" if doi else (loc.get("landing_page_url") or w.get("id") or "")
     return {
         "title": (w.get("display_name") or w.get("title") or "").strip(),
@@ -150,6 +164,7 @@ def from_openalex(w, use_crossref=True):
         "year": str(w.get("publication_year") or ""),
         "type": kind,
         "firstAuthor": first,
+        "lastAuthor": last,
         "notice": "Retracted" if w.get("is_retracted") else "",
         "url": url,
         "linkLabel": "Read",
@@ -217,17 +232,41 @@ def main():
         rec["_source"] = source
         added.append(rec)
 
+    # Author roles on works already listed: mark first or last authorship found on OpenAlex.
+    by_doi = {norm_doi(w.get("doi")): w for _, w in candidates if w.get("doi")}
+    by_title = {norm_title(w.get("display_name") or ""): w for _, w in candidates}
+    roles = []
+    for p in pubs:
+        w = by_doi.get(norm_doi(p["url"])) if "doi.org/" in p.get("url", "") else None
+        if w is None:
+            w = by_title.get(norm_title(p["title"]))
+        if w is None:
+            close = difflib.get_close_matches(norm_title(p["title"]), list(by_title), n=1, cutoff=0.92)
+            w = by_title[close[0]] if close else None
+        pos = my_position(w) if w else ""
+        if pos == "last" and not p.get("firstAuthor") and not p.get("lastAuthor"):
+            p["lastAuthor"] = True
+            roles.append(f"- Last author: {p['title']} ({p['year']})")
+        elif pos == "first" and not p.get("firstAuthor"):
+            p["firstAuthor"] = True
+            p["lastAuthor"] = False
+            roles.append(f"- First author: {p['title']} ({p['year']})")
+        p.setdefault("lastAuthor", False)
+
     lines = []
+    if roles:
+        PUBS.write_text(json.dumps(pubs, ensure_ascii=False, indent=2) + "\n")
+        lines += [f"Updated author roles on **{len(roles)} listed work(s)** from OpenAlex author positions:"] + roles + [""]
     if added:
         for r in added:
             r.pop("_source", None)
         pubs = sorted(pubs + added, key=lambda p: -int(p["year"] or 0))  # stable: keeps order within a year
         PUBS.write_text(json.dumps(pubs, ensure_ascii=False, indent=2) + "\n")
         lines += [f"Found **{len(added)} new work(s)** on OpenAlex/ORCID that are not on the Publications page yet.", "",
-                  "| Year | Type | Title | Journal | First author | Notice |", "| --- | --- | --- | --- | --- | --- |"]
+                  "| Year | Type | Title | Journal | Lead author | Notice |", "| --- | --- | --- | --- | --- | --- |"]
         for r in added:
             lines.append(f"| {r['year']} | {r['type']} | [{r['title']}]({r['url']}) | {r['venue']} | "
-                         f"{'yes' if r['firstAuthor'] else ''} | {r['notice']} |")
+                         f"{'first' if r['firstAuthor'] else 'last' if r.get('lastAuthor') else ''} | {r['notice']} |")
 
     # refresh the "research works" number on the home page
     profile = json.loads(PROFILE.read_text())
