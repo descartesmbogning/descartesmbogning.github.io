@@ -18,7 +18,6 @@ const first = pubs.filter((p) => p.firstAuthor).length;
     <p>Peer-reviewed articles, preprints and my doctoral thesis, newest first. For live citation counts see <a href={profile.links.find((l) => l.label === 'Google Scholar')?.url}>Google Scholar</a> or <a href={profile.metricsSourceUrl}>OpenAlex</a>.</p>
   </div></div></section>
   <section class="section"><div class="wrap">
-    <p class="notice" style="margin-bottom:22px">Six papers from my doctoral period at IHU Méditerranée Infection carry publisher notices (five expressions of concern and one retraction) issued as part of institution-wide reviews. They are labelled below.</p>
     <Filter groups={groups} placeholder="Search title, journal or year" noun="works" />
     <ol class="pubs">
       {pubs.map((p) => (

@@ -32,29 +32,16 @@
   ],
   "metrics": [
     {
-      "value": "7.9M",
-      "label": "preprint records harmonised from 109 servers"
-    },
-    {
-      "value": "5,753",
-      "label": "patents mapped for a first-author Nature Biotechnology paper"
-    },
-    {
-      "value": "49",
-      "label": "research works"
-    },
-    {
       "value": "10",
       "label": "years of research in Cameroon, France and Canada"
     }
   ],
-  "metricsSource": "OpenAlex author record, October 2026 (research works)",
   "metricsSourceUrl": "https://api.openalex.org/authors/A5023046200",
   "about": [
-    "I started at the lab bench: clinical laboratories in Yaoundé, about 20 new bacterial species described during my PhD in Marseille, then microbiome and cancer research at Gustave Roussy. Ten years of biomedical research showed me how science is really made: who funds it, who publishes it and who patents it.",
+    "I started at the lab bench: clinical laboratories in Yaoundé, then culturomics in Marseille, where I described 12 new bacterial species as lead author and 23 more with colleagues, then microbiome and cancer research at Gustave Roussy. Ten years of biomedical research showed me how science is really made: who funds it, who publishes it and who patents it.",
     "Now I measure that system. At York University I mapped the global patent landscape of phage therapy, published in Nature Biotechnology. At Simon Fraser University's ScholCommLab I built a harmonised dataset of 7.9 million preprint records from 109 servers.",
     "Through CognosX, the science-intelligence company I founded, I help research teams and biotech companies read publication, patent and funding landscapes, and turn them into decisions. I work in French and English."
   ],
-  "lastUpdated": "2026-10-19",
+  "lastUpdated": "2026-10-20",
   "specialties": "bibliometrics, patent analytics, research evaluation"
 }

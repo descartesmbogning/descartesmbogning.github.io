@@ -69,8 +69,7 @@ node scripts/cv_to_pdf.js "$PWD/cv.html" public/cv/Mbogning-Fonkou-CV.pdf
 
 Every Monday, `.github/workflows/publications.yml` runs `scripts/update_publications.py`. It asks
 OpenAlex (author `A5023046200`) and ORCID (`0000-0001-5581-3891`) for your works and adds any whose
-DOI and title are not already in `src/data/publications.json`. It also refreshes the "research works"
-number on the home page. It never edits or removes existing entries.
+DOI and title are not already in `src/data/publications.json`. It never edits or removes existing entries.
 
 The changes arrive as a pull request called **"New publications found"**, which GitHub emails you about.
 Check that each work is yours, add a `notice` if a publisher issued one, then **Merge**. The site updates

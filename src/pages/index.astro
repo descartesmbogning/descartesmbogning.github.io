@@ -4,6 +4,14 @@ import CaseStudy from '../components/CaseStudy.astro';
 import profile from '../data/profile.json';
 import projects from '../data/projects.json';
 import { programmeList } from '../lib/programmes.js';
+import species from '../data/species.json';
+import pubs from '../data/publications.json';
+const leadSpecies = species.filter((s) => s.role === 'lead').length;
+const metrics = [
+  { value: String(species.length), label: `bacterial species described, ${leadSpecies} as lead author`, href: '/species/' },
+  { value: String(pubs.length), label: 'publications, from Nature Biotechnology to Science', href: '/publications/' },
+  ...profile.metrics,
+];
 const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - b.featured);
 ---
 <Base current="/">
@@ -20,8 +28,7 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
           <a class="btn ghost" href="/cv/Mbogning-Fonkou-CV.pdf" download>Download CV</a>
         </div>
       </div>
-      <div class="metrics">{profile.metrics.map((m) => <div class="metric"><b>{m.value}</b><span>{m.label}</span></div>)}</div>
-      <p class="source" style="padding-bottom:28px;position:relative;z-index:1">Counts from the <a href={profile.metricsSourceUrl}>{profile.metricsSource}</a>.</p>
+      <div class="metrics" style="padding-bottom:28px">{metrics.map((m) => m.href ? <a class="metric" href={m.href}><b>{m.value}</b><span>{m.label}</span></a> : <div class="metric"><b>{m.value}</b><span>{m.label}</span></div>)}</div>
     </div>
   </section>
 
