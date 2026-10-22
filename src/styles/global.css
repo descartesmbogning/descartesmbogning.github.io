@@ -302,3 +302,6 @@ a.copy{text-decoration:none;display:inline-block}
 .prog-sub{font-size:17px;margin:6px 0 12px}
 .tags.mini li{font-size:11px;padding:2px 7px}
 .card .gh{font:600 14px var(--body);display:inline-block;padding-block:4px;margin-top:auto}
+
+.metrics-note{max-width:72ch;margin:0 0 22px;padding:14px 18px;border-left:4px solid var(--brand);background:var(--surface);font-size:15px;line-height:1.6;color:var(--muted)}
+.metrics-note b{color:var(--ink)}

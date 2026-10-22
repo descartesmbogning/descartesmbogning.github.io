@@ -3,7 +3,7 @@
     "group": "Research intelligence",
     "items": [
       {
-        "name": "Bibliometrics & scientometrics",
+        "name": "Research landscape analysis (bibliometrics)",
         "level": "Expert",
         "proof": "COVID-19 Africa study; open-access study",
         "url": "https://www.mdpi.com/1660-4601/18/14/7273"
@@ -15,13 +15,25 @@
         "url": "https://www.nature.com/articles/s41587-024-02493-9"
       },
       {
-        "name": "Systematic & scoping reviews",
+        "name": "Literature reviews and evidence synthesis",
         "level": "Advanced",
-        "proof": "Future Microbiology 2018",
-        "url": "https://doi.org/10.2217/fmb-2018-0181"
+        "proof": "Airway bacteria review; lice review (Acta Tropica)",
+        "url": "https://doi.org/10.1016/j.actatropica.2022.106709"
       },
       {
-        "name": "Technology watch",
+        "name": "Funding and portfolio analysis",
+        "level": "Advanced",
+        "proof": "Phage therapy funding: 802 grants",
+        "url": "/projects/phage-therapy-funding-intelligence/"
+      },
+      {
+        "name": "Equity analysis (country, income group, gender)",
+        "level": "Advanced",
+        "proof": "COVID-19 research in Africa; open access in Africa",
+        "url": "/projects/african-covid-19-research-bibliometrics/"
+      },
+      {
+        "name": "Horizon scanning and technology watch",
         "level": "Advanced",
         "proof": "Master in scientific & technical information",
         "url": ""
