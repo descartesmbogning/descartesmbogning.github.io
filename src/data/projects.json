@@ -62,7 +62,12 @@
         "width": 1132,
         "height": 708
       }
-    ]
+    ],
+    "kind": [
+      "Patent analysis",
+      "Bibliometric analysis"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "global-preprint-metadata-integration",
@@ -124,7 +129,12 @@
         "width": 1520,
         "height": 1056
       }
-    ]
+    ],
+    "kind": [
+      "Bibliometric analysis",
+      "Tool"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "african-research-production-and-inequalities",
@@ -195,7 +205,11 @@
         "width": 1600,
         "height": 1357
       }
-    ]
+    ],
+    "kind": [
+      "Bibliometric analysis"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "immune-checkpoint-patent-intelligence-dashboard",
@@ -251,7 +265,11 @@
         "width": 1552,
         "height": 502
       }
-    ]
+    ],
+    "kind": [
+      "Patent analysis"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "african-covid-19-research-bibliometrics",
@@ -298,7 +316,11 @@
         "width": 1600,
         "height": 1309
       }
-    ]
+    ],
+    "kind": [
+      "Bibliometric analysis"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "bacterial-discovery-and-taxonogenomics",
@@ -310,7 +332,7 @@
     ],
     "summary": "Doctoral research that grew and described bacteria never isolated before from the human airways.",
     "problem": "Most bacteria living in the human respiratory tract had never been grown or described.",
-    "approach": "Combined culturomics with metagenomics on clinical samples, and wrote a systematic review of every bacterial species reported from the mouth and airways.",
+    "approach": "Combined culturomics with metagenomics on clinical samples, and reviewed every bacterial species reported from the mouth and airways.",
     "result": "35 new bacterial species described, including 5 new genera; PhD defended in November 2018.",
     "contribution": "PhD researcher at IHU Méditerranée Infection, Aix-Marseille Université: isolation, characterisation and writing.",
     "outputs": "Multiple bacterial species publications",
@@ -334,7 +356,7 @@
         "url": "https://theses.fr/2018AIXM0693"
       },
       {
-        "label": "Systematic review (Future Microbiology)",
+        "label": "Literature review (Future Microbiology)",
         "url": "https://doi.org/10.2217/fmb-2018-0181"
       }
     ],
@@ -384,45 +406,11 @@
         "width": 665,
         "height": 780
       }
-    ]
-  },
-  {
-    "slug": "bacteriophage-one-health-literature-mapping",
-    "title": "Bacteriophage One Health literature mapping",
-    "status": "Manuscript in preparation",
-    "featured": 0,
-    "domains": [
-      "science",
-      "public-health",
-      "ai"
     ],
-    "summary": "Themes, equity, funding and trends across bacteriophage research, mapped from the literature.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Literature data assembly, topic modelling and bibliometric visualisation.",
-    "outputs": "Literature datasets; co-occurrence maps; topic analysis; manuscript material",
-    "methods": [
-      "Web of Science",
-      "Scopus",
-      "PubMed",
-      "Python",
-      "LDA",
-      "VOSviewer"
+    "kind": [
+      "Lab research"
     ],
-    "skills": [
-      "Bibliometrics",
-      "literature synthesis",
-      "thematic evolution",
-      "science mapping"
-    ],
-    "links": [
-      {
-        "label": "Code on GitHub",
-        "url": "https://github.com/descartesmbogning/Deciphering_Bacteriophage_Revolution"
-      }
-    ],
-    "images": []
+    "role": "Lead"
   },
   {
     "slug": "phage-therapy-funding-intelligence",
@@ -454,7 +442,11 @@
         "url": "https://github.com/descartesmbogning/phage-therapy-funding"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Funding analysis"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "preprint-harvester-toolkit",
@@ -507,7 +499,11 @@
         "url": "https://github.com/descartesmbogning/openalex_preprints_metada"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Tool"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "preprint-servers-explorer",
@@ -543,7 +539,11 @@
         "url": "https://github.com/descartesmbogning/Preprint-Servers-Explorer"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Tool"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "genai-publication-intelligence",
@@ -595,7 +595,12 @@
         "caption": "Facet 1, GenAI's role in each paper: hand codes and LLM codes on 300 blind gold-standard records (κ 0.89).",
         "credit": "CognosX, October 2026"
       }
-    ]
+    ],
+    "kind": [
+      "AI-assisted screening",
+      "Bibliometric analysis"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "ticks-and-climate-change-research-mapping",
@@ -625,60 +630,12 @@
       "NLP"
     ],
     "links": [],
-    "images": []
-  },
-  {
-    "slug": "rsv-integrated-surveillance-review",
-    "title": "RSV integrated surveillance review",
-    "status": "In progress",
-    "featured": 0,
-    "domains": [
-      "public-health"
+    "images": [],
+    "kind": [
+      "Bibliometric analysis",
+      "AI-assisted screening"
     ],
-    "summary": "Compare integrated surveillance approaches for RSV, influenza and COVID-19.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Literature review, evidence extraction and comparison of methods.",
-    "outputs": "Evidence summaries and review materials",
-    "methods": [
-      "Literature databases",
-      "Excel",
-      "structured extraction"
-    ],
-    "skills": [
-      "Systematic review",
-      "public health surveillance",
-      "synthesis"
-    ],
-    "links": [],
-    "images": []
-  },
-  {
-    "slug": "cameroon-malaria-under-reporting-analysis",
-    "title": "Cameroon malaria under-reporting analysis",
-    "status": "In progress",
-    "featured": 0,
-    "domains": [
-      "public-health"
-    ],
-    "summary": "Identify the drivers of malaria under-reporting in Cameroon.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Variable framework and literature and model review.",
-    "outputs": "Variable framework; literature review material",
-    "methods": [
-      "Research literature",
-      "Epidemiological modelling"
-    ],
-    "skills": [
-      "Public health analytics",
-      "variable specification",
-      "synthesis"
-    ],
-    "links": [],
-    "images": []
+    "role": "Lead"
   },
   {
     "slug": "covid-19-transmission-and-mortality-in-africa",
@@ -707,7 +664,11 @@
         "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8568130/"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Epidemiology"
+    ],
+    "role": "Contributor"
   },
   {
     "slug": "covid-19-case-reporting-in-africa",
@@ -736,7 +697,11 @@
         "url": "https://doi.org/10.3389/fpubh.2024.1406363"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Epidemiology"
+    ],
+    "role": "Contributor"
   },
   {
     "slug": "marburg-virus-bibliometrics-and-gender",
@@ -771,7 +736,11 @@
         "url": "https://github.com/descartesmbogning/Marburg-virus-research-gender"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Bibliometric analysis"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "gut-microbiota-and-cancer-immunotherapy",
@@ -824,7 +793,11 @@
         "width": 1080,
         "height": 954
       }
-    ]
+    ],
+    "kind": [
+      "Lab research"
+    ],
+    "role": "Contributor"
   },
   {
     "slug": "analysis-code",
@@ -877,7 +850,11 @@
         "url": "https://github.com/descartesmbogning/Data-Transfer-to-PostgreSQL"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Tool"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "openalex-data-enricher",
@@ -913,7 +890,11 @@
         "url": "https://github.com/cognosx/OpenAlexDataEnricher"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Tool"
+    ],
+    "role": "Lead"
   },
   {
     "slug": "publication-fetcher",
@@ -944,32 +925,250 @@
         "url": "https://github.com/cognosx/publicationfetcher"
       }
     ],
-    "images": []
+    "images": [],
+    "kind": [
+      "Tool"
+    ],
+    "role": "Lead"
   },
   {
-    "slug": "who-one-health-ai-hubs-mapping",
-    "title": "One Health AI hubs mapping",
-    "status": "In progress",
+    "slug": "respiratory-bacteria-literature-review",
+    "title": "Repertoire of bacteria cultured from the mouth and airways",
+    "status": "Published",
+    "featured": 0,
+    "domains": [
+      "biomedical",
+      "science"
+    ],
+    "summary": "A literature review of every bacterial species ever grown from the human mouth and respiratory tract.",
+    "problem": "Sequencing finds many airway bacteria, but no one had listed which ones had actually been grown in the lab.",
+    "approach": "Reviewed the published literature and built a database of the bacterial species cultured from respiratory samples.",
+    "result": "756 species cultured from the respiratory tract, about 27% of the bacterial diversity grown from the whole human body. First-author article in Future Microbiology (2018).",
+    "contribution": "First author: literature search, data collection, database building and writing.",
+    "outputs": "Future Microbiology article (2018); species database",
+    "methods": [
+      "Literature review",
+      "Database building"
+    ],
+    "skills": [
+      "Evidence synthesis",
+      "microbiology"
+    ],
+    "links": [
+      {
+        "label": "Future Microbiology article",
+        "url": "https://doi.org/10.2217/fmb-2018-0181"
+      }
+    ],
+    "images": [],
+    "kind": [
+      "Review"
+    ],
+    "role": "Lead"
+  },
+  {
+    "slug": "lice-borne-diseases-africa-review",
+    "title": "Lice and lice-borne diseases in Africa",
+    "status": "Published",
     "featured": 0,
     "domains": [
       "public-health",
-      "science"
+      "biomedical"
     ],
-    "summary": "Map institutions building AI capacity for One Health.",
+    "summary": "A narrative review of the bacteria found in human lice across Africa, to alert health professionals to an under-recognised risk.",
+    "problem": "",
+    "approach": "Searched PubMed and Google Scholar: 507 publications found, 505 screened by title and abstract, 74 read in full.",
+    "result": "",
+    "contribution": "Co-author: literature search and screening, study selection and data extraction; analysed the data and wrote the data-collection section.",
+    "outputs": "Acta Tropica article (2023)",
+    "methods": [
+      "PubMed",
+      "Google Scholar"
+    ],
+    "skills": [
+      "Literature search",
+      "study selection",
+      "data extraction"
+    ],
+    "links": [
+      {
+        "label": "Acta Tropica article",
+        "url": "https://doi.org/10.1016/j.actatropica.2022.106709"
+      }
+    ],
+    "images": [],
+    "kind": [
+      "Review"
+    ],
+    "role": "Contributor"
+  },
+  {
+    "slug": "gut-mycobiota-microbiota-review",
+    "title": "Gut fungi, bacteria and the immune system",
+    "status": "Published",
+    "featured": 0,
+    "domains": [
+      "biomedical"
+    ],
+    "summary": "A review of the methods used to study gut fungi and bacteria, and how imbalances affect the immune system.",
     "problem": "",
     "approach": "",
     "result": "",
-    "contribution": "Institution mapping and intelligence gathering.",
-    "outputs": "List/map of research hubs and institutions",
+    "contribution": "Co-author.",
+    "outputs": "Human Microbiome Journal article (2019)",
     "methods": [
-      "Desk research",
-      "institutional datasets"
+      "Literature review"
     ],
     "skills": [
-      "Institutional landscape analysis",
-      "research intelligence"
+      "Evidence synthesis"
+    ],
+    "links": [
+      {
+        "label": "Human Microbiome Journal article",
+        "url": "https://doi.org/10.1016/j.humic.2019.100056"
+      }
+    ],
+    "images": [],
+    "kind": [
+      "Review"
+    ],
+    "role": "Contributor"
+  },
+  {
+    "slug": "chimera-detection-tools-bibliometric-survey",
+    "title": "Tools to detect sequence transfer between microbes",
+    "status": "Preprint",
+    "featured": 0,
+    "domains": [
+      "science",
+      "biomedical"
+    ],
+    "summary": "A bibliometric survey of the software used to detect chimeric and transferred DNA sequences in microbes.",
+    "problem": "",
+    "approach": "Screened 1,354 PubMed and 52 Web of Science records to find the original papers describing each tool, then tracked how often each tool is cited.",
+    "result": "17 main tools identified, from Bellerophon (2004) to ChimeraMiner (2019); citations grew most for Mothur, UCHIME, VSEARCH and ChimeraSlayer.",
+    "contribution": "Co-author: bibliometric search and citation analysis.",
+    "outputs": "bioRxiv preprint (2022)",
+    "methods": [
+      "PubMed",
+      "Web of Science"
+    ],
+    "skills": [
+      "Bibliometrics",
+      "citation analysis"
+    ],
+    "links": [
+      {
+        "label": "bioRxiv preprint",
+        "url": "https://doi.org/10.1101/2022.12.21.521446"
+      }
+    ],
+    "images": [],
+    "kind": [
+      "Bibliometric analysis",
+      "Review"
+    ],
+    "role": "Contributor"
+  },
+  {
+    "slug": "covid-19-treatment-research-trends",
+    "title": "Early research on COVID-19 treatments",
+    "status": "Preprint",
+    "featured": 0,
+    "domains": [
+      "science",
+      "public-health"
+    ],
+    "summary": "A bibliometric analysis of the first research on COVID-19 treatments: what was studied, where and by whom.",
+    "problem": "",
+    "approach": "",
+    "result": "",
+    "contribution": "First author: search, analysis and writing.",
+    "outputs": "medRxiv preprint (2020)",
+    "methods": [
+      "Bibliometrics"
+    ],
+    "skills": [
+      "Research trend analysis"
+    ],
+    "links": [
+      {
+        "label": "medRxiv preprint",
+        "url": "https://doi.org/10.1101/2020.06.13.20122762"
+      }
+    ],
+    "images": [],
+    "kind": [
+      "Bibliometric analysis"
+    ],
+    "role": "Lead"
+  },
+  {
+    "slug": "research-databases-usage-analysis",
+    "title": "Which research databases do bibliometric studies use?",
+    "status": "Talk or article",
+    "featured": 0,
+    "domains": [
+      "science"
+    ],
+    "summary": "A 15-year analysis of the databases (Web of Science, Scopus, OpenAlex and others) used in bibliometric and scientometric research.",
+    "problem": "",
+    "approach": "",
+    "result": "",
+    "contribution": "Author: data collection with Python and OpenAlex, analysis and writing.",
+    "outputs": "Two LinkedIn articles (2024)",
+    "methods": [
+      "Python",
+      "OpenAlex"
+    ],
+    "skills": [
+      "Bibliometrics",
+      "research trend analysis"
+    ],
+    "links": [
+      {
+        "label": "15-year analysis (LinkedIn)",
+        "url": "https://www.linkedin.com/pulse/mapping-global-usage-research-databases-bibliometrics-mbogning-ielac"
+      },
+      {
+        "label": "How I built it (LinkedIn)",
+        "url": "https://www.linkedin.com/pulse/how-i-used-python-openalex-track-evolution-research-usage-mbogning-o6hjc"
+      }
+    ],
+    "images": [],
+    "kind": [
+      "Bibliometric analysis"
+    ],
+    "role": "Lead"
+  },
+  {
+    "slug": "covid-19-priority-disease-research-funding-africa",
+    "title": "COVID-19 and research on priority diseases in Africa",
+    "status": "Talk or article",
+    "featured": 0,
+    "domains": [
+      "science",
+      "public-health"
+    ],
+    "summary": "How the COVID-19 pandemic affected research output and funding for other priority diseases in Africa.",
+    "problem": "",
+    "approach": "",
+    "result": "",
+    "contribution": "Co-author.",
+    "outputs": "Conference presentation, 3rd International Conference on Virology, Infectious Diseases and COVID-19, Dubai (2022)",
+    "methods": [
+      "Bibliometrics"
+    ],
+    "skills": [
+      "Research funding",
+      "equity analysis"
     ],
     "links": [],
-    "images": []
+    "images": [],
+    "kind": [
+      "Bibliometric analysis",
+      "Funding analysis"
+    ],
+    "role": "Contributor"
   }
 ]

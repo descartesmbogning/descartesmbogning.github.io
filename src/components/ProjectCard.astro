@@ -1,11 +1,11 @@
 ---
 const { p } = Astro.props;
 ---
-<article class="card" data-item data-status={p.status}
+<article class="card" data-item data-status={p.status} data-kind={(p.kind || []).join('|')} data-role={p.role}
   data-text={`${p.title} ${p.summary} ${p.methods.join(' ')} ${p.skills.join(' ')}`.toLowerCase()}>
-  <span class="status" data-s={p.status}>{p.status}</span>
+  <div class="card-top"><span class="status" data-s={p.status}>{p.status}</span><span class="role" data-r={p.role}>{p.role}</span></div>
   <h3><a href={`/projects/${p.slug}/`}>{p.title}</a></h3>
   <p>{p.summary}</p>
-  {p.methods.length > 0 && <ul class="tags mini" aria-label="Tools">{p.methods.slice(0, 4).map((m) => <li>{m}</li>)}</ul>}
+  {p.kind?.length > 0 && <ul class="tags mini" aria-label="Method">{p.kind.map((m) => <li>{m}</li>)}</ul>}
   {p.links.find((l) => l.url.includes('github.com')) && <a class="gh" href={p.links.find((l) => l.url.includes('github.com')).url} target="_blank" rel="noopener noreferrer">Code on GitHub ↗</a>}
 </article>

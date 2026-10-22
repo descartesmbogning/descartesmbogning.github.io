@@ -9,14 +9,27 @@
     "members": [
       "immune-checkpoint-patent-intelligence-dashboard",
       "phage-therapy-funding-intelligence",
-      "bacteriophage-one-health-literature-mapping",
-      "genai-publication-intelligence",
-      "who-one-health-ai-hubs-mapping"
+      "genai-publication-intelligence"
+    ]
+  },
+  {
+    "id": "evidence-says",
+    "label": "Question 2",
+    "title": "What does the evidence say?",
+    "question": "What is already known on a topic, and which studies and tools matter?",
+    "summary": "Literature reviews and bibliometric surveys that collect, screen and summarise the published research, as lead author or as the person who ran the search and analysis.",
+    "lead": "respiratory-bacteria-literature-review",
+    "members": [
+      "lice-borne-diseases-africa-review",
+      "gut-mycobiota-microbiota-review",
+      "chimera-detection-tools-bibliometric-survey",
+      "covid-19-treatment-research-trends",
+      "research-databases-usage-analysis"
     ]
   },
   {
     "id": "left-out",
-    "label": "Question 2",
+    "label": "Question 3",
     "title": "Who is left out?",
     "question": "Which countries, regions and groups are missing from research, and why?",
     "summary": "Gaps and disparities by country, region and gender: who publishes, who leads, who shares openly, and where research does not follow the disease burden.",
@@ -24,21 +37,20 @@
     "members": [
       "african-research-production-and-inequalities",
       "marburg-virus-bibliometrics-and-gender",
-      "ticks-and-climate-change-research-mapping"
+      "ticks-and-climate-change-research-mapping",
+      "covid-19-priority-disease-research-funding-africa"
     ]
   },
   {
     "id": "evidence",
-    "label": "Question 3",
+    "label": "Question 4",
     "title": "Is the evidence keeping up?",
     "question": "How fast is new research shared, and how well do data track outbreaks?",
     "summary": "Early sharing of research before peer review, and how well case reports and surveillance data follow COVID-19, malaria and respiratory viruses.",
     "lead": "global-preprint-metadata-integration",
     "members": [
       "covid-19-case-reporting-in-africa",
-      "covid-19-transmission-and-mortality-in-africa",
-      "cameroon-malaria-under-reporting-analysis",
-      "rsv-integrated-surveillance-review"
+      "covid-19-transmission-and-mortality-in-africa"
     ]
   },
   {

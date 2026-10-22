@@ -104,6 +104,11 @@ a.metric:hover span{color:var(--on-black);text-decoration:underline}
 .status[data-s="Manuscript in preparation"]::before{background:transparent;border:2px solid var(--ink)}
 .status[data-s="Tool or dataset"]::before{background:var(--ink);border-radius:2px}
 .status[data-s="In progress"]::before{background:transparent;border:2px dashed var(--muted)}
+.status[data-s="Preprint"]::before{background:transparent;border:2px solid var(--brand)}
+.status[data-s="Talk or article"]::before{background:var(--muted);border-radius:2px}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.role{font:500 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border-radius:999px;border:1px solid var(--rule);color:var(--muted)}
+.role[data-r="Lead"]{border-color:var(--ink);color:var(--ink)}
 .status[data-s="Client project"]::before{background:var(--brand);border-radius:2px;box-shadow:0 0 0 1.5px var(--ink) inset}
 
 /* featured case studies */
@@ -293,7 +298,7 @@ a.copy{text-decoration:none;display:inline-block}
 .prog-lead{margin-bottom:18px}
 .prog-lead[hidden]{display:none}
 .prog-lead .case{max-width:none}
-@media (min-width:900px){.prog-lead .case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}.prog-lead .case .top{grid-column:1/-1}.prog-lead .case-img{aspect-ratio:auto;height:100%;border-bottom:0;border-right:1px solid var(--rule)}.prog-lead .case .body{grid-column:2}}
+@media (min-width:900px){.prog-lead .case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}.prog-lead .case .top{grid-column:1/-1}.prog-lead .case-img{aspect-ratio:auto;height:100%;border-bottom:0;border-right:1px solid var(--rule)}.prog-lead .case .body{grid-column:2}.prog-lead .case:not(:has(.case-img)) .body{grid-column:1/-1}}
 .prog-sub{font-size:17px;margin:6px 0 12px}
 .tags.mini li{font-size:11px;padding:2px 7px}
 .card .gh{font:600 14px var(--body);display:inline-block;padding-block:4px;margin-top:auto}
