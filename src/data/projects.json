@@ -721,7 +721,7 @@
     "approach": "",
     "result": "",
     "contribution": "Evidence mapping and AI-assisted screening.",
-    "outputs": "334,277 deduplicated records screened; papers planned",
+    "outputs": "334,277 deduplicated records in the first screen, narrowed to about 71,000 tick studies, then screened with large language models; papers planned",
     "methods": [
       "Python",
       "bibliometrics",
