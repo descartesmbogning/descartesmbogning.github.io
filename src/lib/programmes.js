@@ -25,4 +25,7 @@ export const programmeList = programmes.map((g) => {
 export const programmeOf = Object.fromEntries(programmeList.flatMap((g) => g.all.map((p) => [p.slug, g])));
 
 // Old /projects/#area-… links land on the closest programme.
-export const areaToProgramme = { biomedical: 'microbes', 'public-health': 'epidemics', science: 'africa-equity', patents: 'phage', data: 'preprints', ai: 'innovation' };
+export const areaToProgramme = { biomedical: 'lab', 'public-health': 'evidence', science: 'left-out', patents: 'invest', data: 'evidence', ai: 'invest' };
+
+// Old programme anchors (before October 2026) land on the new question groups.
+export const oldProgramme = { phage: 'invest', genai: 'invest', innovation: 'invest', preprints: 'evidence', epidemics: 'evidence', 'africa-equity': 'left-out', microbes: 'lab', toolbox: 'tools' };

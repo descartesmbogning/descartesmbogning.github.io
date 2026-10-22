@@ -1,80 +1,52 @@
 [
   {
-    "id": "phage",
-    "title": "Phage therapy intelligence",
-    "question": "Who invents, funds and studies phage therapy, and where?",
-    "summary": "Patents, research grants and literature mapped together to show how phage therapy is moving from the lab to the clinic.",
+    "id": "invest",
+    "label": "Question 1",
+    "title": "Where is a field going, and where should we invest?",
+    "question": "Who invents, funds and studies a field, and which technologies are growing?",
+    "summary": "Landscapes of publications, patents and funding that show who leads a field, where the money goes and what is coming next.",
     "lead": "phage-therapy-patent-landscape",
     "members": [
+      "immune-checkpoint-patent-intelligence-dashboard",
       "phage-therapy-funding-intelligence",
-      "bacteriophage-one-health-literature-mapping"
-    ]
-  },
-  {
-    "id": "genai",
-    "title": "Generative AI in science",
-    "question": "How do researchers build, use, evaluate and debate generative AI?",
-    "summary": "A large, screened corpus of generative-AI research, classified one facet at a time with LLM coding that is checked against hand-coded gold standards. Current work at CognosX.",
-    "lead": "genai-publication-intelligence",
-    "members": []
-  },
-  {
-    "id": "preprints",
-    "title": "The global preprint ecosystem",
-    "question": "How big is the preprint world, and how can we count it reliably?",
-    "summary": "Harvesters for Crossref, DataCite and OpenAlex, rules to identify preprint servers, and public explorers built on the resulting dataset.",
-    "lead": "global-preprint-metadata-integration",
-    "members": [
-      "preprint-servers-explorer",
-      "crossref-preprints-explorer",
-      "preprint-harvester-toolkit",
-      "crossref-preprint-harvesting-and-labeling",
-      "datacite-preprint-harvesting",
-      "openalex-preprint-metadata-extraction"
-    ]
-  },
-  {
-    "id": "africa-equity",
-    "title": "Research equity in Africa",
-    "question": "Who gets to publish, share and lead research in Africa?",
-    "summary": "Continent-wide measures of open access, collaboration, leadership and gender in African research output.",
-    "lead": "african-research-production-and-inequalities",
-    "members": [
-      "marburg-virus-bibliometrics-and-gender"
-    ]
-  },
-  {
-    "id": "epidemics",
-    "title": "Epidemics, surveillance and One Health",
-    "question": "How well do research and surveillance data track outbreaks, from COVID-19 to malaria and ticks?",
-    "summary": "Studies of epidemic research output, case reporting, under-reporting and surveillance, across human, animal and environmental health.",
-    "lead": "african-covid-19-research-bibliometrics",
-    "members": [
-      "covid-19-case-reporting-in-africa",
-      "covid-19-transmission-and-mortality-in-africa",
-      "cameroon-malaria-under-reporting-analysis",
-      "rsv-integrated-surveillance-review",
-      "ticks-and-climate-change-research-mapping",
+      "bacteriophage-one-health-literature-mapping",
+      "genai-publication-intelligence",
       "who-one-health-ai-hubs-mapping"
     ]
   },
   {
-    "id": "innovation",
-    "title": "Biotech and innovation intelligence",
-    "question": "Which companies, inventors and technologies lead a field, and where is it heading?",
-    "summary": "Patent and publication intelligence for biotech teams and recruiters, delivered through CognosX as reports, dashboards and pipelines.",
-    "lead": "immune-checkpoint-patent-intelligence-dashboard",
+    "id": "left-out",
+    "label": "Question 2",
+    "title": "Who is left out?",
+    "question": "Which countries, regions and groups are missing from research, and why?",
+    "summary": "Gaps and disparities by country, region and gender: who publishes, who leads, who shares openly, and where research does not follow the disease burden.",
+    "lead": "african-covid-19-research-bibliometrics",
     "members": [
-      "cognosx-field-intelligence-initiative",
-      "biotech-sosci-research-pipelines",
-      "scientific-network-analysis-and-patent-preparation"
+      "african-research-production-and-inequalities",
+      "marburg-virus-bibliometrics-and-gender",
+      "ticks-and-climate-change-research-mapping"
     ]
   },
   {
-    "id": "microbes",
-    "title": "Microbes in health and disease",
+    "id": "evidence",
+    "label": "Question 3",
+    "title": "Is the evidence keeping up?",
+    "question": "How fast is new research shared, and how well do data track outbreaks?",
+    "summary": "Early sharing of research before peer review, and how well case reports and surveillance data follow COVID-19, malaria and respiratory viruses.",
+    "lead": "global-preprint-metadata-integration",
+    "members": [
+      "covid-19-case-reporting-in-africa",
+      "covid-19-transmission-and-mortality-in-africa",
+      "cameroon-malaria-under-reporting-analysis",
+      "rsv-integrated-surveillance-review"
+    ]
+  },
+  {
+    "id": "lab",
+    "label": "Background",
+    "title": "Lab foundations",
     "question": "Which bacteria live in us, and how do they shape disease and treatment?",
-    "summary": "Culturomics and taxonogenomics of the human microbiota, from new respiratory species to the gut bacteria that affect cancer immunotherapy.",
+    "summary": "Growing and identifying bacteria never cultured before (culturomics), from new respiratory species to the gut bacteria that affect cancer immunotherapy.",
     "lead": "bacterial-discovery-and-taxonogenomics",
     "members": [
       "gut-microbiota-and-cancer-immunotherapy"
@@ -85,16 +57,18 @@
     }
   },
   {
-    "id": "toolbox",
-    "title": "Open-source toolbox",
-    "question": "Reusable code behind the studies, free on GitHub.",
-    "summary": "General-purpose tools for collecting, enriching, analysing and moving scholarly data.",
+    "id": "tools",
+    "label": "Tools",
+    "title": "Tools you can use",
+    "question": "Free apps and code behind the studies.",
+    "summary": "Public apps and open-source code for collecting, enriching and analysing research data.",
     "lead": "",
     "members": [
+      "preprint-servers-explorer",
       "openalex-data-enricher",
       "publication-fetcher",
-      "biomedical-ner-tf-idf-and-topic-modelling-tools",
-      "postgresql-data-transfer-utility"
+      "preprint-harvester-toolkit",
+      "analysis-code"
     ]
   }
 ]
