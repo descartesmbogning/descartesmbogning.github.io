@@ -67,18 +67,18 @@
   {
     "slug": "global-preprint-metadata-integration",
     "title": "A harmonised global dataset of preprints, 1990–2025",
-    "status": "In preparation",
+    "status": "Tool or dataset",
     "featured": 2,
     "domains": [
       "data",
       "science"
     ],
-    "summary": "One clean record for every preprint, harmonised across Crossref, DataCite and OpenAlex.",
+    "summary": "A clean global list of preprints (research shared before peer review), to show how fast new evidence reaches the world and who is left behind.",
     "problem": "Preprint metadata are split across Crossref, DataCite and OpenAlex, with inconsistent server names and duplicate records.",
     "approach": "Built harvesters for each source, wrote rules to identify preprint servers, linked versions and removed duplicates.",
-    "result": "7,905,699 harvested records reduced to 7,332,492 parent records from 109 servers; dataset paper in preparation for Quantitative Science Studies.",
+    "result": "7.3 million preprint records from 109 servers, explorable in the public Preprint Servers Explorer.",
     "contribution": "Lead author and data engineer at ScholCommLab, Simon Fraser University.",
-    "outputs": "Harmonised dataset; harvesters; manuscript in preparation",
+    "outputs": "Harmonised dataset; harvesters; public explorer",
     "methods": [
       "OpenAlex",
       "Crossref",
@@ -129,7 +129,7 @@
   {
     "slug": "african-research-production-and-inequalities",
     "title": "Open access and research inequalities in Africa",
-    "status": "In preparation",
+    "status": "Manuscript in preparation",
     "featured": 3,
     "domains": [
       "science",
@@ -200,7 +200,7 @@
   {
     "slug": "immune-checkpoint-patent-intelligence-dashboard",
     "title": "Immune-checkpoint therapy patent intelligence",
-    "status": "Software & data",
+    "status": "Client project",
     "featured": 4,
     "domains": [
       "patents",
@@ -389,7 +389,7 @@
   {
     "slug": "bacteriophage-one-health-literature-mapping",
     "title": "Bacteriophage One Health literature mapping",
-    "status": "In preparation",
+    "status": "Manuscript in preparation",
     "featured": 0,
     "domains": [
       "science",
@@ -427,7 +427,7 @@
   {
     "slug": "phage-therapy-funding-intelligence",
     "title": "Equity and trends in phage therapy funding",
-    "status": "In preparation",
+    "status": "Manuscript in preparation",
     "featured": 0,
     "domains": [
       "patents",
@@ -459,62 +459,37 @@
   {
     "slug": "preprint-harvester-toolkit",
     "title": "Preprint Harvester toolkit",
-    "status": "Software & data",
+    "status": "Tool or dataset",
     "featured": 0,
     "domains": [
       "data"
     ],
-    "summary": "One toolkit to harvest preprint metadata from Crossref, DataCite and OpenAlex.",
+    "summary": "Free code to collect preprint records from Crossref, DataCite and OpenAlex, label each preprint's server, and explore the results.",
     "problem": "",
     "approach": "",
     "result": "",
-    "contribution": "Developed the toolkit.",
-    "outputs": "Unified harvester repository",
+    "contribution": "Built the harvesters, the server-labelling rules and the Crossref Preprints Explorer.",
+    "outputs": "Harvesters for three sources; server-labelling rules; Crossref Preprints Explorer",
     "methods": [
       "Python",
-      "APIs",
-      "Jupyter"
+      "Crossref API",
+      "DataCite API",
+      "OpenAlex API"
     ],
     "skills": [
-      "API engineering",
-      "extraction",
-      "automation",
+      "Automated data collection",
+      "metadata quality",
       "pipeline design"
     ],
     "links": [
       {
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/preprint-harvester"
-      }
-    ],
-    "images": []
-  },
-  {
-    "slug": "crossref-preprint-harvesting-and-labeling",
-    "title": "Crossref preprint harvesting and labeling",
-    "status": "Software & data",
-    "featured": 0,
-    "domains": [
-      "data"
-    ],
-    "summary": "Collect Crossref posted-content records and label which server each preprint belongs to.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Harvester, classification rules and normalisation workflows.",
-    "outputs": "Harvester and labeling repositories; notebooks",
-    "methods": [
-      "Crossref API",
-      "Python",
-      "Jupyter"
-    ],
-    "skills": [
-      "Cursor pagination",
-      "API resilience",
-      "metadata labeling",
-      "QA"
-    ],
-    "links": [
+      },
+      {
+        "label": "Code on GitHub",
+        "url": "https://github.com/descartesmbogning/Crossref-Preprints-Explorer"
+      },
       {
         "label": "Harvester on GitHub",
         "url": "https://github.com/descartesmbogning/crossref-preprints-harvester"
@@ -522,66 +497,11 @@
       {
         "label": "Labelling rules",
         "url": "https://github.com/descartesmbogning/crossref_preprint_labeling"
-      }
-    ],
-    "images": []
-  },
-  {
-    "slug": "datacite-preprint-harvesting",
-    "title": "DataCite preprint harvesting",
-    "status": "Software & data",
-    "featured": 0,
-    "domains": [
-      "data"
-    ],
-    "summary": "Harvest DataCite preprint metadata at scale, with resumable extraction.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Resumable extraction pipeline.",
-    "outputs": "Harvester repository",
-    "methods": [
-      "DataCite API",
-      "Python"
-    ],
-    "skills": [
-      "Resumability",
-      "metadata harvesting",
-      "reliability engineering"
-    ],
-    "links": [
+      },
       {
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/datacite-preprints-harvester"
-      }
-    ],
-    "images": []
-  },
-  {
-    "slug": "openalex-preprint-metadata-extraction",
-    "title": "OpenAlex preprint metadata extraction",
-    "status": "Software & data",
-    "featured": 0,
-    "domains": [
-      "data"
-    ],
-    "summary": "Retrieve preprint-server records from the OpenAlex API.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "API harvesting and record selection.",
-    "outputs": "Collector script; README; requirements",
-    "methods": [
-      "OpenAlex API",
-      "Python"
-    ],
-    "skills": [
-      "API querying",
-      "filtering",
-      "extraction",
-      "documentation"
-    ],
-    "links": [
+      },
       {
         "label": "Code on GitHub",
         "url": "https://github.com/descartesmbogning/openalex_preprints_metada"
@@ -592,7 +512,7 @@
   {
     "slug": "preprint-servers-explorer",
     "title": "Preprint Servers Explorer",
-    "status": "Software & data",
+    "status": "Tool or dataset",
     "featured": 0,
     "domains": [
       "data",
@@ -626,48 +546,19 @@
     "images": []
   },
   {
-    "slug": "crossref-preprints-explorer",
-    "title": "Crossref Preprints Explorer",
-    "status": "Software & data",
-    "featured": 0,
-    "domains": [
-      "data"
-    ],
-    "summary": "Explore Crossref preprint metadata interactively.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Built the explorer application.",
-    "outputs": "Public application repository",
-    "methods": [
-      "Python"
-    ],
-    "skills": [
-      "Exploratory analytics",
-      "dashboard"
-    ],
-    "links": [
-      {
-        "label": "Code on GitHub",
-        "url": "https://github.com/descartesmbogning/Crossref-Preprints-Explorer"
-      }
-    ],
-    "images": []
-  },
-  {
     "slug": "genai-publication-intelligence",
     "title": "How science builds, uses and studies generative AI",
-    "status": "Ongoing work",
+    "status": "In progress",
     "featured": 0,
     "domains": [
       "ai",
       "science",
       "data"
     ],
-    "summary": "A screened OpenAlex corpus of generative-AI research since 2020, classified facet by facet with validated LLM coding.",
+    "summary": "How scientists build, use and debate generative AI since 2020, studied with AI-assisted screening that is checked against human experts.",
     "problem": "Generative-AI papers are usually counted by keyword, which mixes papers that build models with papers that only mention ChatGPT. There is no reliable picture of how the balance of building, using, evaluating and debating GenAI has shifted since 2022.",
     "approach": "Harvested an OpenAlex corpus with GenAI concept and tool terms (2020 onward), screened every title and abstract with LLMs, and wrote a codebook for each classification facet, starting with GenAI's role in the paper, tested against hand-coded records.",
-    "result": "Facet 1, GenAI's role, agrees with 300 blind hand-coded records at κ 0.89 (91% agreement). More facets, articles on CognosX Insights and a public dashboard are in progress.",
+    "result": "On 300 test papers, the AI's classification matched expert human coders 91% of the time (κ 0.89, very strong agreement). More facets, articles on CognosX Insights and a public dashboard are in progress.",
     "contribution": "Lead, through CognosX: corpus design, LLM screening and classification pipeline, facet codebooks, hand-coded gold standards and analysis.",
     "outputs": "Screened corpus; facet codebooks; validated gold sets; forthcoming articles and dashboard",
     "methods": [
@@ -709,7 +600,7 @@
   {
     "slug": "ticks-and-climate-change-research-mapping",
     "title": "Ticks and climate-change research mapping",
-    "status": "Ongoing work",
+    "status": "In progress",
     "featured": 0,
     "domains": [
       "public-health",
@@ -739,7 +630,7 @@
   {
     "slug": "rsv-integrated-surveillance-review",
     "title": "RSV integrated surveillance review",
-    "status": "Ongoing work",
+    "status": "In progress",
     "featured": 0,
     "domains": [
       "public-health"
@@ -766,7 +657,7 @@
   {
     "slug": "cameroon-malaria-under-reporting-analysis",
     "title": "Cameroon malaria under-reporting analysis",
-    "status": "Ongoing work",
+    "status": "In progress",
     "featured": 0,
     "domains": [
       "public-health"
@@ -850,7 +741,7 @@
   {
     "slug": "marburg-virus-bibliometrics-and-gender",
     "title": "Marburg virus bibliometrics and gender",
-    "status": "Software & data",
+    "status": "Tool or dataset",
     "featured": 0,
     "domains": [
       "science",
@@ -936,9 +827,62 @@
     ]
   },
   {
+    "slug": "analysis-code",
+    "title": "Analysis code",
+    "status": "Tool or dataset",
+    "featured": 0,
+    "domains": [
+      "ai",
+      "data",
+      "patents",
+      "science"
+    ],
+    "summary": "Open-source notebooks and scripts for text mining, collaboration maps, patent data preparation and database loading.",
+    "contribution": "Wrote and published the notebooks and scripts, including reusable pipelines built at CognosX.",
+    "outputs": "Text-mining, network-analysis, Lens.org-to-VOSviewer and PostgreSQL repositories",
+    "methods": [
+      "Python",
+      "Jupyter",
+      "VOSviewer",
+      "PostgreSQL"
+    ],
+    "skills": [
+      "Text mining",
+      "network mapping",
+      "data cleaning"
+    ],
+    "links": [
+      {
+        "label": "Topic modelling",
+        "url": "https://github.com/descartesmbogning/topic-modeling-lda"
+      },
+      {
+        "label": "Keyword extraction",
+        "url": "https://github.com/descartesmbogning/Keyword-Extraction-using-TF-IDF-for-Bigrams"
+      },
+      {
+        "label": "Named-entity recognition",
+        "url": "https://github.com/descartesmbogning/Named-Entity-Recognition-NER-"
+      },
+      {
+        "label": "Network analysis",
+        "url": "https://github.com/descartesmbogning/social-network-analysis"
+      },
+      {
+        "label": "Lens.org to VOSviewer",
+        "url": "https://github.com/descartesmbogning/prepare_patent_data_from_Lens.org_for_visualization_in_VosViewer"
+      },
+      {
+        "label": "Code on GitHub",
+        "url": "https://github.com/descartesmbogning/Data-Transfer-to-PostgreSQL"
+      }
+    ],
+    "images": []
+  },
+  {
     "slug": "openalex-data-enricher",
     "title": "OpenAlex Data Enricher",
-    "status": "Software & data",
+    "status": "Tool or dataset",
     "featured": 0,
     "domains": [
       "data"
@@ -974,7 +918,7 @@
   {
     "slug": "publication-fetcher",
     "title": "Publication Fetcher",
-    "status": "Software & data",
+    "status": "Tool or dataset",
     "featured": 0,
     "domains": [
       "data"
@@ -1003,188 +947,9 @@
     "images": []
   },
   {
-    "slug": "biomedical-ner-tf-idf-and-topic-modelling-tools",
-    "title": "Biomedical NER, TF-IDF and topic-modelling tools",
-    "status": "Software & data",
-    "featured": 0,
-    "domains": [
-      "ai",
-      "data"
-    ],
-    "summary": "Extract entities, key terms and topics from biomedical text.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "NER, TF-IDF and LDA notebooks.",
-    "outputs": "NER, TF-IDF, LDA and biomedical-mining repositories",
-    "methods": [
-      "Python",
-      "NER",
-      "TF-IDF",
-      "LDA",
-      "Jupyter"
-    ],
-    "skills": [
-      "Text mining",
-      "keyword extraction",
-      "topic modelling"
-    ],
-    "links": [
-      {
-        "label": "Topic modelling",
-        "url": "https://github.com/descartesmbogning/topic-modeling-lda"
-      },
-      {
-        "label": "Keyword extraction",
-        "url": "https://github.com/descartesmbogning/Keyword-Extraction-using-TF-IDF-for-Bigrams"
-      },
-      {
-        "label": "Named-entity recognition",
-        "url": "https://github.com/descartesmbogning/Named-Entity-Recognition-NER-"
-      }
-    ],
-    "images": []
-  },
-  {
-    "slug": "scientific-network-analysis-and-patent-preparation",
-    "title": "Scientific network analysis and patent preparation",
-    "status": "Software & data",
-    "featured": 0,
-    "domains": [
-      "science",
-      "patents"
-    ],
-    "summary": "Prepare publication and patent data for network maps in VOSviewer.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Country extraction, Lens.org preparation and network scripts.",
-    "outputs": "Public methodological notebooks",
-    "methods": [
-      "Python",
-      "Lens.org",
-      "VOSviewer",
-      "network analysis"
-    ],
-    "skills": [
-      "Data transformation",
-      "network mapping",
-      "data cleaning"
-    ],
-    "links": [
-      {
-        "label": "Network analysis",
-        "url": "https://github.com/descartesmbogning/social-network-analysis"
-      },
-      {
-        "label": "Lens.org to VOSviewer",
-        "url": "https://github.com/descartesmbogning/prepare_patent_data_from_Lens.org_for_visualization_in_VosViewer"
-      }
-    ],
-    "images": []
-  },
-  {
-    "slug": "postgresql-data-transfer-utility",
-    "title": "PostgreSQL data transfer utility",
-    "status": "Software & data",
-    "featured": 0,
-    "domains": [
-      "data"
-    ],
-    "summary": "Move research datasets into PostgreSQL reliably.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Python utility.",
-    "outputs": "Data-Transfer-to-PostgreSQL repository",
-    "methods": [
-      "Python",
-      "PostgreSQL"
-    ],
-    "skills": [
-      "Database loading",
-      "ETL"
-    ],
-    "links": [
-      {
-        "label": "Code on GitHub",
-        "url": "https://github.com/descartesmbogning/Data-Transfer-to-PostgreSQL"
-      }
-    ],
-    "images": []
-  },
-  {
-    "slug": "biotech-sosci-research-pipelines",
-    "title": "Biotech / sosci research pipelines",
-    "status": "Ongoing work",
-    "featured": 0,
-    "domains": [
-      "data",
-      "ai"
-    ],
-    "summary": "Reusable science-of-science pipelines for biotech topics, from corpus to topics and dashboards.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Python, database and BERTopic pipelines at CognosX.",
-    "outputs": "biotech repository and research pipeline scripts",
-    "methods": [
-      "Python",
-      "DuckDB",
-      "BERTopic",
-      "cuML",
-      "UMAP",
-      "HDBSCAN",
-      "embeddings"
-    ],
-    "skills": [
-      "Pipeline architecture",
-      "multilingual NLP",
-      "GPU workflow"
-    ],
-    "links": [],
-    "images": []
-  },
-  {
-    "slug": "cognosx-field-intelligence-initiative",
-    "title": "CognosX science intelligence",
-    "status": "Ongoing work",
-    "featured": 0,
-    "domains": [
-      "patents",
-      "science",
-      "data"
-    ],
-    "summary": "Publication, patent and funding intelligence for research teams and biotech recruiters.",
-    "problem": "",
-    "approach": "",
-    "result": "",
-    "contribution": "Founder: service design, analysis workflows and client reports.",
-    "outputs": "Client reports; dashboards; CognosX Insights newsletter",
-    "methods": [
-      "Python",
-      "scientific APIs",
-      "NLP",
-      "visualization",
-      "patent data"
-    ],
-    "skills": [
-      "Consulting design",
-      "stakeholder communication",
-      "product strategy"
-    ],
-    "links": [
-      {
-        "label": "CognosX Insights",
-        "url": "https://cognosxinsights.substack.com"
-      }
-    ],
-    "images": []
-  },
-  {
     "slug": "who-one-health-ai-hubs-mapping",
     "title": "One Health AI hubs mapping",
-    "status": "Ongoing work",
+    "status": "In progress",
     "featured": 0,
     "domains": [
       "public-health",

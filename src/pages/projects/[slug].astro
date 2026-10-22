@@ -34,7 +34,7 @@ const prog = programmeOf[p.slug];
     </div>
     <aside class="side">
       {p.links.length > 0 && <div><h3>Evidence</h3><div class="links">{p.links.map((l) => l.url.startsWith('/') ? <a href={l.url}>{l.label} →</a> : <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}</div></div>}
-      {prog && <div><h3>Programme</h3><div class="links"><a href={`/projects/#${prog.id}`}>{prog.title} →</a></div><p class="source" style="margin-top:6px">{prog.all.length} related {prog.all.length === 1 ? 'project' : 'projects'}</p></div>}
+      {prog && <div><h3>Part of</h3><div class="links"><a href={`/projects/#${prog.id}`}>{prog.title} →</a></div><p class="source" style="margin-top:6px">{prog.all.length} related {prog.all.length === 1 ? 'project' : 'projects'}</p></div>}
     </aside>
   </div></section>
 </Base>

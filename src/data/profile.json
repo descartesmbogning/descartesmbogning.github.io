@@ -1,8 +1,8 @@
 {
   "name": "Maxime Descartes Mbogning Fonkou",
   "shortName": "Maxime D. Mbogning Fonkou",
-  "headline": "Research & data analyst, PhD",
-  "summary": "I turn publication, patent and funding records into evidence people can act on. Ten years of research across Cameroon, France and Canada, from clinical microbiology labs to bibliometrics, patent analytics and data tools.",
+  "headline": "From lab microbiologist to science-of-science researcher",
+  "summary": "I help public-health teams, research funders and biotech organisations see where a field is going, what is missing and who is left out. I started as a lab microbiologist; today I map research, patents and funding to support better decisions.",
   "badge": "Founder, CognosX",
   "location": "Burnaby, British Columbia, Canada",
   "languages": "French (native) · English (professional) · Bamileke languages (native)",
@@ -60,5 +60,5 @@
     }
   ],
   "lastUpdated": "2026-10-20",
-  "specialties": "bibliometrics, patent analytics, research evaluation"
+  "specialties": "research landscapes, patent analysis and research evaluation"
 }
