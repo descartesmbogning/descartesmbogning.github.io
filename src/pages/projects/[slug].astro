@@ -27,6 +27,8 @@ const prog = programmeOf[p.slug];
       {p.problem && <div><h2 style="font-size:22px;margin-bottom:8px">Problem</h2><p>{p.problem}</p></div>}
       {p.approach && <div><h2 style="font-size:22px;margin-bottom:8px">Approach</h2><p>{p.approach}</p></div>}
       {p.result && <div><h2 style="font-size:22px;margin-bottom:8px">Result</h2><p>{p.result}</p></div>}
+      {p.meaning && <div><h2 style="font-size:22px;margin-bottom:8px">What it means</h2><p>{p.meaning}</p></div>}
+      {p.whoFor && <div><h2 style="font-size:22px;margin-bottom:8px">Who it was for</h2><p>{p.whoFor}</p></div>}
       <div><h2 style="font-size:22px;margin-bottom:8px">My role</h2><p>{p.contribution}</p></div>
       <div><h2 style="font-size:22px;margin-bottom:8px">Outputs</h2><p>{p.outputs}</p></div>
       <div><h2 style="font-size:22px;margin-bottom:10px">Methods and tools</h2><ul class="tags">{p.methods.map((m) => <li>{m}</li>)}</ul></div>

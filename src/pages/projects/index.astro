@@ -18,6 +18,7 @@ const textOf = (p) => `${p.title} ${p.summary} ${p.methods.join(' ')} ${p.skills
     <p>My work, grouped by the question it helps answer: where a field is going, what the evidence says, who is left out, and whether the evidence is keeping up. Filter by method to see every review or bibliometric study, whether I led it or contributed to it.</p>
   </div></div></section>
   <section class="section"><div class="wrap">
+<p class="metrics-note"><b>How I use research metrics.</b> I follow the principles of the San Francisco Declaration on Research Assessment (DORA), which Canada's federal research funders have signed. Counts and citations describe a field or a portfolio; they never measure the quality of one researcher or one paper. I explain my data sources and their limits, and I share my code.</p>
     <nav class="prog-nav" aria-label="Questions">
       {programmeList.map((g) => <a href={`#${g.id}`}>{g.title}<span>{g.all.length}</span></a>)}
     </nav>
@@ -29,10 +30,6 @@ const textOf = (p) => `${p.title} ${p.summary} ${p.methods.join(' ')} ${p.skills
           <h2>{g.title}</h2>
           <p class="prog-q">{g.question}</p>
           <p class="lede">{g.summary}</p>
-          <div class="prog-tags">
-            <div><h3 class="label">Tools used</h3><ul class="tags counted">{g.tools.slice(0, 14).map((t) => <li>{t.name}{t.n > 1 && <b>×{t.n}</b>}</li>)}</ul></div>
-            <div><h3 class="label">Skills</h3><ul class="tags counted">{g.skills.slice(0, 12).map((t) => <li>{t.name}{t.n > 1 && <b>×{t.n}</b>}</li>)}</ul></div>
-          </div>
           {g.extra && <a class="more" href={g.extra.url}>{g.extra.label} →</a>}
         </div>
         {g.leadProject && <div class="prog-lead" data-item data-status={g.leadProject.status} data-kind={(g.leadProject.kind || []).join('|')} data-role={g.leadProject.role} data-text={textOf(g.leadProject)}><CaseStudy p={g.leadProject} /></div>}

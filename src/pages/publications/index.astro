@@ -7,6 +7,7 @@ import profile from '../../data/profile.json';
 const types = [...new Set(pubs.map((p) => p.type))];
 const groups = [
   { key: 'type', label: 'Type', options: types.map((t) => ({ value: t, label: t })) },
+  { key: 'study', label: 'Study type', options: [{ value: 'Review', label: 'Review' }, { value: 'Bibliometric study', label: 'Bibliometric study' }] },
   { key: 'role', label: 'Role', options: [{ value: 'lead', label: 'Lead author (first or last)' }, { value: 'first', label: 'First author' }, { value: 'last', label: 'Last author' }] },
 ];
 const lead = pubs.filter((p) => p.firstAuthor || p.lastAuthor).length;
@@ -22,7 +23,7 @@ const roleOf = (p) => [p.firstAuthor && 'first', p.lastAuthor && 'last', (p.firs
     <Filter groups={groups} placeholder="Search title, journal or year" noun="works" />
     <ol class="pubs">
       {pubs.map((p) => (
-        <li data-item data-type={p.type} data-role={roleOf(p)} data-text={`${p.title} ${p.venue} ${p.year} ${p.authors}`.toLowerCase()}>
+        <li data-item data-type={p.type} data-study={p.study || ''} data-role={roleOf(p)} data-text={`${p.title} ${p.venue} ${p.year} ${p.authors}`.toLowerCase()}>
           <span class="yr">{p.year}</span>
           <div>
             <div class="t">{p.title}</div>
@@ -30,6 +31,7 @@ const roleOf = (p) => [p.firstAuthor && 'first', p.lastAuthor && 'last', (p.firs
             <div class="v"><i>{p.venue}</i></div>
             <div class="meta">
               <span class="badge">{p.type}</span>
+              {p.study && <span class="badge">{p.study}</span>}
               {p.firstAuthor && <span class="badge first">First author</span>}
               {p.lastAuthor && <span class="badge first">Last author</span>}
               {p.notice && <span class="badge notice">{p.notice}</span>}
@@ -39,7 +41,7 @@ const roleOf = (p) => [p.firstAuthor && 'first', p.lastAuthor && 'last', (p.firs
         </li>))}
     </ol>
   </div></section>
-  <section class="section alt"><div class="wrap">
+  <section class="section alt" id="writing"><div class="wrap">
     <div class="sec-head"><h2>Writing for a wider audience</h2></div>
     <ol class="pubs">{(talks.writing || []).map((w) => <li><span class="yr">{w.year}</span><div><div class="t"><a href={w.url} target="_blank" rel="noopener noreferrer">{w.title} ↗</a></div><div class="v">LinkedIn article</div></div></li>)}</ol>
   </div></section>
