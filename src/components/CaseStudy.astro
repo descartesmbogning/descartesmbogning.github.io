@@ -2,7 +2,7 @@
 const { p } = Astro.props;
 ---
 <article class="case">
-  <div class="top"><span class="label">{p.status}</span></div>
+  <div class="top"><span class="label">{p.status} · {p.role}{p.kind?.length ? ` · ${p.kind.join(', ')}` : ''}</span></div>
   {p.images?.[0] && <a class={`case-img ${p.images[0].fit}${p.images[0].dark ? ' dark' : ''}`} href={`/projects/${p.slug}/`} tabindex="-1" aria-hidden="true"><img src={p.images[0].src} alt="" width={p.images[0].width} height={p.images[0].height} loading="lazy" decoding="async" /></a>}
   <div class="body">
     <h3><a href={`/projects/${p.slug}/`}>{p.title}</a></h3>

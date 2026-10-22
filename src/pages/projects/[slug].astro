@@ -10,7 +10,7 @@ const prog = programmeOf[p.slug];
 <Base title={p.title} description={p.summary} current="/projects/">
   <section class="band dots"><div class="wrap"><div class="page-hero">
     <a href="/projects/" class="label" style="color:var(--on-black-muted)">← All projects</a>
-    <span class="status" data-s={p.status} style="color:var(--brand)">{p.status}</span>
+    <span class="status" data-s={p.status} style="color:var(--brand)">{p.status} · {p.role}</span>
     <h1 style="font-size:clamp(30px,4.6vw,52px)">{p.title}</h1>
     <p>{p.summary}</p>
   </div></div></section>
