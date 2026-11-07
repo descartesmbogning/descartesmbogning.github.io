@@ -13,6 +13,7 @@ import json
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -28,15 +29,20 @@ NS = {"atom": "http://www.w3.org/2005/Atom", "media": "http://search.yahoo.com/m
       "yt": "http://www.youtube.com/xml/schemas/2015"}
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
+
+
+def fetch(url, ua=UA, quiet=False):
+    req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "application/rss+xml, application/xml, */*"})
     for attempt in range(3):
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
                 return r.read()
         except Exception as e:  # network hiccup: retry, then skip this source
             if attempt == 2:
-                print(f"::warning::{url}: {e}")
+                if not quiet:
+                    print(f"::warning::{url}: {e}")
                 return None
             time.sleep(3 * (attempt + 1))
 
@@ -45,6 +51,26 @@ def clean(text, limit=220):
     text = html.unescape(re.sub(r"<[^>]+>", " ", text or ""))
     text = re.sub(r"\s+", " ", text).strip()
     return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0] + "…"
+
+
+def substack_raw():
+    """Substack often blocks requests from cloud servers such as GitHub's. Try a normal
+    browser-style request first, then a public RSS relay (rss2json) as a fallback."""
+    raw = fetch(SUBSTACK_FEED, ua=BROWSER_UA, quiet=True)
+    if raw:
+        return raw
+    relay = "https://api.rss2json.com/v1/api.json?rss_url=" + urllib.parse.quote(SUBSTACK_FEED, safe="")
+    data = fetch(relay, quiet=True)
+    try:
+        items = json.loads(data or b"{}").get("items") or []
+    except ValueError:
+        items = []
+    if not items:
+        print("::warning::Substack could not be reached today (blocked or down); kept the saved posts.")
+        return None
+    print(f"Substack read through the rss2json relay ({len(items)} recent posts).")
+    return [{"source": "Newsletter", "title": clean(i.get("title"), 300), "url": (i.get("link") or "").strip(),
+             "date": (i.get("pubDate") or "")[:10], "summary": clean(i.get("description"))} for i in items]
 
 
 def substack(xml):
@@ -84,11 +110,14 @@ def main():
     sources = [(SUBSTACK_FEED, "substack.xml", substack), (YOUTUBE_FEED, "youtube.xml", youtube)]
     new = 0
     for url, fixture, parse in sources:
-        raw = (Path(args.offline) / fixture).read_bytes() if args.offline else fetch(url)
+        if args.offline:
+            raw = (Path(args.offline) / fixture).read_bytes()
+        else:
+            raw = substack_raw() if url == SUBSTACK_FEED else fetch(url)
         if not raw:
             continue
         try:
-            found = parse(raw)
+            found = raw if isinstance(raw, list) else parse(raw)
         except ET.ParseError as e:
             print(f"::warning::Could not read {url}: {e}")
             continue
