@@ -65,24 +65,33 @@ npx playwright install chromium                # once
 node scripts/cv_to_pdf.js "$PWD/cv.html" public/cv/Mbogning-Fonkou-CV.pdf
 ```
 
-## New publications are found automatically
+## Everything updates by itself every day
 
-Every Monday, `.github/workflows/publications.yml` runs `scripts/update_publications.py`. It asks
-OpenAlex (author `A5023046200`) and ORCID (`0000-0001-5581-3891`) for your works and adds any whose
-DOI and title are not already in `src/data/publications.json`. It never edits or removes existing entries.
+Every day at about 6 a.m. Vancouver time, `.github/workflows/deploy.yml`:
 
-The changes arrive as a pull request called **"New publications found"**, which GitHub emails you about.
-Check that each work is yours, add a `notice` if a publisher issued one, then **Merge**. The site updates
-a minute later. To run it right away, open **Actions → Check for new publications → Run workflow**.
+1. looks for new publications on OpenAlex (author `A5023046200`) and ORCID (`0000-0001-5581-3891`) with
+   `scripts/update_publications.py --auto`, and adds them to `src/data/publications.json`;
+2. looks for new newsletter posts (Substack) and videos (YouTube) with `scripts/update_feeds.py`, and adds
+   them to `src/data/feeds.json`;
+3. saves any change, then rebuilds and publishes the site.
 
-To stop a work from being proposed again, add its DOI or exact title to `scripts/publications_ignore.json`:
+New items appear in **Latest** on the home page and in **Publications** (papers, newsletter, videos).
+Nothing is ever deleted automatically.
+
+**Safety rule for publications:** a new work is published only if its DOI is on your ORCID record, or the
+paper itself lists your name. Anything OpenAlex attributes to you without that proof is left out and listed
+on the run page (**Actions → Update feeds and publish the site**). If such a work is really yours, add it to
+ORCID and it appears the next day. Still check new entries now and then, and add a `notice` if a publisher
+issued one.
+
+To stop a work from appearing, add its DOI or exact title to `scripts/publications_ignore.json`:
 
 ```json
 { "dois": ["10.1234/example"], "titles": ["A paper that is not mine"] }
 ```
 
-One-time setting (already needed for this to work): **Settings → Actions → General → Workflow permissions →
-tick "Allow GitHub Actions to create and approve pull requests"**.
+To change the Substack or YouTube source, edit the two addresses at the top of `scripts/update_feeds.py`.
+To run the update right away: **Actions → Update feeds and publish the site → Run workflow**.
 
 ## Bacteria I described
 

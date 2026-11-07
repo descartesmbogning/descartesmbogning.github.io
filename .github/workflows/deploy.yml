@@ -1,20 +1,59 @@
-name: Deploy Astro site to GitHub Pages
+name: Update feeds and publish the site
+
+# Every day: look for new publications (OpenAlex + ORCID), newsletter posts (Substack)
+# and videos (YouTube), save them, then rebuild and publish the site.
+# Also publishes on every change to main. Run it by hand from the Actions tab ("Run workflow").
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '23 13 * * *'   # every day at 13:23 UTC (about 6 a.m. in Vancouver)
   workflow_dispatch:
+
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
+
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
+
 jobs:
-  build:
+  update:
+    # Only the daily run and manual runs look for new items; a normal push just publishes.
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: New publications (only works confirmed by ORCID or by your name on the paper)
+        run: python3 scripts/update_publications.py --auto --body "$RUNNER_TEMP/publications.md"
+      - name: New newsletter posts and videos
+        run: python3 scripts/update_feeds.py
+      - name: Save changes
+        run: |
+          git config user.name "site-bot"
+          git config user.email "cognosxx@gmail.com"
+          git add src/data/publications.json src/data/profile.json src/data/feeds.json
+          if git diff --cached --quiet; then
+            echo "Nothing new today."
+          else
+            git commit -m "Daily update: new publications, posts or videos"
+            git push
+          fi
+
+  build:
+    needs: update
+    # Publish even if a feed was unreachable today, so the site never goes stale.
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -23,6 +62,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
   deploy:
     environment:
       name: github-pages

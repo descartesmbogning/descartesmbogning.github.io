@@ -6,10 +6,16 @@ import projects from '../data/projects.json';
 import { programmeList } from '../lib/programmes.js';
 import species from '../data/species.json';
 import pubs from '../data/publications.json';
+import feeds from '../data/feeds.json';
 const metrics = [
   { value: String(species.length), label: 'bacterial species described', href: '/species/' },
   { value: String(pubs.length), label: 'publications, from Nature Biotechnology to Science', href: '/publications/' },
   ...profile.metrics,
+];
+const fmt = (d) => d ? new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }) : '';
+const latest = [
+  ...(pubs[0] ? [{ source: pubs[0].type === 'Preprint' ? 'New preprint' : 'New paper', title: pubs[0].title, url: pubs[0].url, when: pubs[0].year, summary: pubs[0].venue }] : []),
+  ...feeds.slice(0, 2).map((f) => ({ ...f, when: fmt(f.date) })),
 ];
 const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - b.featured);
 ---
@@ -49,7 +55,21 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
     </div>
   </section>
 
-  <section class="section alt">
+  <section class="section alt" id="latest">
+    <div class="wrap">
+      <div class="sec-head"><h2>Latest</h2><a class="more" href="/publications/#writing">All writing and videos →</a></div>
+      <p class="latest-note">New papers, newsletter posts and videos appear here automatically every day.</p>
+      <div class="cards">{latest.map((i) => (
+        <article class="card latest-card">
+          <div class="card-top"><span class="label">{i.source}</span><span class="label">{i.when}</span></div>
+          <h3><a href={i.url} target="_blank" rel="noopener noreferrer">{i.title}</a></h3>
+          {i.summary && <p>{i.summary}</p>}
+        </article>))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="wrap">
       <div class="sec-head"><h2>Find out more</h2></div>
       <div class="next">
@@ -70,6 +90,7 @@ const featured = projects.filter((p) => p.featured).sort((a, b) => a.featured - 
           <li><b>Research landscapes and gap analysis:</b> evidence maps, rapid evidence profiles and environmental scans, for public-health and policy teams.</li>
           <li><b>Patent and technology landscapes:</b> patent landscapes, inventor maps and competitor watchlists, for biotech teams.</li>
           <li><b>Funding, portfolio and equity analysis:</b> portfolio and impact reports, benchmarking and equity indicators, for funders and research offices.</li>
+          <li><b>Training for researchers:</b> workshops, bootcamps and coaching to make the data of your health topic speak, in French or English. <a href="https://cognosx.ca/services.html#researchers" target="_blank" rel="noopener noreferrer">See the options ↗</a></li>
           <li><b>Faster evidence with AI, checked by people:</b> AI-assisted screening with a validation report, for evidence-synthesis teams.</li>
         </ul>
         <p>I work through my Canadian company, CognosX, in English and French, and can work under a confidentiality agreement. Small first projects are welcome. Looking for a staff role? My CV is below.</p>

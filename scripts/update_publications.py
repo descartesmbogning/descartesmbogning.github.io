@@ -1,9 +1,12 @@
 """Find new publications on OpenAlex and ORCID and add them to src/data/publications.json.
 
-Run weekly by .github/workflows/publications.yml. It never deletes existing entries: it
+Run every day by .github/workflows/deploy.yml with --auto. It never deletes existing entries: it
 appends works whose DOI and title are not already listed, and marks first or last
-authorship on listed works from OpenAlex author positions. The workflow then opens a pull request
-so a person reviews every change before it goes live.
+authorship on listed works from OpenAlex author positions.
+
+With --auto, a new work is added (and published) only when it is confirmed as yours: its DOI is on
+your ORCID record, or the paper itself lists your name (not only OpenAlex's guess). Works that are
+not confirmed are reported on the Actions run page and left out, so a wrong match never goes live.
 
 To stop a work from being proposed again, add its DOI (or exact title) to
 scripts/publications_ignore.json.
@@ -175,6 +178,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--body", default="pr_body.md")
     ap.add_argument("--offline", help="JSON fixtures instead of live APIs (for testing)")
+    ap.add_argument("--auto", action="store_true", help="add only works confirmed by ORCID or the author name on the paper")
     args = ap.parse_args()
 
     pubs = json.loads(PUBS.read_text())
@@ -210,7 +214,14 @@ def main():
                 candidates.append(("ORCID", w))
                 seen.add(o["doi"])
 
-    added, versions, skipped, notices = [], [], [], []
+    orcid_set = {o["doi"] for o in orc if o.get("doi")}
+
+    def confirmed(source, w):
+        if source == "ORCID" or norm_doi(w.get("doi")) in orcid_set:
+            return True
+        return any(NAME_RE.search(a.get("raw_author_name") or "") for a in (w.get("authorships") or []))
+
+    added, versions, skipped, notices, unconfirmed = [], [], [], [], []
     for source, w in candidates:
         doi, title = norm_doi(w.get("doi")), (w.get("display_name") or "")
         nt = norm_title(title)
@@ -228,6 +239,9 @@ def main():
         close = difflib.get_close_matches(nt, list(have_titles), n=1, cutoff=0.9)
         if close:  # same work under a slightly different title: mention it, don't add it
             versions.append((rec, have_titles[close[0]]))
+            continue
+        if args.auto and not confirmed(source, w):
+            unconfirmed.append(rec)
             continue
         rec["_source"] = source
         added.append(rec)
@@ -278,6 +292,10 @@ def main():
             profile["metricsSource"] = f"OpenAlex author record, {dt.date.today():%B %Y} (research works)"
             PROFILE.write_text(json.dumps(profile, ensure_ascii=False, indent=2) + "\n")
 
+    if unconfirmed:
+        lines += ["", "**Not added: not confirmed as yours** (not on ORCID, and your name is not on the paper). "
+                  "If one is yours, add it to ORCID and it will appear the next day:"]
+        lines += [f"- {r['title']} ({r['year']}, {r['venue']}) {r['url']}" for r in unconfirmed]
     if not lines:
         print("No new publications.")
         Path(args.body).write_text("No changes.\n")
@@ -286,7 +304,8 @@ def main():
         lines += ["", "**Not added: very similar title already listed** (usually the same work). "
                   "If one is really a separate work, add it by hand:"]
         lines += [f"- {r['title']} ({r['venue']}) ≈ already listed: {old}" for r, old in versions]
-    lines += ["", "**Before merging, check:**",
+    if not args.auto:
+      lines += ["", "**Before merging, check:**",
               "- Each work is really yours (OpenAlex sometimes mixes up similar names).",
               "- Notices: add `\"notice\": \"Expression of concern\"` where a publisher issued one.",
               "", "To drop a work, delete it in *Files changed* → *Edit file*, or close this pull request and add its DOI "

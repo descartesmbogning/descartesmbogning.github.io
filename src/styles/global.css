@@ -305,3 +305,7 @@ a.copy{text-decoration:none;display:inline-block}
 
 .metrics-note{max-width:72ch;margin:0 0 22px;padding:14px 18px;border-left:4px solid var(--brand);background:var(--surface);font-size:15px;line-height:1.6;color:var(--muted)}
 .metrics-note b{color:var(--ink)}
+/* Latest (home page): newest paper, posts and videos, updated daily */
+.latest-note{color:var(--muted);margin:-12px 0 20px}
+.latest-card h3{font-size:18px;line-height:1.35}
+.latest-card p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
